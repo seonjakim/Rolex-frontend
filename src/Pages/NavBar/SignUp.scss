@@ -1,0 +1,68 @@
+.SignUp {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+    background-color: #f8f8f8;
+        .ContentWrapper {
+        width: 500px;
+        .Logo {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 200px;
+                height: 150px;
+            }
+        }
+        h2 {
+            border-bottom: 0.5px solid #a37e2c;
+            font-size: 14px;
+            margin: 0px 0px 22px;
+            padding-bottom: 9px;
+        }
+        .IdPwInput {
+            p{
+                color: grey;
+            }
+            input {
+                width: 500px;
+                height: 35px;
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid #cecaca;
+            }
+        }
+
+        .AgreeJoin {
+            display: flex;
+            flex-direction: row;
+            margin: 40px 0px 0px 10px;
+            button {
+                width: 18px;
+                height: 18px;
+                padding: 0px;
+            }
+            div {
+                margin-left: 10px;
+            }
+        }
+        .WraptheBtn{
+            button {
+                width: 188px;
+                height: 40px;
+                padding: 11px 30px;
+                margin-top: 20px;
+                background-color: rgb(248, 248, 248);
+                border: 1px solid rgb(18, 120, 74);
+                color:  rgb(18, 120, 74);
+                border-radius: 30px;
+            }
+            .Join {
+                border: none;
+            }
+        }
+    }
+}

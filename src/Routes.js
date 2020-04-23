@@ -6,7 +6,9 @@ import FindRolex from './Pages/FindRolex/FindRolex'
 import Detail from './Pages/Detail/Detail'
 import Collection from './Pages/Collection/Collection'
 import MapRolex from './Pages/MapRolex/MapRolex'
-
+import NavBar from './Pages/NavBar/NavBar'
+import SignIn from './Pages/NavBar/SignIn'
+import SignUp from './Pages/NavBar/SignUp'
 
 
 
@@ -21,6 +23,9 @@ class Routes extends React.Component {
           <Route exact path='/Detail' component={Detail} />
           <Route exact path='/collection' component={Collection} />
           <Route exact path='/maprolex' component={MapRolex} />
+          <Route exact path='/navbar' component={NavBar} />
+          <Route exact path='/signin' component={SignIn} />
+          <Route exact path='/signup' component={SignUp} />
         </Switch>
       </Router>
     );
