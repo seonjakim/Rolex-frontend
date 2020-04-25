@@ -7,8 +7,8 @@ import Detail from './Pages/Detail/Detail'
 import Collection from './Pages/Collection/Collection'
 import MapRolex from './Pages/MapRolex/MapRolex'
 import NavBar from './Pages/NavBar/NavBar'
-import SignIn from './Pages/NavBar/SignIn'
-import SignUp from './Pages/NavBar/SignUp'
+import SignIn from './Pages/SignInNUp/SignIn'
+import SignUp from './Pages/SignInNUp/SignUp'
 
 
 

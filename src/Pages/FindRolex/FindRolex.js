@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import './FindRolex.scss';
 
 class FindRolex extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className='FindRolex'>
                 here is FindRolex
             </div>

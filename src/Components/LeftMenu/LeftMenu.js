@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '.Leftlace.scss';
 
 class LeftMenu extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className='LeftMenu'>
                 here is LeftMenu
             </div>

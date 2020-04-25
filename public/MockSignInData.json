@@ -1,0 +1,16 @@
+{
+    "SignInData": [
+        {
+            "EmailAddress": "a@gmail.com",
+            "PW": "7654321"
+        },
+        {
+            "EmailAddress": "b@gmail.com",
+            "PW": "1234567"
+        },
+        {
+            "EmailAddress": "c@gmail.com",
+            "PW": "0987654"
+        }
+    ]
+}
