@@ -1,0 +1,39 @@
+
+.FindRolex {
+    .VideoBox {
+        position: relative;
+        width: 100%;
+        height: 340px;
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.5);
+        }
+
+        .VideoText {
+            position: absolute;
+            top: 130px;
+            font-weight: 400;
+            font-size: calc(1.5625rem + 1.5625 * ((100vw - 20rem) / 100));
+            line-height: 1.1;
+            color: white;
+            margin: 0;
+
+            left:50%;
+            transform:translateX(-50%);
+        }
+
+        h1 {
+            font-size: calc(1.5625rem + 1.5625 * ((100vw - 20rem) / 100));
+        }
+    }
+
+    .ContentBox {
+        background-color: #f7f7f7;
+        width: 100%;
+
+        height: 3200px;
+    }
+}
