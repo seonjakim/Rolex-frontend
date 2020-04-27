@@ -19,7 +19,8 @@ class FindRolex extends Component {
             muted
             type="video/mp4"
           />
-          <h1 className="VideoText">롤렉스 컬렉션</h1>
+          <h1 className="VideoText">DAY-DATE</h1>
+          <h3 className="VideoText">품격 있는 시계의 상징</h3>
         </div>
         <div className="ContentBox">
           <FilterCenter />

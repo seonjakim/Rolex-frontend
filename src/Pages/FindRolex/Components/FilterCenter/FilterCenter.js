@@ -2,54 +2,65 @@ import React, { Component } from "react";
 import CategoryIcon from "./Components/CategoryIcon";
 import "./FilterCenter.scss";
 
-const genders = [
-  {
-    title: "남성용 시계",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/man.jpg",
-  },
-  {
-    title: "여성용 시계",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/woman.jpg",
-  },
-];
+// const genders = [
+//   {
+//     title: "36mm",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-36.jpg",
+//   },
+//   {
+//     title: "40mm",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-40.jpg",
+//   },
+// ];
 
-const materials = [
-  {
-    title: "오이스터스틸",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/steel.jpg",
-  },
-  {
-    title: "골드케이스",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/gold.jpg",
-  },
-  {
-    title: "오이스터스틸과",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/steel-and-gold.jpg",
-  },
-];
+// const materials = [
+//   {
+//     title: "옐로우 골드",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-yellow-gold.jpg"
+//   },
+//   {
+//     title: "핑크 골드",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-pink-gold.jpg"
+//   },
+//   {
+//     title: "화이트 골드",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-white-gold.jpg"
+//   },
+//   {
+//     title: "플래티넘",
+//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-platinum.jpg"
+//   }
+// ];
 
-const jewerly = [
-  {
-    title: "보석 세팅 베젤",
-    img:
-      "https://content.rolex.com/dam/watches/find-your-rolex/filters/gem-set.jpg",
-  },
-];
 
 class FilterCenter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedGender: "",
-      selectedMaterial: "",
-      selectedJewerly: ""
+      genders : [],
+      materials : [],
+      selectedGender : "",
+      selectedMaterial : "",
+      selectedJewerly : ""
     };
   }
+
+  componentDidMount = () => {
+    this.getData();
+  }
+
+  getData = () => {
+    fetch("http://localhost:3000/data/data.json")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          genders: res.genders,
+          materials: res.materials
+        })
+      })
+  }
+
+
 
   selected = (cate, name, idx) => {
     cate === idx ?
@@ -68,8 +79,8 @@ class FilterCenter extends Component {
   }
 
   render() {
-
-    const Genders = genders.map((gender, i) => (
+    console.log(this.state.genders)
+    const Genders = this.state.genders.map((gender, i) => (
       <CategoryIcon
         key={i}
         name={`gender`}
@@ -80,7 +91,7 @@ class FilterCenter extends Component {
       />
     ));
 
-    const Materials = materials.map((material, i) => (
+    const Materials = this.state.materials.map((material, i) => (
       <CategoryIcon
         key={i}
         name={`material`}
@@ -91,22 +102,10 @@ class FilterCenter extends Component {
       />
     ));
 
-    const jewerlies = jewerly.map((jewerly, i) => (
-      <CategoryIcon
-        key={i}
-        name={`jewerly`}
-        idx={i}
-        data={jewerly}
-        onClick={() => this.selected(this.state.selectedJewerly, "selectedJewerly", i)}
-        isSelected={i === this.state.selectedJewerly}
-      />
-    ));
     return (
       <div className="FilterCenter">
         {Genders}
-        <div className="Dot"></div>
         {Materials}
-        {jewerlies}
         <div className="CategoryItem FilterContainer">
             <div className="FilterBox"/>
             <span>모든 필터</span>
@@ -116,26 +115,5 @@ class FilterCenter extends Component {
   }
 }
 
-// {genders.map((gender) => (
-//   <CategoryIcon
-//     key={gender.name}
-//     data={gender}
-//     onClick={() => { this.setState({selectedGender: gender.name}) }}
-//     isSelected={gender.name === this.state.selectedGender}
-
-//   />
-// ))}
-// 쩜
-// {materials.map((mat, i) => (
-//   <CategoryIcon key={i} data={mat}/>
-// ))}
-// 쩜
-// {materials.map((mat, i) => (
-//   <CategoryIcon key={i} data={mat}/>
-// ))}
-
-//   }
-
-// }
 
 export default FilterCenter;

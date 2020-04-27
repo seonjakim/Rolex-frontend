@@ -9,7 +9,6 @@ class CategoryIcon extends React.Component {
       }
 
   render() {
-    console.log(this.props.idx);
     return (
       <div
         className={

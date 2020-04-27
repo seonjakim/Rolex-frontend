@@ -1,18 +1,10 @@
 .FilterCenter {
-    width: 100%;
-    padding: 52px 0 94px 0;
+    width: 100vw;
+    padding: 57px 0 94px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 91px;
-    border: 1px solid red;
 
-    .Container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        border: 1px solid blue;
-    }
 }
