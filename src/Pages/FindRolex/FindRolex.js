@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import ShareBox from "./Components/ShareBox/ShareBox";
 import FilterCenter from "./Components/FilterCenter/FilterCenter";
 import ProductList from "./Components/ProductList/ProductList";
 import FilterRight from "./Components/FilterRight/FilterRight";
@@ -8,6 +7,30 @@ import FilterRight from "./Components/FilterRight/FilterRight";
 import "./FindRolex.scss";
 
 class FindRolex extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      genders : [],
+      materials : [],
+    }
+  }
+
+  componentDidMount = () => {
+    this.getData();
+  }
+
+  getData = () => {
+    fetch("http://localhost:3000/data/data.json")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          genders: res.genders,
+          materials: res.materials,
+        })
+      })
+  }
+
+
   render() {
     return (
       <div className="FindRolex">
@@ -23,11 +46,17 @@ class FindRolex extends Component {
           <h3 className="VideoText">품격 있는 시계의 상징</h3>
         </div>
         <div className="ContentBox">
-          <FilterCenter />
-          <ProductList />
+          <FilterCenter 
+          genders={this.state.genders}
+          materials={this.state.materials}
+          />
+          <ProductList
+          watches={this.state.watches}
+          />
           <FilterRight />
+          <div className="sharebox"></div>
         </div>
-        <ShareBox />
+        <div className="footer"></div>
       </div>
     );
   }

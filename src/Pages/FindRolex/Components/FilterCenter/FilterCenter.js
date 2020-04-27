@@ -2,65 +2,15 @@ import React, { Component } from "react";
 import CategoryIcon from "./Components/CategoryIcon";
 import "./FilterCenter.scss";
 
-// const genders = [
-//   {
-//     title: "36mm",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-36.jpg",
-//   },
-//   {
-//     title: "40mm",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-40.jpg",
-//   },
-// ];
-
-// const materials = [
-//   {
-//     title: "옐로우 골드",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-yellow-gold.jpg"
-//   },
-//   {
-//     title: "핑크 골드",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-pink-gold.jpg"
-//   },
-//   {
-//     title: "화이트 골드",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-white-gold.jpg"
-//   },
-//   {
-//     title: "플래티넘",
-//     img:"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-platinum.jpg"
-//   }
-// ];
-
-
 class FilterCenter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      genders : [],
-      materials : [],
       selectedGender : "",
       selectedMaterial : "",
       selectedJewerly : ""
     };
   }
-
-  componentDidMount = () => {
-    this.getData();
-  }
-
-  getData = () => {
-    fetch("http://localhost:3000/data/data.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          genders: res.genders,
-          materials: res.materials
-        })
-      })
-  }
-
-
 
   selected = (cate, name, idx) => {
     cate === idx ?
@@ -79,8 +29,7 @@ class FilterCenter extends Component {
   }
 
   render() {
-    console.log(this.state.genders)
-    const Genders = this.state.genders.map((gender, i) => (
+    const Genders = this.props.genders.map((gender, i) => (
       <CategoryIcon
         key={i}
         name={`gender`}
@@ -91,7 +40,7 @@ class FilterCenter extends Component {
       />
     ));
 
-    const Materials = this.state.materials.map((material, i) => (
+    const Materials = this.props.materials.map((material, i) => (
       <CategoryIcon
         key={i}
         name={`material`}
