@@ -78,6 +78,7 @@ class Main extends Component {
       </div>
     );
   }
+
 }
 
 export default withRouter(Main);

@@ -1,0 +1,22 @@
+{
+    "SignUpData": [
+        {
+            "UserName": "김바보",
+            "UserEmail": "a@gmail.com",
+            "PWInSignUp": "7654321",
+            "CheckPW": "7654321"
+        },
+        {
+            "UserName": "봄이다",
+            "UserEmail": "b@gmail.com",
+            "PWInSignUp": "1234567",
+            "CheckPW": "12345678"
+        },
+        {
+            "UserName": "그래",
+            "UserEmail": "c@gmail.com",
+            "PWInSignUp": "0987654",
+            "CheckPW": "0987654"
+        }
+    ]
+}

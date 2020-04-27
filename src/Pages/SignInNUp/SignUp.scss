@@ -1,0 +1,75 @@
+.SignUp {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+    background-color: #f8f8f8;
+        .ContentWrapper {
+        width: 500px;
+        .Logo {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 200px;
+            }
+        }
+        h2 {
+            border-bottom: 0.5px solid #a37e2c;
+            font-size: 14px;
+            margin: 0px 0px 22px;
+            padding-bottom: 9px;
+        }
+        .IdPwInput {
+            div{
+                padding: 10px;
+                margin-top: 15px;
+                color: grey;
+            }
+            input {
+                width: 500px;
+                padding: 9px 12px;
+                border-radius: 4px;
+                border: 1px solid #cecaca;
+                font-size: 14px;
+            }
+        }
+
+        .AgreeJoin {
+            display: flex;
+            flex-direction: row;
+            margin: 40px 10px 0px;
+            button {
+                width: 18px;
+                padding: 0px;
+            }
+            div {
+                margin-left: 10px;
+            }
+        }
+        .WraptheBtn{
+            button {
+                width: 188px;
+                padding: 6px 30px;
+                margin-top: 30px;
+                background-color: transparent;
+                transition-duration: 0.3s;
+                transition-property: color, border-color, background-color, fill;
+                border: 1px solid rgb(18, 120, 74);
+                color:  rgb(18, 120, 74);
+                border-radius: 30px;
+                font-size: 17px;
+                font-weight: 400;
+                &:hover {
+                    background-color: rgb(18, 120, 74);
+                    color: rgb(248, 248, 248);
+                }
+            }
+            .Join {
+                border: none;
+            }
+        }
+    }
+}
