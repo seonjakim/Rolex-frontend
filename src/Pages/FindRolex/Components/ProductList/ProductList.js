@@ -1,130 +1,62 @@
 import React, { Component } from "react";
 import GridChange from "./Components/GridChange";
-import ProductCard from "./Components/ProductCard"
+import ProductCard from "./Components/ProductCard";
+import DescriptionCard from "./Components/DescriptionCard";
 import "./ProductList.scss";
 
-const watches = [
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-    {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  },
-  {
-    name: "Day-Date 40",
-    outline: "오이스터, 40mm, 옐로우 골드",
-    img:
-      "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-  }
-];
-
-
-const Products = watches.map((watch,idx) => (
-  <ProductCard
-    key={idx}
-    idx={idx}
-    className={`item`+idx}
-    data={watch}
-  />
-))
-
 class ProductList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkbox: false,
+      watches: [],
+      descriptions: [],
+      watches02: [],
+    };
+  }
+
+  componentDidMount = () => {
+    this.getData();
+  };
+
+  getData = () => {
+    fetch("http://localhost:3000/data/data.json")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          watches: res.watches,
+          descriptions: res.descriptions,
+        });
+      });
+  };
+
+  toggleChange = () => {
+    this.setState({
+      checkbox: !this.state.checkbox,
+    });
+  };
+
   render() {
+    const Products = this.state.watches.map((watch, idx) => (
+      <ProductCard key={idx} idx={idx} class={`item` + idx} data={watch} />
+    ));
+
+    const Descriptions = this.state.descriptions.map((des, idx) => (
+      <DescriptionCard key={idx} idx={idx} class={`des` + idx} data={des} />
+    ));
+
     return (
       <div className="ProductList">
-        <GridChange />
-        <div className="ListGrid">
+        <GridChange toggle={this.toggleChange} checkbox={this.state.checkbox} />
+        <div
+          className={
+            this.state.checkbox === false
+              ? "ListGrid Grid01"
+              : "ListGrid Grid02"
+          }
+        >
           {Products}
+          {Descriptions}
         </div>
       </div>
     );

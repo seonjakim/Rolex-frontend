@@ -1,119 +1,122 @@
 {
-    "genders" : [
-        {
-            "title": "36mm",
-            "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-36.jpg"
-          },
-          {
-            "title": "40mm",
-            "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-40.jpg"
-          }
-    ],
+  "genders": [
+    {
+      "title": "36mm",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-36.jpg"
+    },
+    {
+      "title": "40mm",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-40.jpg"
+    }
+  ],
 
-    "materials" : [
-      {
-        "title": "옐로우 골드",
-        "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-yellow-gold.jpg"
-      },
-      {
-        "title": "핑크 골드",
-        "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-pink-gold.jpg"
-      },
-      {
-        "title": "화이트 골드",
-        "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-white-gold.jpg"
-      },
-      {
-        "title": "플래티넘",
-        "img":"https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-platinum.jpg"
-      }
-    ],
+  "materials": [
+    {
+      "title": "옐로우 골드",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-yellow-gold.jpg"
+    },
+    {
+      "title": "핑크 골드",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-pink-gold.jpg"
+    },
+    {
+      "title": "화이트 골드",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-white-gold.jpg"
+    },
+    {
+      "title": "플래티넘",
+      "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-platinum.jpg"
+    }
+  ],
 
-    "watches" : [
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 36",
-        "outline": "오이스터, 36mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0069.png?impolicy=v6-upright&imwidth=270, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0069.png?impolicy=v6-upright&imwidth=540 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      },
-      {
-        "name": "Day-Date 40",
-        "outline": "오이스터, 40mm, 옐로우 골드",
-        "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
-      }
-    ]
+  "watches": [
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 옐로우 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 옐로우 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0069.png?impolicy=v6-upright&imwidth=270, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0069.png?impolicy=v6-upright&imwidth=540 2x"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 화이트 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228349rbr-0003.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228349rbr-0003.png?impolicy=v6-upright&imwidth=840 2x"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 에버로즈 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128345rbr-0028.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128345rbr-0028.png?impolicy=v6-upright&imwidth=840 2x"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 옐로우 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0008.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 옐로우 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0022.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 에버로즈 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228345rbr-0002.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 에버로즈 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128345rbr-0043.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 화이트 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128239-0023.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 플래티넘",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228206-0004.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 옐로우 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128348rbr-0037.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 화이트 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228239-0046.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 36",
+      "outline": "오이스터, 36mm, 화이트 골드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128239-0025.png?impolicy=v6-upright&imwidth=840"
+    },
+    {
+      "name": "Day-Date 40",
+      "outline": "오이스터, 40mm, 옐로우 골드와 다이아몬드",
+      "img": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228348rbr-0002.png?impolicy=v6-upright&imwidth=840"
+    }
+  ],
+
+  "descriptions": [
+    {
+      "img": "https://content.rolex.com/dam/watches/watchmaking-snippets/display-features/rolex_watchmaking_day_display_0001_584x422.jpg",
+      "name": "1956년 처음 선보인 데이-데이트(Day-Date)는",
+      "outline": "요일의 전체 글자를 표시한 세계 최초의 시계였습니다. 글로벌 리더들이 즐겨 찾는 데이-데이트는 세계 각국의 언어로 표시됩니다."
+    },
+    {
+      "img": "https://content.rolex.com/dam/watches/watchmaking-snippets/bracelets-and-clasps/rolex_watchmaking_president_bracelet_0001_584x346.jpg",
+      "name": "프레지던트(President) 브레슬릿은 1956년 오이스터 퍼페츄얼 데이-데이트(Oyster Perpetual Day-Date)의 출시를 위해 제작되었습니다.",
+      "outline": "프레지던트 브레슬릿은 반원형 링크 3열로 구성된 특별하고 세련된 금속 브레슬릿으로 현재 데이-데이트 컬렉션과 최고급 금속으로 제작된 여성용 데이트저스트(Datejust) 일부 모델에만 장착되고 있으며, 롤렉스의 우아한 크라운클라스프(Crownclasp)가 겉으로 보이지 않게 장착되어 있습니다."
+    },
+    {
+      "img": "https://content.rolex.com/dam/watches/watchmaking-snippets/movement/calibre/rolex_watchmaking_calibre_3255_0001_584x464.jpg",
+      "name": "데이-데이트 40 (Day-Date 40)은 최상의 성능을 구현하기 위하여 롤렉스에서 직접 개발하고 제작한 차세대 무브먼트인 칼리버 3255를 탑재하고 있습니다. ",
+      "outline": "이 새로운 오토매틱 와인딩 메케니컬 무브먼트는 워치메이킹 기술의 정점입니다. 14개의 롤렉스 특허를 포함, 롤렉스의 워치메이킹 기술이 고스란히 담겨 있는 무브먼트로 정밀함, 파워리저브, 충격과 자기장에 대한 저항, 사용의 편의성, 신뢰도 등의 다양한 측면에서 핵심적인 성과를 보여줍니다."
+    }
+  ]
 }

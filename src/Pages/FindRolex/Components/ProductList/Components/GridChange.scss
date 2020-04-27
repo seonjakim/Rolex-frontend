@@ -1,5 +1,43 @@
 .GridChange {
-    height: 43px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80vw;
 
-    border: 1px solid green;
+  .DivCheck {
+    width: 56px;
+    height: 28px;
+    border-radius: 22px;
+    margin: 15px 0;
+    background-color: #11784a;
+    position: relative;
+  }
+  .checkBox01 {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    left: 2px;
+    transform: translate3d(28px, 0px, 0px);
+    background: rgb(255, 255, 255);
+    border-radius: 22px;
+    transition: all 0.2s linear 0s;
+  }
+  .checkBox02 {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    left: -25px;
+    transform: translate3d(28px, 0px, 0px);
+    background: rgb(255, 255, 255);
+    border-radius: 22px;
+    transition: all 0.2s linear 0s;
+  }
 }
