@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Indepth2 extends Component {
+export default class IndepthBot extends Component {
   constructor() {
     super();
     this.state = {

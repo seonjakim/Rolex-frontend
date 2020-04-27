@@ -1,59 +1,64 @@
 import React, { Component } from "react";
 import "./RolexInDepth.scss";
-import Indepth1 from "./Components/Indepth1";
-import Indepth2 from "./Components/Indepth2";
+import IndepthTop from "./Components/IndepthTop";
+import IndepthBot from "./Components/IndepthBot";
 
 export default class RolexInDepth extends Component {
   constructor() {
     super();
     this.state = {
-      indepthData1: [],
-      indepthData2: [],
-      hover: false,
+      indepthDataTop: [],
+      indepthDataBot: [],
     };
   }
 
   componentDidMount = () => {
-    this.getData1();
-    this.getData2();
+    this.getDataTop();
+    this.getDataBot();
   };
 
-  getData1 = () => {
-    fetch("http://localhost:3000/data/IndepthData1.json")
+  getDataTop = () => {
+    fetch("http://localhost:3000/data/IndepthDataTop.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.IndepthData1가 이렇게 생겼어요 : ", res.IndepthData1);
-        this.setState({ indepthData1: res.IndepthData1 });
+        console.log(
+          "res.IndepthDataTop이 이렇게 생겼어요 : ",
+          res.IndepthDataTop
+        );
+        this.setState({ indepthDataTop: res.IndepthDataTop });
       });
   };
 
-  getData2 = () => {
-    fetch("http://localhost:3000/data/IndepthData2.json")
+  getDataBot = () => {
+    fetch("http://localhost:3000/data/IndepthDataBot.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.IndepthData2가 이렇게 생겼어요 : ", res.IndepthData2);
-        this.setState({ indepthData2: res.IndepthData2 });
+        console.log(
+          "res.IndepthDataBot이 이렇게 생겼어요 : ",
+          res.IndepthDataBot
+        );
+        this.setState({ indepthDataBot: res.IndepthDataBot });
       });
   };
 
   render() {
-    let IndepthList1 = this.state.indepthData1.map((indepth1) => {
+    let IndepthList1 = this.state.indepthDataTop.map((indepthtopdatum) => {
       return (
-        <Indepth1
-          pic={indepth1.pic_url}
-          name={indepth1.name}
-          detail={indepth1.detail}
-          link={indepth1.link}
+        <IndepthTop
+          pic={indepthtopdatum.pic_url}
+          name={indepthtopdatum.name}
+          detail={indepthtopdatum.detail}
+          link={indepthtopdatum.link}
         />
       );
     });
-    let IndepthList2 = this.state.indepthData2.map((indepth2) => {
+    let IndepthList2 = this.state.indepthDataBot.map((indepthbotdatum) => {
       return (
-        <Indepth2
-          pic={indepth2.pic_url}
-          name={indepth2.name}
-          detail={indepth2.detail}
-          link={indepth2.link}
+        <IndepthBot
+          pic={indepthbotdatum.pic_url}
+          name={indepthbotdatum.name}
+          detail={indepthbotdatum.detail}
+          link={indepthbotdatum.link}
         />
       );
     });

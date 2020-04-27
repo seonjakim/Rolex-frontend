@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import TwitterIcon from "../../../../Images/TwitterIcon";
+import FacebookIcon from "../../../../Images/FacebookIcon";
 import "./PageShare.scss";
+import PinterestIcon from "../../../../Images/PinterestIcon";
+import LinkedinIcons from "../../../../Images/LinkedinIcons";
+import ShowMoreIcon from "../../../../Images/ShowMoreIcon";
+import WeiboIcon from "../../../../Images/WeiboIcon";
+import QQIcon from "../../../../Images/QQIcon";
+import DoubanIcon from "../../../../Images/DoubanIcon";
 
 export default class PageShare extends Component {
   state = {
-    display: true,
+    txtIconDisplay: true,
   };
 
   render() {
@@ -11,135 +19,57 @@ export default class PageShare extends Component {
       <div className="pageShare">
         <div
           className={
-            this.state.display ? "shareTxtNIcon" : "shareTxtNIconClick"
+            this.state.txtIconDisplay ? "shareTxtNIcon" : "shareTxtNIconClick"
           }
         >
           <div className="shareTxt">이 페이지 공유하기</div>
           <div className="shareIcon">
             <div>
               <button>
-                <svg
-                  aria-labelledby=""
-                  height="15"
-                  width="15"
-                  viewBox="0 0 15 15"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="green"
-                  role="img"
-                >
-                  <path d="m15 2.85c-.55.24-1.14.41-1.77.49.64-.38 1.12-.98 1.35-1.7-.6.35-1.25.61-1.96.75-.56-.6-1.36-.97-2.24-.97-1.7 0-3.08 1.38-3.08 3.08 0 .24.03.48.08.7-2.55-.14-4.82-1.37-6.34-3.23-.26.45-.41.98-.41 1.55 0 1.07.54 2.01 1.37 2.56-.51-.02-.98-.16-1.4-.39v.04c0 1.49 1.06 2.74 2.47 3.02-.26.07-.53.1-.81.1-.2 0-.39-.02-.58-.05.39 1.22 1.53 2.11 2.87 2.14-1.05.82-2.38 1.31-3.82 1.31-.25 0-.49-.01-.73-.04 1.36.87 2.98 1.38 4.72 1.38 5.66 0 8.75-4.69 8.75-8.75l-.01-.4c.61-.43 1.13-.97 1.54-1.59zm0 0"></path>
-                </svg>
+                <TwitterIcon />
               </button>
             </div>
             <div>
               <button>
-                <svg
-                  aria-labelledby=""
-                  height="15"
-                  width="15"
-                  viewBox="0 0 15 15"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="green"
-                  role="img"
-                >
-                  <path d="m11.5 0v2.25h-2.93c-.31 0-.57.32-.57.63v1.62h3.25l-.61 2.25h-2.64v8.25h-2.25v-8.25h-2.25v-2.25h2.25v-1.75c0-1.59 1.17-2.75 2.75-2.75z"></path>
-                </svg>
+                <FacebookIcon />
               </button>
             </div>
             <div>
               <button>
-                <svg
-                  aria-labelledby=""
-                  height="15"
-                  width="15"
-                  viewBox="0 0 15 15"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="green"
-                  role="img"
-                >
-                  <path d="m13.5 5.34c0 3.18-2.04 5.75-4.87 5.75-.95 0-1.85-.49-2.15-1.06 0 0-.47 1.76-.59 2.2-.19.71-.65 1.57-1.02 2.18-.03.05-.06.11-.1.16-.02.03-.04.05-.05.08-.12.15-.25.29-.39.35 0 0-.16-.13-.25-.58 0-.03-.02-.07-.02-.1-.01-.09-.02-.19-.03-.3 0 0 0 0 0-.01-.06-.7-.08-1.58.07-2.24.17-.72 1.1-4.59 1.1-4.59s-.27-.56-.27-1.38c0-1.29.76-2.24 1.7-2.24.8 0 1.19.59 1.19 1.3 0 .79-.51 1.98-.78 3.08-.22.92.47 1.67 1.39 1.67 1.67 0 2.95-1.73 2.95-4.23 0-2.21-1.62-3.76-3.92-3.76-2.67 0-4.24 1.97-4.24 4.01 0 .79.31 1.65.7 2.11.07.09.08.17.06.26-.07.29-.23.92-.26 1.05-.04.17-.13.2-.31.12-1.18-.54-1.91-2.22-1.91-3.58 0-2.91 2.15-5.59 6.21-5.59 3.26 0 5.79 2.28 5.79 5.34z"></path>
-                </svg>
+                <PinterestIcon />
               </button>
             </div>
             <div>
               <button>
-                <svg
-                  aria-labelledby=""
-                  height="15"
-                  width="15"
-                  viewBox="0 0 15 15"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="green"
-                  role="img"
-                >
-                  <path d="m15 8.91v5.74h-3.1v-5.36c0-1.34-.47-2.26-1.6-2.26-.86 0-1.39.62-1.62 1.22-.07.21-.11.51-.11.81v5.59h-3.1s.04-9.05 0-10h3.1v1.41c0 .01.01.01 0 .01v-.01c.48-.68 1.17-1.66 2.83-1.66 2.05 0 3.6 1.43 3.6 4.51zm-13.32-8.55c-1.02 0-1.68.72-1.68 1.66 0 .93.64 1.67 1.64 1.67h.02c1.03 0 1.68-.74 1.68-1.67-.03-.94-.65-1.66-1.66-1.66zm-1.44 14.28h2.86v-10h-2.86z"></path>
-                </svg>
+                <LinkedinIcons />
               </button>
             </div>
 
-            {this.state.display && (
+            {this.state.txtIconDisplay && (
               <div>
-                <button onClick={() => this.setState({ display: false })}>
-                  <svg
-                    aria-labelledby=""
-                    height="15"
-                    width="15"
-                    viewBox="0 0 15 15"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="green"
-                    role="img"
-                  >
-                    <path d="m4 7.5c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm3.5-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm5.5 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
-                  </svg>
+                <button
+                  onClick={() => this.setState({ txtIconDisplay: false })}
+                >
+                  <ShowMoreIcon />
                 </button>
               </div>
             )}
 
-            {!this.state.display && (
+            {!this.state.txtIconDisplay && (
               <>
                 <div>
                   <button>
-                    <svg
-                      aria-labelledby=""
-                      height="15"
-                      width="15"
-                      viewBox="0 0 15 15"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="green"
-                      role="img"
-                    >
-                      <path d="m11.07 7.59c-.25-.09-.33-.09-.25-.44.25-.62.25-1.24 0-1.59-.49-.71-1.8-.71-3.28 0 0 0-.49.27-.33-.18.25-.8.16-1.51-.16-1.86-.82-.89-2.95 0-4.84 2.04-1.39 1.5-2.21 3.09-2.21 4.51 0 2.66 3.11 4.43 6.15 4.43 4.02 0 6.64-2.75 6.64-4.7.08-1.24-.9-1.95-1.72-2.21zm-4.84 5.67c-2.46.27-4.51-.97-4.67-2.66-.17-1.77 1.64-3.37 4.1-3.63 2.46-.27 4.51.89 4.67 2.66s-1.64 3.36-4.1 3.63zm8.77-7.89c0-2.66-2.05-4.87-4.51-4.87-.33 0-.49.27-.49.53 0 .35.25.53.49.53 1.89 0 3.44 1.68 3.44 3.72 0 .35.25.53.49.53.42.18.58-.08.58-.44zm-2.05-.09c-.25-1.24-1.15-2.3-2.38-2.57-.24-.08-.57.18-.65.45s.16.62.41.71c.74.18 1.39.8 1.56 1.68.08.27.33.53.66.44.24-.08.48-.35.4-.71zm-7.95 3.46c-.98.18-1.64 1.06-1.48 1.95s1.07 1.42 2.05 1.24 1.64-1.06 1.48-1.95c-.16-.97-1.07-1.51-2.05-1.24z"></path>
-                    </svg>
+                    <WeiboIcon />
                   </button>
                 </div>
                 <div>
                   <button>
-                    <svg
-                      aria-labelledby=""
-                      height="15"
-                      width="15"
-                      viewBox="0 0 15 15"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="green"
-                      role="img"
-                    >
-                      <path d="m7.94.01c-.81-.07-1.36.51-1.43 1.29s.36 1.46 1.17 1.53 5.97.83 7.17 6.17c.05-.26.09-.52.11-.78.39-4.16-2.75-7.84-7.02-8.21zm-2.77 7.95c-.2.53-.23 1.04-.07 1.13.11.06.28-.08.44-.35.06.3.22.56.45.78-.24.09-.39.25-.39.44 0 .3.42.54.93.54.46 0 .85-.2.92-.46h.11c.07.26.45.46.92.46.51 0 .93-.24.93-.54 0-.18-.15-.34-.39-.44.22-.22.38-.49.44-.78.16.27.33.41.44.35.16-.09.13-.6-.07-1.13-.16-.41-.37-.72-.53-.78 0-.03 0-.05 0-.08 0-.16-.04-.31-.11-.43 0-.01 0-.02 0-.03 0-.07-.02-.14-.04-.2-.03-1.08-.65-1.94-1.65-1.94s-1.62.86-1.66 1.94c-.03.06-.04.12-.04.2v.03c-.07.12-.11.27-.11.43v.08c-.15.06-.36.37-.52.78zm8.53 3.54c.45-.67.19-1.44-.46-1.88s-1.45-.37-1.9.3-3.58 4.85-8.84 3.36c.2.17.41.32.63.47 3.47 2.32 8.21 1.31 10.57-2.25zm-12.98-.55c.34.74 1.12.93 1.84.61.71-.32 1.09-1.04.75-1.77-.34-.74-2.23-5.61 1.82-9.29-.25.08-.49.18-.74.29-3.81 1.71-5.45 6.27-3.67 10.16z"></path>
-                    </svg>
+                    <QQIcon />
                   </button>
                 </div>
                 <div>
                   <button>
-                    <svg
-                      aria-labelledby=""
-                      height="15"
-                      width="15"
-                      viewBox="0 0 15 15"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="green"
-                      role="img"
-                    >
-                      <path d="m15 1.25v1.25h-15v-1.25zm-4.38 11.25h4.38v1.25h-15v-1.25h4.37l-1.24-3.75h-.63-1.25v-1.25-2.5-1.25h1.25 10 1.25v5h-1.25-.63zm1.88-5v-2.5h-10v2.5zm-1.88 1.25h-6.24l1.25 3.75h3.75z"></path>
-                    </svg>
+                    <DoubanIcon />
                   </button>
                 </div>
               </>

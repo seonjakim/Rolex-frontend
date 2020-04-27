@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export default class Indepth1 extends Component {
+export default class IndepthTop extends Component {
   constructor() {
     super();
     this.state = {
-      hover: false,
+      depthImageHover: false,
     };
   }
   render() {
@@ -12,18 +12,22 @@ export default class Indepth1 extends Component {
       <a href={this.props.link}>
         <li
           onMouseEnter={() => {
-            this.setState({ hover: true });
+            this.setState({ depthImageHover: true });
           }}
           onMouseLeave={() => {
-            this.setState({ hover: false });
+            this.setState({ depthImageHover: false });
           }}
         >
           <div
-            className={this.state.hover ? "depthPicHover" : "depthPic"}
+            className={
+              this.state.depthImageHover ? "depthPicHover" : "depthPic"
+            }
             style={{ backgroundImage: `url(${this.props.pic})` }}
           ></div>
           <figcaption
-            className={this.state.hover ? "depthTitleHover" : "depthTitle"}
+            className={
+              this.state.depthImageHover ? "depthTitleHover" : "depthTitle"
+            }
           >
             <span>{this.props.name}</span>
             <span>{this.props.detail}</span>
