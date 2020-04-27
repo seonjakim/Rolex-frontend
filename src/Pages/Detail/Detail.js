@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import './Detail.scss';
 
 class Detail extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className='Detail'>
                 here is Detail
             </div>
