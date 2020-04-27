@@ -11,6 +11,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-scrollbar-custom": "^1.2.0",
+    "react-scrollbars-custom": "^4.0.21",
     "sass": "^1.26.3",
     "save": "^2.4.0"
   },
