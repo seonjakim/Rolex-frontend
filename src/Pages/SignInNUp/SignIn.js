@@ -1,6 +1,6 @@
 import React from 'react';
-import './SignIn.scss';
 import ColorLogo from './ColorLogo.png'
+import './SignIn.scss';
 
 class SignIn extends React.Component {
     constructor() {
@@ -32,16 +32,16 @@ class SignIn extends React.Component {
             <div className="SignIn">
                 <div className="ContentWrapper">
                     <div className="Logo">
-                        <img src={ColorLogo} />
+                        <img src={ColorLogo} alt="color logo" />
                     </div>
                     <h2>로그인</h2>
                     <div className="IdPwInput">
                         <div>이메일</div>
-                        <input className="EmailAddress" onChange={this.GetEmail = (e) => { this.setState({ EmailAddress: e.target.value }) }}></input>
+                        <input className="EmailAddress" onChange={(e) => { this.setState({ EmailAddress: e.target.value }) }}></input>
                     </div>
                     <div className="IdPwInput">
                         <div>비밀번호</div>
-                        <input className="PW" onChange={this.GetPW = (e) => { this.setState({ PW: e.target.value }) }} type="password"></input>
+                        <input className="PW" onChange={(e) => { this.setState({ PW: e.target.value }) }} type="password"></input>
                     </div>
                     <div className="WraptheBtn">
                         <button>

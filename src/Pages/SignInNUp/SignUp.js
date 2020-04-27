@@ -1,7 +1,6 @@
 import React from 'react';
-import './SignUp.scss';
 import ColorLogo from './ColorLogo.png'
-
+import './SignUp.scss';
 
 class SignUp extends React.Component {
     constructor() {
@@ -34,24 +33,24 @@ class SignUp extends React.Component {
             <div className="SignUp">
                 <div className="ContentWrapper">
                     <div className="Logo">
-                        <img src={ColorLogo} />
+                        <img src={ColorLogo} alt="color logo" />
                     </div>
                     <h2>회원가입</h2>
                     <div className="IdPwInput">
                         <div>이름</div>
-                        <input className="UserName" onChange={this.GetUserName = (e) => { this.setState({ UserName: e.target.value }) }}></input>
+                        <input className="UserName" onChange={(e) => { this.setState({ UserName: e.target.value }) }}></input>
                     </div>
                     <div className="IdPwInput">
                         <div>이메일</div>
-                        <input className="UserEmail" onChange={this.GetUserEmail = (e) => { this.setState({ UserEmail: e.target.value }) }}></input>
+                        <input className="UserEmail" onChange={(e) => { this.setState({ UserEmail: e.target.value }) }}></input>
                     </div>
                     <div className="IdPwInput">
                         <div>비밀번호</div>
-                        <input type="password" className="PWInSignUp" onChange={this.UserPassword = (e) => { this.setState({ PWInSignUp: e.target.value }) }}></input>
+                        <input type="password" className="PWInSignUp" onChange={(e) => { this.setState({ PWInSignUp: e.target.value }) }}></input>
                     </div>
                     <div className="IdPwInput">
                         <div>비밀번호 확인</div>
-                        <input type="password" className="CheckPW" onChange={this.CheckPassword = (e) => { this.setState({ CheckPW: e.target.value }) }}></input>
+                        <input type="password" className="CheckPW" onChange={(e) => { this.setState({ CheckPW: e.target.value }) }}></input>
                     </div>
                     <div className="AgreeJoin">
                         <button type="checkbox"></button>
