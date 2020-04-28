@@ -1,40 +1,22 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import TopNav from "../../Components/TopNav/TopNav";
 import FilterCenter from "./Components/FilterCenter/FilterCenter";
 import ProductList from "./Components/ProductList/ProductList";
 import FilterRight from "./Components/FilterRight/FilterRight";
-
+import FindRolexArrow from "../../Images/FindRolexArrow";
 import "./FindRolex.scss";
 
 class FindRolex extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {
-      genders : [],
-      materials : [],
-
-    }
+    this.state = {};
   }
-
-  componentDidMount = () => {
-    this.getData();
-  }
-
-  getData = () => {
-    fetch("http://localhost:3000/data/data.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          genders: res.genders,
-          materials: res.materials,
-        })
-      })
-  }
-
 
   render() {
     return (
       <div className="FindRolex">
+        <TopNav />
         <div className="VideoBox">
           <video
             src={require("./Videos/FindRolexVideoTop.mp4")}
@@ -47,17 +29,16 @@ class FindRolex extends Component {
           <h3 className="VideoText">품격 있는 시계의 상징</h3>
         </div>
         <div className="ContentBox">
-          <FilterCenter 
-          genders={this.state.genders}
-          materials={this.state.materials}
-          />
-          <ProductList
-          watches={this.state.watches}
-          />
+          <FilterCenter />
+          <ProductList />
           <FilterRight />
-          <div className="sharebox"></div>
+          <div className="page">
+            페이지 1
+            <FindRolexArrow />
+          </div>
+          <div className="sharebox">shareboxr section</div>
         </div>
-        <div className="footer"></div>
+        <div className="footer">footer section</div>
       </div>
     );
   }
