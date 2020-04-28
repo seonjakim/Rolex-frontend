@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import RolexInDepth from "./Component/RolexInDepth/RolexInDepth";
 import Retailer from "./Component/Retailer/Retailer";
 import PageShare from "./Component/PageShare/PageShare";
@@ -78,7 +78,6 @@ class Main extends Component {
       </div>
     );
   }
-
 }
 
 export default withRouter(Main);

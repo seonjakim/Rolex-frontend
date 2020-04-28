@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./HowItsMade.scss";
 
 export default class HowItsMade extends Component {
