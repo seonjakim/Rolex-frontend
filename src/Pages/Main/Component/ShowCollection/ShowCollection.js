@@ -33,57 +33,36 @@ export default class ShowCollection extends Component {
   };
 
   whenScrolled = () => {
-    if (this.scrollbar.scrollLeft > 200) {
-      this.setState({ LBtnAppear: true });
-    } else {
-      this.setState({ LBtnAppear: false });
-    }
-    if (
-      this.scrollbar.scrollLeft >
-      this.scrollbar.scrollWidth - this.scrollbar.clientWidth - 200
-    ) {
-      this.setState({ RBtnAppear: false });
-    } else {
-      this.setState({ RBtnAppear: true });
-    }
+    const { scrollLeft, scrollWidth, clientWidth } = this.scrollbar;
+    scrollLeft > 200
+      ? this.setState({ LBtnAppear: true })
+      : this.setState({ LBtnAppear: false });
+
+    scrollLeft > scrollWidth - clientWidth - 200
+      ? this.setState({ RBtnAppear: false })
+      : this.setState({ RBtnAppear: true });
   };
 
   whenLClicked = () => {
-    let firstElMargin = this.scrollbar.clientWidth * 0.05;
+    const { scrollLeft, clientWidth, scrollTo } = this.scrollbar;
+    let firstElMargin = clientWidth * 0.05;
     let firstElWidth = 377 + firstElMargin;
-    let howManyEl = parseInt((this.scrollbar.scrollLeft - firstElWidth) / 399);
-    let howMuchInEl =
-      (this.scrollbar.scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
-    if (howMuchInEl > 200) {
-      this.scrollbar.scrollTo(
-        this.scrollbar.scrollLeft - (howMuchInEl + firstElMargin),
-        0
-      );
-    } else {
-      this.scrollbar.scrollTo(
-        this.scrollbar.scrollLeft - (howMuchInEl + 399 + firstElMargin),
-        0
-      );
-    }
+    let howManyEl = parseInt((scrollLeft - firstElWidth) / 399);
+    let howMuchInEl = (scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
+    howMuchInEl > 200
+      ? scrollTo(scrollLeft - (howMuchInEl + firstElMargin), 0)
+      : scrollTo(scrollLeft - (howMuchInEl + 399 + firstElMargin), 0);
   };
 
   whenRClicked = () => {
-    let firstElMargin = this.scrollbar.clientWidth * 0.05;
+    const { scrollLeft, clientWidth, scrollTo } = this.scrollbar;
+    let firstElMargin = clientWidth * 0.05;
     let firstElWidth = 377 + firstElMargin;
-    let howManyEl = parseInt((this.scrollbar.scrollLeft - firstElWidth) / 399);
-    let howMuchInEl =
-      (this.scrollbar.scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
-    if (howMuchInEl > 200) {
-      this.scrollbar.scrollTo(
-        this.scrollbar.scrollLeft + (399 - howMuchInEl) - firstElMargin + 399,
-        0
-      );
-    } else {
-      this.scrollbar.scrollTo(
-        this.scrollbar.scrollLeft + (399 - howMuchInEl) - firstElMargin,
-        0
-      );
-    }
+    let howManyEl = parseInt((scrollLeft - firstElWidth) / 399);
+    let howMuchInEl = (scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
+    howMuchInEl > 200
+      ? scrollTo(scrollLeft + (399 - howMuchInEl) - firstElMargin + 399, 0)
+      : scrollTo(scrollLeft + (399 - howMuchInEl) - firstElMargin, 0);
   };
 
   render() {

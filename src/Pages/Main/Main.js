@@ -5,6 +5,7 @@ import Retailer from "./Component/Retailer/Retailer";
 import PageShare from "./Component/PageShare/PageShare";
 import HowItsMade from "./Component/HowItsMade/HowItsMade";
 import ShowCollection from "./Component/ShowCollection/ShowCollection";
+import MovingArrow from "../../Images/MovingArrow";
 import "./Main.scss";
 
 class Main extends Component {
@@ -28,16 +29,7 @@ class Main extends Component {
           </div>
           <div className="animeArrow">
             <span>
-              <svg
-                aria-labelledby=""
-                height="15"
-                width="15"
-                viewBox="0 0 15 15"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-              >
-                <path d="m15 5.41-7.5 7.91-7.5-7.91 1.95-1.95 5.55 5.83 5.55-5.83z"></path>
-              </svg>
+              <MovingArrow />
             </span>
           </div>
         </div>

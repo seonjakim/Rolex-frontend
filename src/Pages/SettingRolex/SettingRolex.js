@@ -4,7 +4,32 @@ import "./SettingRolex.scss";
 
 class SettingRolex extends Component {
   render() {
-    return <div className="SettingRolex">here is SettingRolex</div>;
+    return (
+      <div className="SettingRolex">
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+        <div>Footer</div>
+      </div>
+    );
   }
 }
 
