@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import FilterCenter from "./Components/FilterCenter/FilterCenter";
 import ProductList from "./Components/ProductList/ProductList";
 import FilterRight from "./Components/FilterRight/FilterRight";
+import TopNav from "../../Components/TopNav/TopNav";
 
 import "./FindRolex.scss";
 
@@ -15,6 +16,7 @@ class FindRolex extends Component {
   render() {
     return (
       <div className="FindRolex">
+        <TopNav />
         <div className="VideoBox">
           <video
             src={require("./Videos/FindRolexVideoTop.mp4")}

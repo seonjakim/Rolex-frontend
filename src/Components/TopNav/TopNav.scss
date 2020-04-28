@@ -1,0 +1,60 @@
+.TopNav {
+  .Nav {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    color: white;
+    transition: all 0.5s ease-out;
+    border: 1px solid red;
+
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+  .onTopNav {
+    height: 80px;
+    &:hover {
+      color: black;
+      background-color: white;
+      transition: all 0.5s ease-out;
+    }
+  }
+  .MiddleNav {
+    height: 60px;
+  }
+  .ScrollDown {
+    top: -80px;
+    transition: all 0.5s ease-out;
+  }
+  .ScrollUp {
+    top: 0;
+    transition: all 0.5s ease-out;
+    background-color: white;
+    color: black;
+  }
+  .menu {
+    width: 43px;
+    text-align: center;
+  }
+  .NavContainer {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    .leftMenu {
+      display: flex;
+      justify-content: space-between;
+      div {
+        margin: 0 10px;
+      }
+    }
+    .rightMenu {
+      display: flex;
+      justify-content: space-between;
+      div {
+        margin: 0 10px;
+      }
+    }
+  }
+}
