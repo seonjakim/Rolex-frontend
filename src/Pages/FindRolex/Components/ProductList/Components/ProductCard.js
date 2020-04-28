@@ -10,7 +10,7 @@ class ProductCard extends React.Component {
   render() {
     return (
       <div
-        className={this.props.class + ` Card`}
+        className={`${this.props.class} Card`}
         style={{ gridArea: `main` + this.props.idx }}
       >
         <svg
