@@ -2,4 +2,34 @@
   * {
     border: 1px solid black;
   }
+  .settingZone {
+    height: 780px;
+    .configurator {
+      height: 544px;
+    }
+    .btnSection {
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btnContainer {
+        width: 572.4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button:first-of-type {
+          width: 103.9px;
+          height: 39px;
+        }
+        button:last-of-type {
+          width: 154.2px;
+          height: 40px;
+        }
+        .emptyBuffer {
+          width: 209.1px;
+          height: 30px;
+        }
+      }
+    }
+  }
 }

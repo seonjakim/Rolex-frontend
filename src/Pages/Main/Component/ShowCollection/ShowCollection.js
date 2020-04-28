@@ -49,9 +49,11 @@ export default class ShowCollection extends Component {
     let firstElWidth = 377 + firstElMargin;
     let howManyEl = parseInt((scrollLeft - firstElWidth) / 399);
     let howMuchInEl = (scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
-    howMuchInEl > 200
-      ? scrollTo(scrollLeft - (howMuchInEl + firstElMargin), 0)
-      : scrollTo(scrollLeft - (howMuchInEl + 399 + firstElMargin), 0);
+    scrollTo(
+      scrollLeft -
+        (howMuchInEl + firstElMargin + (howMuchInEl > 200 ? 0 : 399)),
+      0
+    );
   };
 
   whenRClicked = () => {
@@ -60,9 +62,13 @@ export default class ShowCollection extends Component {
     let firstElWidth = 377 + firstElMargin;
     let howManyEl = parseInt((scrollLeft - firstElWidth) / 399);
     let howMuchInEl = (scrollLeft - firstElWidth - howManyEl * 399 - 22) % 377;
-    howMuchInEl > 200
-      ? scrollTo(scrollLeft + (399 - howMuchInEl) - firstElMargin + 399, 0)
-      : scrollTo(scrollLeft + (399 - howMuchInEl) - firstElMargin, 0);
+    scrollTo(
+      scrollLeft +
+        (399 - howMuchInEl) -
+        firstElMargin +
+        (howMuchInEl > 200 ? 399 : 0),
+      0
+    );
   };
 
   render() {
