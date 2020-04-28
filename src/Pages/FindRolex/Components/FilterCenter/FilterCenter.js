@@ -24,8 +24,8 @@ class FilterCenter extends Component {
       .then((res) => {
         const { genders, materials } = res;
         this.setState({
-          genders: genders,
-          materials: materials,
+          genders,
+          materials,
         });
       });
   };

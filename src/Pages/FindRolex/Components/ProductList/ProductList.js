@@ -25,8 +25,8 @@ class ProductList extends Component {
       .then((res) => {
         const { watches, descriptions } = res;
         this.setState({
-          watches: watches,
-          descriptions: descriptions,
+          watches,
+          descriptions,
         });
       });
   };
@@ -51,7 +51,7 @@ class ProductList extends Component {
         <GridChange toggle={this.toggleChange} checkbox={this.state.checkbox} />
         <div
           className={
-            this.state.checkbox ? "ListGrid Grid01" : "ListGrid Grid02"
+            this.state.checkbox ? "ListGrid Grid02" : "ListGrid Grid01"
           }
         >
           {Products}
