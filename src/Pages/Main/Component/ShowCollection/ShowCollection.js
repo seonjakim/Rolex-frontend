@@ -108,7 +108,7 @@ export default class ShowCollection extends Component {
             <div className="collections">
               <Scrollbar
                 ref={(ref) => (this.scrollbar = ref)}
-                trackClickBehavior="step"
+                trackClickBehavior="STEP"
                 noDefaultStyles
               >
                 {CollectionList}

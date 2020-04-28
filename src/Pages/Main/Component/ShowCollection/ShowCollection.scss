@@ -82,7 +82,6 @@
                 }
                 li {
                   display: inline-block;
-                  //position: relative;
                   height: 490.79px;
                   width: 100%;
 
@@ -90,7 +89,6 @@
 
                   .collectionPic {
                     height: 424.59px;
-                    //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
                     object-fit: cover;
                     background-size: cover;
                     transform: scale(1);
@@ -98,7 +96,6 @@
                   }
                   .collectionPicHover {
                     height: 424.59px;
-                    //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
                     object-fit: cover;
                     background-size: cover;
                     transform: scale(1.05);
@@ -141,12 +138,10 @@
                   .collectionTitleHover {
                     display: flex;
                     flex-direction: column;
-                    //height: 66.2px;
                     background-color: white;
                     transform: translateY(-10px);
                     transform-origin: 50% 50%;
                     transition: transform 0.2s ease 0s;
-                    //overflow: hidden;
                     span {
                       &:first-child {
                         font-weight: 700;
