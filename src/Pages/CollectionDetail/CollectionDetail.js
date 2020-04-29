@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import DisplayWithHeart from './Components/DisplayWithHeart'
+import SideSlideDayDate from './Components/SideSlideDayDate/SideSlideDayDate'
 import './CollectionDetail.scss';
 
 class CollectionDetail extends Component {
@@ -55,14 +56,25 @@ class CollectionDetail extends Component {
                     </div>
 
                 </div>
-                <div className="DivForSlidingShow">
-                    <div>
-                        <div>
-                            <ul>
+                {/* <SideSlideDayDate /> */}
+                <div class="carousel carousel-wrap">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
 
-                            </ul>
-                        </div>
-                    </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
                 </div>
             </div>
         )

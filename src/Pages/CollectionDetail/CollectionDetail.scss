@@ -91,7 +91,8 @@
       }
     }
     .movingPic {
-      height: 772px;
+      display: block;
+      // height: 772px;
       display: flex;
       flex-direction: column;
       // transform-style: preserve-3d;
@@ -101,25 +102,66 @@
         height: 120%;
         transform: translate3d(0px, 0.29);
         img {  
-          width: 100vw;
-          height: 100vh;
+          width: 100%;
+          height: 100%;
           top: -10%;
-          transform-origin: 50% 50%;
+          // transform-origin: 50% 50%;
           transition: transform 0.5s linear 0s;
         }
       }
     }
 
+    .carousel-wrap {
+      overflow-x: auto;
+      width: 100%;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      ul {
+        width: calc(340px * 5);
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        background-color: #ddd;
+        border: #ccc;
+        float: left;
+        margin: 20px;
+        width: 300px;
+        height: 260px;
+      }
+    }
+
     .DivForSlidingShow {
-      display: block;
+
+      // display: block;
+      // height: 60vw;
+      width: calc(100%-10vw);
+      // overflow-x: scroll;
         div {
           div {
+            width: 100vw;
+            overflow-x: auto;
             ul {
               display: grid;
-              grid-template-columns: repeat(6, 1fr);
+              grid-template-columns: repeat(8, 1fr);
               grid-gap: 30px;
-              grid-template-areas:
-              "main0 main1 main2 main3 main4 main5";  
+              // grid-template-areas:
+              // "main0 main1 main2 main3 main4 main5 main6 main7"; 
+              overflow: auto;
+              width: 2000px;
+
+              li {
+                height: 581.4px;
+                border: 1px solid black;
+                list-style: none;
+                &:first-child {
+                  width: 20vw;
+                }
+              }
             }
           }
         }
