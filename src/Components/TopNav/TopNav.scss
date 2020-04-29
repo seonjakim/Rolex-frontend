@@ -1,60 +1,121 @@
 .TopNav {
+  .iconLike,
+  .iconSearch,
+  .iconEnter,
+  .iconMenu {
+    margin-right: 8px;
+  }
+
   .Nav {
     width: 100%;
     top: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     color: white;
     transition: all 0.5s ease-out;
-    border: 1px solid red;
-
+    padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 28px;
+
+    .st0,
+    .st1 {
+      fill: white;
+    }
   }
   .onTopNav {
-    height: 80px;
+    height: 100px;
+    .iconSearch,
+    .iconLike,
+    .iconEnter,
+    .iconMenu {
+      fill: white;
+    }
     &:hover {
       color: black;
       background-color: white;
       transition: all 0.5s ease-out;
+      .st0 {
+        fill: #a37e2d;
+      }
+      .st1 {
+        fill: #00603a;
+      }
+      .iconSearch,
+      .iconLike,
+      .iconEnter,
+      .iconMenu {
+        fill: black;
+      }
     }
   }
   .MiddleNav {
     height: 60px;
+    padding-bottom: 10px !important;
+    .stLogo {
+      width: 60px;
+      margin-bottom: -10px;
+    }
   }
   .ScrollDown {
     top: -80px;
     transition: all 0.5s ease-out;
+    .iconSearch,
+    .iconLike,
+    .iconEnter,
+    .iconMenu {
+      fill: white;
+    }
   }
   .ScrollUp {
     top: 0;
     transition: all 0.5s ease-out;
     background-color: white;
     color: black;
+    .st0 {
+      fill: #a37e2d;
+    }
+    .st1 {
+      fill: #00603a;
+    }
   }
   .menu {
-    width: 43px;
-    text-align: center;
+    margin-left: 60px !important;
+    margin-right: 80px !important;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 10px;
+    }
   }
   .NavContainer {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: flex-end;
 
     width: 100%;
-    .leftMenu {
-      display: flex;
-      justify-content: space-between;
-      div {
-        margin: 0 10px;
-      }
-    }
+    .leftMenu,
     .rightMenu {
       display: flex;
       justify-content: space-between;
       div {
-        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        margin: 0 15px;
       }
+      div:hover {
+        color: #00603a !important;
+        cursor: pointer;
+        svg {
+          fill: #00603a;
+        }
+      }
+    }
+    .logo {
+      margin-bottom: -10px;
     }
   }
 }

@@ -1,0 +1,79 @@
+.InMenu {
+  width: 100%;
+  height: 100%;
+  .menuWindow {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: white;
+
+    overflow: hidden;
+    .outMenu {
+      margin-left: 80px;
+      margin-top: 50px;
+    }
+
+    .inMenuLeft {
+      width: 50%;
+      height: 100%;
+      background-color: #212121;
+      overflow: scroll;
+      padding-left: 130px;
+      padding-right: 130px;
+      .st0 {
+        fill: #a37e2d;
+      }
+      .st1 {
+        fill: white;
+      }
+      .logo {
+        height: 80px;
+        padding-top: 10px;
+        top: 0;
+        left: 22%;
+        position: fixed;
+      }
+      .slideShow {
+        height: 300px;
+        margin-top: 90px;
+      }
+      .menuList {
+        padding: 30px 0;
+        list-style-type: none;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        outline: none;
+        transition: color 0.3s ease 0s;
+
+        div {
+          padding: 25px 0;
+          border-bottom: 1px solid gray;
+        }
+        li {
+          margin: 12px 0;
+        }
+        .language {
+          position: fixed;
+          bottom: 0;
+          background-color: #212121;
+          width: 50%;
+          border-bottom: none;
+        }
+        .org {
+          margin-bottom: 100px;
+          border-bottom: 1px solid gray;
+        }
+      }
+    }
+    .inMenuRight {
+      width: 50%;
+      background-color: black;
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+import TopNavLogo from "../../Images/TopNavLogo";
+import TopNavSearch from "../../Images/TopNavSearch";
+import TopNavLike from "../../Images/TopNavLike";
+import TopNavEnter from "../../Images/TopNavEnter";
+import TopNavMenu from "../../Images/TopNavMenu";
+import InMenu from "./inMenu";
 import "./TopNav.scss";
 
 class TopNav extends Component {
@@ -6,6 +12,7 @@ class TopNav extends Component {
     super(props);
     this.state = {
       navClass: "Nav onTopNav",
+      openMenu: false,
       point: [0, 0],
     };
   }
@@ -34,22 +41,47 @@ class TopNav extends Component {
       });
     }
   };
+
+  openMenuHandle = () => {
+    this.setState({
+      openMenu: !this.state.openMenu,
+    });
+  };
+
   render() {
     return (
       <div className="TopNav">
+        <InMenu
+          openMenu={this.state.openMenu}
+          openMenuHandle={this.openMenuHandle}
+        />
         <div className={this.state.navClass}>
-          {/* <div className="menu">메뉴</div> */}
           <div className="NavContainer">
             <div className="leftMenu">
+              <div className="menu" onClick={this.openMenuHandle}>
+                <TopNavMenu />
+                메뉴
+              </div>
               <div>컬렉션</div>
               <div>롤렉스 세계</div>
               <div>공식 판매점 찾기</div>
             </div>
-            <div>로고</div>
+            <div className="logo">
+              <TopNavLogo />
+            </div>
             <div className="rightMenu">
-              <div>검색하기</div>
-              <div>나의 셀렉션</div>
-              <div>로그인</div>
+              <div>
+                <TopNavSearch />
+                검색하기
+              </div>
+              <div>
+                <TopNavLike />
+                나의 셀렉션
+              </div>
+              <div>
+                <TopNavEnter />
+                로그인
+              </div>
             </div>
           </div>
         </div>
