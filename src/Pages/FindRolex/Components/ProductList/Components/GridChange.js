@@ -10,11 +10,7 @@ class GridChange extends Component {
     return (
       <div className="GridChange">
         <div className="DivCheck" onClick={this.props.toggle}>
-          <div
-            className={
-              this.props.checkbox === false ? "checkBox01" : "checkBox02"
-            }
-          />
+          <div className={this.props.checkbox ? "checkBox02" : "checkBox01"} />
         </div>
       </div>
     );

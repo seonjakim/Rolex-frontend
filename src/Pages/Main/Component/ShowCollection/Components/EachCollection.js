@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Collection.scss";
+import "./EachCollection.scss";
 
-export default class Collection extends Component {
+export default class EachCollection extends Component {
   constructor() {
     super();
     this.state = {
@@ -10,7 +10,7 @@ export default class Collection extends Component {
   }
   render() {
     return (
-      <a href={this.props.link}>
+      <a href={this.props.link} idx={this.props.idx}>
         <li
           onMouseEnter={() => {
             this.setState({ hover: true });

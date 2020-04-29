@@ -10,8 +10,8 @@ class ProductCard extends React.Component {
   render() {
     return (
       <div
-        className={this.props.class + ` Card`}
-        style={{ gridArea: `des` + this.props.idx }}
+        className={`${this.props.class} Card`}
+        style={{ gridArea: `des${this.props.idx}` }}
       >
         <div>
           <img src={this.props.data.img} alt="" />

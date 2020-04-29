@@ -23,9 +23,10 @@ class ProductList extends Component {
     fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
       .then((res) => {
+        const { watches, descriptions } = res;
         this.setState({
-          watches: res.watches,
-          descriptions: res.descriptions,
+          watches,
+          descriptions,
         });
       });
   };
@@ -38,11 +39,11 @@ class ProductList extends Component {
 
   render() {
     const Products = this.state.watches.map((watch, idx) => (
-      <ProductCard key={idx} idx={idx} class={`item` + idx} data={watch} />
+      <ProductCard key={idx} idx={idx} class={`item${idx}`} data={watch} />
     ));
 
     const Descriptions = this.state.descriptions.map((des, idx) => (
-      <DescriptionCard key={idx} idx={idx} class={`des` + idx} data={des} />
+      <DescriptionCard key={idx} idx={idx} class={`des${idx}`} data={des} />
     ));
 
     return (
@@ -50,9 +51,7 @@ class ProductList extends Component {
         <GridChange toggle={this.toggleChange} checkbox={this.state.checkbox} />
         <div
           className={
-            this.state.checkbox === false
-              ? "ListGrid Grid01"
-              : "ListGrid Grid02"
+            this.state.checkbox ? "ListGrid Grid02" : "ListGrid Grid01"
           }
         >
           {Products}

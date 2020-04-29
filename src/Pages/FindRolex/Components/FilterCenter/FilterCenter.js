@@ -8,7 +8,6 @@ class FilterCenter extends Component {
     this.state = {
       genders: [],
       materials: [],
-      watches: [],
       selectedGender: "",
       selectedMaterial: "",
       selectedJewerly: "",
@@ -23,22 +22,29 @@ class FilterCenter extends Component {
     fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
       .then((res) => {
+        const { genders, materials } = res;
         this.setState({
-          genders: res.genders,
-          materials: res.materials,
+          genders,
+          materials,
         });
       });
   };
 
   selected = (cate, name, idx) => {
-    cate === idx
-      ? this.setState({
-          [name]: "",
-        })
-      : this.setState({
-          [name]: idx,
-        });
+    this.setState({
+      [name]: cate === idx ? "" : idx,
+    });
   };
+
+  // selected = (cate, name, idx) => {
+  //   cate === idx
+  //     ? this.setState({
+  //         [name]: "",
+  //       })
+  //     : this.setState({
+  //         [name]: idx,
+  //       });
+  // };
 
   resetSelected = () => {
     this.setState({
@@ -47,6 +53,7 @@ class FilterCenter extends Component {
   };
 
   render() {
+    console.log(this.state);
     const Genders = this.state.genders.map((gender, i) => (
       <CategoryIcon
         key={i}
