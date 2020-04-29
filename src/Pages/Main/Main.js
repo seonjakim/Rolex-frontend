@@ -18,10 +18,10 @@ class Main extends Component {
             type="video/mp4"
             autoPlay
             muted
-            playsinline
+            playsInline
             loop
             preload="auto"
-            class="sc-pRTZB jXSwJn"
+            className="sc-pRTZB jXSwJn"
           />
           <div className="videoTitle">
             <div>DAY-DATE</div>
@@ -44,10 +44,10 @@ class Main extends Component {
             type="video/mp4"
             autoPlay
             muted
-            playsinline=""
+            playsInline=""
             loop
             preload="auto"
-            class="sc-pRTZB jXSwJn"
+            className="sc-pRTZB jXSwJn"
           />
           <a
             className="planetTxt"

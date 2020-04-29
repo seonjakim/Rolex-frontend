@@ -53,7 +53,6 @@ class FilterCenter extends Component {
   };
 
   render() {
-    console.log(this.state);
     const Genders = this.state.genders.map((gender, i) => (
       <CategoryIcon
         key={i}

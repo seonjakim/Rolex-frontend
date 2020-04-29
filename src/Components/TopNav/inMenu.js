@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TopNavLogo from "../../Images/TopNavLogo";
+import TopNavLanguage from "../../Images/TopNavLanguage";
+import TopNavCancel from "../../Images/TopNavCancel";
 import "./inMenu.scss";
 class InMenu extends Component {
   constructor(props) {
@@ -18,13 +20,14 @@ class InMenu extends Component {
             onClick={this.props.openMenuHandle}
             style={{ position: "absolute" }}
           >
-            여기를 누르세요
+            <TopNavCancel />
           </div>
           <div className="inMenuLeft">
+            <div className="first"></div>
             <div className="logo">
               <TopNavLogo />
             </div>
-            <div className="slideShow">1</div>
+            <div className="slideShow">슬라이드</div>
             <div className="menuList">
               <div>
                 <li>롤렉스 컬렉션</li>
@@ -42,10 +45,16 @@ class InMenu extends Component {
               <div className="org">
                 <li>Rolex.org에 대해</li>
               </div>
-              <div className="language">언어</div>
+              <div className="language">
+                <TopNavLanguage />
+                &nbsp;&nbsp;언어
+              </div>
             </div>
           </div>
-          <div className="inMenuRight"></div>
+          <div
+            className="inMenuRight"
+            onClick={this.props.openMenuHandle}
+          ></div>
         </div>
       </div>
     );

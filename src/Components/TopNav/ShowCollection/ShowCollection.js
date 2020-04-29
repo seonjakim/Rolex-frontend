@@ -20,25 +20,19 @@ export default class ShowCollection extends Component {
     fetch("http://localhost:3000/data/CollectionData.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log(
-          "res.CollectionData가 이렇게 생겼어요 : ",
-          res.CollectionData
-        );
         this.setState({ collectionData: res.CollectionData });
       });
   };
 
   render() {
-    let CollectionList = this.state.collectionData.map((collection) => {
-      return (
-        <Collection
-          pic={collection.pic_url}
-          name={collection.name}
-          detail={collection.detail}
-          link={collection.link}
-        />
-      );
-    });
+    let CollectionList = this.state.collectionData.map((collection) => (
+      <Collection
+        pic={collection.pic_url}
+        name={collection.name}
+        detail={collection.detail}
+        link={collection.link}
+      />
+    ));
     return (
       <div className="showCollection">
         <div className="collectionTxtNSwipe">
