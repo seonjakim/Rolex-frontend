@@ -6,7 +6,7 @@ class Detail extends Component {
     render() {
         return (
             <div className='Detail'>
-                here is Detail
+
             </div>
         )
     }
