@@ -1,5 +1,4 @@
 import React from "react";
-import FindRolexLike from "../../../../../Images/FindRolexLike";
 import "./ProductCard.scss";
 
 class ProductCard extends React.Component {
@@ -12,9 +11,8 @@ class ProductCard extends React.Component {
     return (
       <div
         className={`${this.props.class} Card`}
-        style={{ gridArea: `main` + this.props.idx }}
+        style={{ gridArea: `des${this.props.idx}` }}
       >
-        <FindRolexLike />
         <div>
           <img src={this.props.data.img} alt="" />
           <h2>{this.props.data.name}</h2>

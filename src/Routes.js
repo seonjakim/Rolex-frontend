@@ -8,11 +8,13 @@ import Collection from "./Pages/Collection/Collection";
 import MapRolex from "./Pages/MapRolex/MapRolex";
 import SignIn from "./Pages/SignInNUp/SignIn";
 import SignUp from "./Pages/SignInNUp/SignUp";
+import TopNav from "./Components/TopNav/TopNav";
 
 class Routes extends React.Component {
   render() {
     return (
       <Router>
+        <TopNav />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/settingrolex" component={SettingRolex} />

@@ -1,48 +1,11 @@
-.showCollection {
-  height: 690.483px;
+.ShowCollection {
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover {
-    .collectionTxtNSwipe {
-      button {
-        visibility: visible;
-        &:first-of-type {
-          transform: translateX(5vw);
-          opacity: 1;
-        }
-        &:last-of-type {
-          transform: translateX(-5vw);
-          opacity: 1;
-        }
-      }
-    }
-  }
   .collectionTxtNSwipe {
-    position: relative;
-    height: 584.563px;
     width: 100%;
-    .collectionTxt {
-      padding-left: 5vw;
-      color: rgb(33, 33, 33);
-      font-weight: 400;
-      letter-spacing: 0px;
-      font-size: calc(0.875rem + 0.125 * ((100vw - 20rem) / 100));
-      line-height: 1.3;
-      margin-bottom: 30px;
-      a {
-        color: rgb(18, 120, 74);
-        font-size: 1rem;
-        text-decoration: none;
-        transition: all 0.3s ease 0s;
-        &:hover {
-          color: rgba(18, 120, 74, 0.5);
-          transition: all 0.3s ease 0s;
-        }
-      }
-    }
     .collectionSwipe {
-      height: 533.763px;
+      height: 380px;
       .collections {
         position: relative;
         width: 100%;
@@ -51,48 +14,51 @@
         -webkit-box-align: center;
         align-items: center;
         -webkit-box-pack: center;
-
         .ScrollbarsCustom {
           width: 100%;
           height: 100%;
-          .ScrollbarsCustom-Wrapper {
+
+          & > .ScrollbarsCustom-Wrapper {
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            .ScrollbarsCustom-Scroller {
-              scroll-behavior: smooth;
-              .ScrollbarsCustom-Content {
-                width: 100%;
+
+            & > .ScrollbarsCustom-Scroller {
+              & > .ScrollbarsCustom-Content {
+                //   width: 100%;
                 text-align: initial;
                 white-space: nowrap;
                 position: relative;
                 a {
                   color: inherit;
                   display: inline-block;
-                  width: 377px;
-                  margin-left: 22px;
+                  width: 13vw;
+                  margin-left: 10px;
                   &:first-child {
-                    margin-left: 5vw;
-                  }
-                  &:last-child {
-                    margin-right: 5vw;
+                    margin-left: 8vw;
                   }
                 }
                 li {
                   display: inline-block;
-                  height: 490.79px;
+                  // height: 500px;
                   width: 100%;
+
                   overflow: hidden;
+                  &:last-child {
+                    margin-right: 8vw;
+                  }
                   .collectionPic {
-                    height: 424.59px;
+                    height: 29.5vh;
+                    //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
                     object-fit: cover;
                     background-size: cover;
                     transform: scale(1);
                     transition: transform 0.6s ease 0s;
                   }
                   .collectionPicHover {
-                    height: 424.59px;
+                    height: 30vh;
+                    //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
                     object-fit: cover;
                     background-size: cover;
                     transform: scale(1.05);
@@ -102,21 +68,19 @@
                     display: flex;
                     flex-direction: column;
                     height: 66.2px;
-                    background-color: white;
                     transform: translateY(0px);
                     transition: transform 0.2s ease 0s;
                     span {
                       &:first-child {
                         font-weight: 700;
                         font-size: calc(
-                          0.6875rem + 0.3125 * ((100vw - 20rem) / 100)
+                          0.625rem + 0.125 * ((100vw - 20rem) / 100)
                         );
-                        line-height: 1.4;
                         margin: 10px 0px 0px;
                       }
                       &:nth-child(2) {
                         letter-spacing: 0.3px;
-                        font-size: 0.875rem;
+                        font-size: 0.75rem;
                         line-height: 1.3;
                         margin: 0px;
                       }
@@ -135,22 +99,22 @@
                   .collectionTitleHover {
                     display: flex;
                     flex-direction: column;
-                    background-color: white;
-                    transform: translateY(-10px);
+                    transform: translateY(-17px);
                     transform-origin: 50% 50%;
                     transition: transform 0.2s ease 0s;
                     span {
                       &:first-child {
                         font-weight: 700;
                         font-size: calc(
-                          0.6875rem + 0.3125 * ((100vw - 20rem) / 100)
+                          0.625rem + 0.125 * ((100vw - 20rem) / 100)
                         );
                         line-height: 1.4;
-                        margin: 10px 0px 0px;
+                        padding: 10px 0px 0px;
+                        background-color: rgb(33, 33, 33);
                       }
                       &:nth-child(2) {
                         letter-spacing: 0.3px;
-                        font-size: 0.875rem;
+                        font-size: 0.75rem;
                         line-height: 1.3;
                         margin: 0px;
                       }
@@ -159,8 +123,7 @@
                         transition: opacity 0.2s linear 0s;
                         padding-left: 0px;
                         font-weight: 400;
-                        color: rgb(33, 33, 33);
-                        margin-top: 5px;
+                        margin-top: 4.5px;
                         font-size: 0.875rem;
                         letter-spacing: 0.3px;
                       }
@@ -177,74 +140,28 @@
           .ScrollbarsCustom-Track {
             border-radius: 4px;
           }
-
-          .ScrollbarsCustom-Thumb {
-            background: rgba(255, 255, 255, 0.12);
-            cursor: pointer;
-            border-radius: 4px;
-          }
-
           .ScrollbarsCustom-ThumbX {
             height: 4px;
-            background: rgb(18, 120, 74);
+            border-radius: 4px;
+            background: #ffffff;
             transition: height 0.2s ease 0s;
             &:hover {
-              height: 6px;
+              height: 5px;
               transition: height 0.2s ease 0s;
             }
           }
-
           .ScrollbarsCustom-TrackX {
             position: absolute;
             display: flex;
             align-items: center;
-            height: 4px;
-            width: calc(100% - 10vw);
+            height: 4.5px;
+            width: calc(100% - 16vw);
             bottom: 0;
-            left: 5vw;
-            background-color: rgba(33, 33, 33, 0.2);
+            left: 8vw;
+            background-color: rgba(255, 255, 255, 0.2);
           }
         }
       }
-    }
-    button {
-      visibility: hidden;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      color: rgb(0, 0, 0);
-      background-color: rgb(255, 255, 255);
-      cursor: pointer;
-      flex-direction: row;
-      transition-property: all;
-      transition-duration: 0.3s;
-      line-height: 1;
-      border-style: solid;
-      border-color: transparent;
-      border-radius: 50%;
-      border-width: 1px;
-      padding: 0.75rem;
-      text-decoration: none;
-      outline: none;
-      position: absolute;
-      top: 50%;
-      &:first-of-type {
-        left: 0;
-        opacity: 0;
-      }
-      &:last-of-type {
-        right: 0;
-        opacity: 0;
-      }
-      &:hover {
-        background-color: rgb(18, 120, 74);
-        border-color: transparent;
-        fill: white;
-      }
-    }
-    .false {
-      display: none;
     }
   }
 }
