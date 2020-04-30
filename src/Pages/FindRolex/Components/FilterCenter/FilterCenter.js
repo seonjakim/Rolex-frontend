@@ -31,20 +31,30 @@ class FilterCenter extends Component {
       });
   };
 
-  selected = (cate, name, idx) => {
-    this.setState(
-      {
-        [name]: cate === idx ? "" : idx,
-      },
-      () => {
-        const { selectedSize, selectedMaterial } = this.state;
-        this.props.onFilterChange &&
-          this.props.onFilterChange({
-            selectedSize,
-            selectedMaterial,
-          });
-      }
-    );
+  // selected = (cate, name, idx) => {
+  //   this.setState(
+  //     {
+  //       [name]: cate === idx ? "" : idx,
+  //     },
+  //     () => {
+  //       const { selectedSize, selectedMaterial } = this.state;
+  //       this.props.onFilterChange &&
+  //         this.props.onFilterChange({
+  //           selectedSize,
+  //           selectedMaterial,
+  //         });
+  //     }
+  //   );
+  // };
+
+  clickHandlerSizes = (value) => {
+    this.props.onFilterChange(value);
+    this.setState({ selectedSize: value });
+  };
+
+  clickHandlerMaterials = (value) => {
+    this.props.onFilterChange(value);
+    this.setState({ selectedMaterial: value });
   };
 
   resetSelected = () => {
@@ -60,9 +70,7 @@ class FilterCenter extends Component {
         name="size"
         idx={i}
         data={size}
-        onClick={() =>
-          this.selected(this.state.selectedSize, "selectedSize", size.value)
-        }
+        onClick={() => this.clickHandlerSizes(size.value)}
         isSelected={size.value === this.state.selectedSize}
       />
     ));
@@ -73,13 +81,7 @@ class FilterCenter extends Component {
         name={`material`}
         idx={i}
         data={material}
-        onClick={() =>
-          this.selected(
-            this.state.selectedMaterial,
-            "selectedMaterial",
-            material.value
-          )
-        }
+        onClick={() => this.clickHandlerMaterials(material.value)}
         isSelected={material.value === this.state.selectedMaterial}
       />
     ));

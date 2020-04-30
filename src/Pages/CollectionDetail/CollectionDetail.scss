@@ -1,0 +1,189 @@
+.CollectionDetail {
+    .videoBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(33, 33, 33);
+        overflow: hidden;
+        height: 90vh;
+        position: relative;
+    
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(0.5);
+        }
+        .videoTitle {
+          border: none;
+          * {
+            border: none;
+          }
+    
+          position: absolute;
+          text-align: center;
+          color: white;
+          div:first-child {
+            font-weight: 400;
+            font-size: calc(1.5625rem + 1.5625 * ((100vw - 20rem) / 100));
+            margin-bottom: 20px;
+          }
+          div:nth-child(2) {
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            font-size: calc(0.75rem + 0.5 * ((100vw - 20rem) / 100));
+            line-height: 1.3;
+          }
+        }
+    }
+    .LetteringBelowVedio {
+        height: 114px;
+        .LetteringWrapper {
+            margin: 20vh auto 0px;
+            width: 75%;
+
+            p {
+                margin: 0px 0px 20px;
+                color: #212121;
+                line-height: 1.5;
+                &:first-child {
+                    font-size: calc(1.25rem + 0.625 * ((100vw - 20rem) / 100));
+                }
+                &:last-child {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .TwoButton {
+      display: block;
+      width: fit-content;
+      height: 50px;
+      margin: 60px auto 0px;
+      button{
+        *{
+          // transition: all 0.3s ease 0s;
+          transition-duration: 0.3s;
+          transition-property: color, border-color, background-color, fill;
+        }
+        background: transparent;
+        // border: transparent;
+        color: rgb(0, 96, 57);
+        padding: 11px 30px;
+        font-size: 16px;
+        &:first-child {
+          // background-color: rgb(0, 96, 57);
+          color: rgb(0, 96, 57);
+          border-radius: 1.875rem;
+          border: 1px solid rgb(0, 96, 57);
+          &:hover {
+            background-color: rgb(0, 96, 57);
+            color: #ffffff;
+          }
+        }
+        &:last-child {
+          border: transparent;
+          &:hover {
+            color: rgba(18, 120, 74, 0.5);
+          }
+        }
+      }
+    }
+    .movingPic {
+      display: block;
+      // height: 772px;
+      display: flex;
+      flex-direction: column;
+      // transform-style: preserve-3d;
+      // transition-duration: 0.5s;
+      // transform: translate3d(0px, 4.98133%, 0px);
+      div {
+        height: 120%;
+        transform: translate3d(0px, 0.29);
+        img {  
+          width: 100%;
+          height: 100%;
+          top: -10%;
+          // transform-origin: 50% 50%;
+          transition: transform 0.5s linear 0s;
+        }
+      }
+    }
+
+    .carousel-wrap {
+      overflow-x: auto;
+      width: 100%;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      ul {
+        width: calc(340px * 5);
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        background-color: #ddd;
+        border: #ccc;
+        float: left;
+        margin: 20px;
+        width: 300px;
+        height: 260px;
+      }
+    }
+
+    .DivForSlidingShow {
+
+      // display: block;
+      // height: 60vw;
+      width: calc(100%-10vw);
+      // overflow-x: scroll;
+        div {
+          div {
+            width: 100vw;
+            overflow-x: auto;
+            ul {
+              display: grid;
+              grid-template-columns: repeat(8, 1fr);
+              grid-gap: 30px;
+              // grid-template-areas:
+              // "main0 main1 main2 main3 main4 main5 main6 main7"; 
+              overflow: auto;
+              width: 2000px;
+
+              li {
+                height: 581.4px;
+                border: 1px solid black;
+                list-style: none;
+                &:first-child {
+                  width: 20vw;
+                }
+              }
+            }
+          }
+        }
+    }
+    .bracelet {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .lettering {
+      width: 100%;
+      div {
+        background-color: black;
+        color: #ffffff;
+        padding: 10vh 26vw;
+      }
+    }
+    .insidePic {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+}
