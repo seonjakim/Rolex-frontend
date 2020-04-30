@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import TopNavLogo from "../../Images/TopNavLogo";
 import TopNavLanguage from "../../Images/TopNavLanguage";
 import TopNavCancel from "../../Images/TopNavCancel";
@@ -7,6 +8,10 @@ class InMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+  goTo(location) {
+    this.props.history.push(location);
+    this.props.openMenuHandle();
   }
   render() {
     return (
@@ -24,7 +29,7 @@ class InMenu extends Component {
           </div>
           <div className="inMenuLeft">
             <div className="first"></div>
-            <div className="logo">
+            <div className="logo" onClick={() => this.goTo("/")}>
               <TopNavLogo />
             </div>
             <div className="slideShow">슬라이드</div>
@@ -32,7 +37,7 @@ class InMenu extends Component {
               <div>
                 <li>롤렉스 컬렉션</li>
                 <li>시계 설정하기</li>
-                <li>시계 골라보기</li>
+                <li onClick={() => this.goTo("/findrolex")}>시계 골라보기</li>
                 <li>역사 & 워치메이킹</li>
               </div>
               <div>
@@ -61,4 +66,4 @@ class InMenu extends Component {
   }
 }
 
-export default InMenu;
+export default withRouter(InMenu);

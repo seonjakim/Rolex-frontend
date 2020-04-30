@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import TopNavLogo from "../../Images/TopNavLogo";
 import TopNavSearch from "../../Images/TopNavSearch";
 import TopNavLike from "../../Images/TopNavLike";
@@ -71,6 +72,9 @@ class TopNav extends Component {
       openSelection: !this.state.openSelection,
     });
   };
+  goTo(location) {
+    this.props.history.push(location);
+  }
   render() {
     return (
       <div className="TopNav">
@@ -93,7 +97,7 @@ class TopNav extends Component {
               <div>롤렉스 세계</div>
               <div>공식 판매점 찾기</div>
             </div>
-            <div className="logo">
+            <div className="logo" onClick={() => this.goTo("/")}>
               <TopNavLogo />
             </div>
             <div className="rightMenu">
@@ -106,7 +110,7 @@ class TopNav extends Component {
                 나의 셀렉션
                 {/* 로그인 안된 상태에서 클릭하면 로그인 창으로 보내버리자 어딜감히 */}
               </div>
-              <div>
+              <div onClick={() => this.goTo("/signin")}>
                 <TopNavEnter />
                 로그인
               </div>
@@ -118,4 +122,4 @@ class TopNav extends Component {
   }
 }
 
-export default TopNav;
+export default withRouter(TopNav);

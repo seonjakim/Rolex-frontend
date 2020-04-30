@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CategoryIcon from "./Components/CategoryIcon";
+
 import "./FilterCenter.scss";
 
 class FilterCenter extends Component {
@@ -35,16 +36,6 @@ class FilterCenter extends Component {
       [name]: cate === idx ? "" : idx,
     });
   };
-
-  // selected = (cate, name, idx) => {
-  //   cate === idx
-  //     ? this.setState({
-  //         [name]: "",
-  //       })
-  //     : this.setState({
-  //         [name]: idx,
-  //       });
-  // };
 
   resetSelected = () => {
     this.setState({
@@ -84,7 +75,7 @@ class FilterCenter extends Component {
         {Genders}
         {Materials}
         <div className="CategoryItem FilterContainer">
-          <div className="FilterBox" />
+          <div className="FilterBox" onClick={this.props.openFilterHandle} />
           <span>모든 필터</span>
         </div>
       </div>
