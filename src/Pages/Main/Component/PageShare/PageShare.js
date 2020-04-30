@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import TwitterIcon from "../../../../Images/TwitterIcon";
 import FacebookIcon from "../../../../Images/FacebookIcon";
-import "./PageShare.scss";
 import PinterestIcon from "../../../../Images/PinterestIcon";
 import LinkedinIcons from "../../../../Images/LinkedinIcons";
 import ShowMoreIcon from "../../../../Images/ShowMoreIcon";
 import WeiboIcon from "../../../../Images/WeiboIcon";
 import QQIcon from "../../../../Images/QQIcon";
 import DoubanIcon from "../../../../Images/DoubanIcon";
+import "./PageShare.scss";
 
 export default class PageShare extends Component {
   state = {

@@ -11,7 +11,6 @@ import SignIn from './Pages/SignInNUp/SignIn'
 import SignUp from './Pages/SignInNUp/SignUp'
 
 
-
 class Routes extends React.Component {
   render() {
     return (
@@ -27,6 +26,7 @@ class Routes extends React.Component {
           <Route exact path='/signin' component={SignIn} />
           <Route exact path='/signup' component={SignUp} />
           <Redirect from='*' to="/" />
+
         </Switch>
       </Router>
     );

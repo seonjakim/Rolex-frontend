@@ -3,7 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    .collectionTxtNSwipe {
+      button {
+        visibility: visible;
+        &:first-of-type {
+          transform: translateX(5vw);
+          opacity: 1;
+        }
+        &:last-of-type {
+          transform: translateX(-5vw);
+          opacity: 1;
+        }
+      }
+    }
+  }
   .collectionTxtNSwipe {
+    position: relative;
     height: 584.563px;
     width: 100%;
     .collectionTxt {
@@ -36,19 +52,18 @@
         -webkit-box-align: center;
         align-items: center;
         -webkit-box-pack: center;
-        //justify-content: center;
+
         .ScrollbarsCustom {
           width: 100%;
           height: 100%;
-
-          & > .ScrollbarsCustom-Wrapper {
+          .ScrollbarsCustom-Wrapper {
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-
-            & > .ScrollbarsCustom-Scroller {
-              & > .ScrollbarsCustom-Content {
+            .ScrollbarsCustom-Scroller {
+              scroll-behavior: smooth;
+              .ScrollbarsCustom-Content {
                 width: 100%;
                 text-align: initial;
                 white-space: nowrap;
@@ -56,10 +71,13 @@
                 a {
                   color: inherit;
                   display: inline-block;
-                  width: 377.6px;
+                  width: 377px;
                   margin-left: 22px;
                   &:first-child {
                     margin-left: 5vw;
+                  }
+                  &:last-child {
+                    margin-right: 5vw;
                   }
                 }
                 li {
@@ -69,9 +87,7 @@
                   width: 100%;
 
                   overflow: hidden;
-                  &:last-child {
-                    margin-right: 5vw;
-                  }
+
                   .collectionPic {
                     height: 424.59px;
                     //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
@@ -196,85 +212,47 @@
             left: 5vw;
             background-color: rgba(33, 33, 33, 0.2);
           }
-
-          // &.trackXVisible {
-          //   &:hover {
-          //     .ScrollbarsCustom-TrackX {
-          //       background: rgba(33, 33, 33, 0.2);
-          //     }
-
-          //     .ScrollbarsCustom-ThumbX {
-          //       background: rgb(18, 120, 74);
-
-          //       &:hover,
-          //       &.dragging {
-          //         background: rgb(18, 120, 74);
-          //       }
-          //     }
-          //   }
-          // }
         }
-
-        // ul {
-        //   list-style-type: none;
-        //   display: grid;
-        //   height: 100%;
-        //   min-height: auto;
-        //   width: 100%;
-        //   //padding-left: 5vw;
-        //   grid-template-columns: repeat(14, 25vw) calc(30vw);
-        //   position: relative;
-        //   grid-auto-flow: column;
-        //   grid-template-rows: 100%;
-        //   column-gap: 20px;
-        //   text-align: initial;
-        //   white-space: nowrap;
-        //   overflow-x: scroll;
-        //   overflow-y: hidden;
-        //   margin: 0;
-        //   padding-bottom: 40px;
-        //   margin-block-start: 0;
-        //   margin-block-end: 0;
-        //   margin-inline-start: 0;
-        //   margin-inline-end: 0;
-        //   li {
-        //     //display: list-item;
-        //     list-style: none;
-        //     white-space: nowrap;
-        //     height: 490.79px;
-        //     width: 377.6px;
-        //     &:last-child {
-        //       margin-right: 5vw;
-        //     }
-        //   }
-        //   &::-webkit-scrollbar {
-        //     display: none;
-        //   }
-        // &::-webkit-scrollbar-track {
-        //   border-top: 1.1px solid transparent;
-        //   border-bottom: 1.1px solid transparent;
-        //   background-color: rgba(33, 33, 33, 0.2);
-        //   background-clip: content-box;
-        // }
-        // &::-webkit-scrollbar-button {
-        //   width: 20px;
-        // }
-        // &::-webkit-scrollbar-thumb {
-        //   background: rgb(18, 120, 74);
-        //   border-top: 1.1px solid transparent;
-        //   border-bottom: 1.1px solid transparent;
-        //   border-radius: 6px;
-        //   background-clip: content-box;
-        //   -webkit-transition: height 0.2s ease 0s;
-        //   &:hover {
-        //     border-top: none;
-        //     border-bottom: none;
-        //     background-clip: content-box;
-        //     -webkit-transition: height 0.2s ease 0s;
-        //   }
-        // }
-        // }
       }
+    }
+    button {
+      visibility: hidden;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+      flex-direction: row;
+      transition-property: all;
+      transition-duration: 0.3s;
+      line-height: 1;
+      border-style: solid;
+      border-color: transparent;
+      border-radius: 50%;
+      border-width: 1px;
+      padding: 0.75rem;
+      text-decoration: none;
+      outline: none;
+      position: absolute;
+      top: 50%;
+      &:first-of-type {
+        left: 0;
+        opacity: 0;
+      }
+      &:last-of-type {
+        right: 0;
+        opacity: 0;
+      }
+      &:hover {
+        background-color: rgb(18, 120, 74);
+        border-color: transparent;
+        fill: white;
+      }
+    }
+    .false {
+      display: none;
     }
   }
 }
