@@ -1,0 +1,124 @@
+.open {
+  display: none;
+}
+.InMenu {
+  width: 100%;
+  height: 100%;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  } /* 스크롤 바 */
+  ::-webkit-scrollbar-track {
+    background-color: #5d5d5d;
+  } /* 스크롤 바 밑의 배경 */
+  ::-webkit-scrollbar-thumb {
+    background: #303030;
+  } /* 실질적 스크롤 바 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+  } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+  ::-webkit-scrollbar-thumb:active {
+    background: #808080;
+  } /* 실질적 스크롤 바를 클릭할 때 */
+  ::-webkit-scrollbar-button {
+    display: none;
+  } /* 스크롤 바 상 하단 버튼 */
+
+  .menuWindow {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: white;
+
+    .outMenu {
+      position: absolute;
+      margin-left: 80px;
+      margin-top: 50px;
+      .cancel {
+        fill: white;
+        &:hover {
+          fill: #a37e2d;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .inMenuLeft {
+      width: 50%;
+      height: 100%;
+      background-color: #212121;
+      overflow: scroll;
+      padding-left: 130px;
+      padding-right: 130px;
+      .first {
+        width: 40%;
+        height: 80px;
+        z-index: 5;
+        background-color: #212121;
+        position: fixed;
+      }
+      .st0 {
+        fill: #a37e2d;
+      }
+      .st1 {
+        fill: white;
+      }
+      .logo {
+        height: 80px;
+        padding-top: 10px;
+        top: 0;
+        left: 22%;
+        position: fixed;
+        z-index: 9;
+        cursor: pointer;
+      }
+    }
+    .slideShow {
+      padding-top: 200px;
+    }
+    .menuList {
+      padding: 30px 0;
+      list-style-type: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      outline: none;
+      transition: color 0.3s ease 0s;
+
+      div {
+        padding: 25px 0;
+        border-bottom: 1px solid gray;
+      }
+      li {
+        margin: 12px 0;
+        &:hover {
+          color: #a37e2d;
+          cursor: pointer;
+        }
+      }
+      .language {
+        position: fixed;
+        bottom: 0;
+        background-color: #212121;
+        width: 35%;
+        border-bottom: none;
+      }
+      .org {
+        margin-bottom: 100px;
+        border-bottom: 1px solid gray;
+      }
+      .iconLang {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.inMenuRight {
+  width: 50%;
+  background-color: black;
+  opacity: 0.9;
+}
