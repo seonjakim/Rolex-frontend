@@ -3,11 +3,30 @@ import { withRouter } from "react-router-dom";
 import TopNavLogo from "../../Images/TopNavLogo";
 import TopNavLanguage from "../../Images/TopNavLanguage";
 import TopNavCancel from "../../Images/TopNavCancel";
+import CollectionDisplay from "./CollectionDisplay";
 import "./inMenu.scss";
 class InMenu extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      collectionData: [],
+    };
   }
+  componentDidMount = () => {
+    this.getData();
+  };
+
+  getData = () => {
+    fetch("http://localhost:3000/data/CollectionData.json")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(
+          "res.CollectionData가 이렇게 생겼어요 : ",
+          res.CollectionData
+        );
+        this.setState({ collectionData: res.CollectionData });
+      });
+  };
   goTo(location) {
     this.props.history.push(location);
     this.props.openMenuHandle();
@@ -25,7 +44,9 @@ class InMenu extends Component {
             <div className="logo" onClick={() => this.goTo("/")}>
               <TopNavLogo />
             </div>
-            <div className="slideShow">슬라이드</div>
+            <div className="slideShow">
+              <CollectionDisplay />
+            </div>
             <div className="menuList">
               <div>
                 <li>롤렉스 컬렉션</li>
