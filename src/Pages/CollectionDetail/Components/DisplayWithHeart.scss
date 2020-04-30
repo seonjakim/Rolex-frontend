@@ -5,7 +5,7 @@
     
         ul{
             list-style: none;
-            overflow-x: scroll;
+            overflow-x: hidden;
             li {
                 // display: flex;
                 // justify-content: space-between;
@@ -13,10 +13,10 @@
                     width: 100%;
                     height: 100%;
                     display: grid;
-                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-columns: repeat(5, 1fr);
                     grid-gap: 30px;
                     grid-template-areas:
-                    "main0 main1 main2 main3 main4 main5";  
+                    "main0 main1 main2 main3 main4";  
 
                     .Card {
                         display: flex;
@@ -25,10 +25,10 @@
                         align-items: center;
                         background-color: white;
                         cursor: pointer;
-                        padding-left: 51.9px;
+                        // padding-left: 51.9px;
                         img {
                             height: 390px;
-                            width: 311.4px;
+                            // width: 350px;
                             transform: scale(1);
                             transition: all 0.3s ease-in 0s;
             
@@ -82,32 +82,23 @@
                 }
             }
         }
+        .divBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 30px;
+            div {
+              width: 80px;
+              height: 4px;
+              border-radius: 4px;
+              background-color: green;
+              &:first-child {
+                margin-right: 9.5px;
+              }
+              &:last-child {
+                margin-left: 9.5px;
+              }
+            }
+          }
     }
-    // .DivForMargin {
-    //     margin: 10vw 0px;
-    //     ul {
-    //         display: grid;
-    //         grid-template-columns: repeat(6, 1fr);
-    //         grid-auto-columns: 311.4px;
-    //         padding-left: 51.9px;
-    //         overflow-x: scroll;
-    //         overflow-y: hidden;
-    //         // white-space: nowrap;
-    //         // grid-auto-flow: column;
-    //         li {
-    //             list-style: none;
-    //             display: flex;
-    //             justify-content: space-between;
-    //             img {
-    //                 height: 390px;
-    //                 width: 311.4px;
-
-    //                 transform: matrix(1, 0, 0, 1, 0, 0);
-    //                 transform-origin: 155.7px 195px;
-    //                 transition-duration: 0.3s;
-    //                 transition-timing-function: cubic-bezier(1, 0.7, 0.5, 1);
-    //             }
-    //         }
-    //     }
-    // }
 }

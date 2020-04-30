@@ -1,0 +1,39 @@
+{
+    "CollectionData": [
+        {
+            "id": 1,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_day-date_m228238_0042_1804jva_001_2_re.jpg?imwidth=550",
+            "name": "DAY-DATE",
+            "detail": "품격 있는 시계의 상징",
+            "link": "https://www.rolex.com/ko/watches/day-date.html"
+        },
+        {
+            "id": 2,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_datejust_m126333-0010_1802jva_001_r.jpg?imwidth=550",
+            "name": "DATEJUST",
+            "detail": "대표적인 클래식 시계",
+            "link": "https://www.rolex.com/ko/watches/datejust.html"
+        },
+        {
+            "id": 3,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_gmt-master2_m126710blro_0001_1809jva_001.jpg?imwidth=550",
+            "name": "GMT-MASTER II",
+            "detail": "코스모폴리탄을 위한 시계",
+            "link": "https://www.rolex.com/ko/watches/gmt-master-ii.html"
+        },
+        {
+            "id": 4,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_submariner_m116613lb-0005_1807jva_001.jpg?imwidth=550",
+            "name": "SUBMARINER",
+            "detail": "다이버 워치의 대명사",
+            "link": "https://www.rolex.com/ko/watches/submariner.html"
+        },
+        {
+            "id": 5,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_oyster-perpetual_m114300_0004_1809jva_001.jpg?imwidth=550",
+            "name": "OYSTER PERPETUAL",
+            "detail": "가장 기본적인 오이스터 모델",
+            "link": "https://www.rolex.com/ko/watches/oyster-perpetual.html"
+        }
+    ]
+}

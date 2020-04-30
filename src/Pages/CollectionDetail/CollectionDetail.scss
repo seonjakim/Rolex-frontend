@@ -1,4 +1,7 @@
 .CollectionDetail {
+  * {
+    margin: 0;
+  }
     .videoBox {
         display: flex;
         flex-direction: column;
@@ -56,6 +59,7 @@
             }
         }
     }
+
     .TwoButton {
       display: block;
       width: fit-content;

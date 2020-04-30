@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import DisplayWithHeart from './Components/DisplayWithHeart'
 import SideSlideDayDate from './Components/SideSlideDayDate/SideSlideDayDate'
 import './CollectionDetail.scss';
+import ClickSlide from './Components/ClickSlide/ClickSlide';
 
 class CollectionDetail extends Component {
     constructor(props) {
@@ -38,7 +39,8 @@ class CollectionDetail extends Component {
                         </p>
                     </div>
                 </div>
-                <DisplayWithHeart />
+                {/* <DisplayWithHeart /> */}
+                <ClickSlide />
                 <div className="TwoButton">
                     <button>
                         설정
