@@ -42,9 +42,6 @@ export default class ClickSlide extends Component {
         return (
             <div className="ClickSlide">
                 <div className="collectionTxtNSwipe">
-                    <div className="collectionTxt">
-                        프로페셔널 시계 - <Link>모두 보기</Link>
-                    </div>
                     <div className="collectionSwipe">
                         <div className="collections">
                             <Scrollbar noDefaultStyles>{CollectionList}</Scrollbar>

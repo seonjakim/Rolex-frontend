@@ -3,11 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // padding: 0px 20vw;
+
     .collectionTxtNSwipe {
       height: 584.563px;
-      width: 100%;
+      width: 1000px;
       .collectionTxt {
-        padding-left: 5vw;
+        // padding-left: 5vw;
         color: rgb(33, 33, 33);
         font-weight: 400;
         letter-spacing: 0px;
@@ -31,12 +33,11 @@
           position: relative;
           width: 100%;
           height: 100%;
-          //height: 473.763px;
           display: flex;
           -webkit-box-align: center;
           align-items: center;
           -webkit-box-pack: center;
-          //justify-content: center;
+          justify-content: center;
           .ScrollbarsCustom {
             width: 100%;
             height: 100%;
@@ -56,27 +57,22 @@
                   a {
                     color: inherit;
                     display: inline-block;
-                    width: 377.6px;
-                    margin-left: 22px;
-                    &:first-child {
-                      margin-left: 5vw;
-                    }
+                    width: 330px;
                   }
                   li {
                     display: inline-block;
                     //position: relative;
                     height: 490.79px;
                     width: 100%;
-  
                     overflow: hidden;
-                    &:last-child {
-                      margin-right: 5vw;
-                    }
                     .collectionPic {
                       height: 424.59px;
+                      // display: flex;
+                      // justify-content: center;
+
                       //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
-                      object-fit: cover;
-                      background-size: cover;
+                      // object-fit: cover;
+                      // background-size: cover;
                       transform: scale(1);
                       transition: transform 0.6s ease 0s;
                     }
@@ -159,43 +155,10 @@
                       }
                     }
                   }
-                //   &::-webkit-scrollbar {
-                //     display: none;
-                //   }
                 }
               }
             }
   
-            // .ScrollbarsCustom-Track {
-            //   border-radius: 4px;
-            // }
-  
-            // .ScrollbarsCustom-Thumb {
-            //   background: rgba(255, 255, 255, 0.12);
-            //   cursor: pointer;
-            //   border-radius: 4px;
-            // }
-  
-            // .ScrollbarsCustom-ThumbX {
-            //   height: 4px;
-            //   background: rgb(18, 120, 74);
-            //   transition: height 0.2s ease 0s;
-            //   &:hover {
-            //     height: 6px;
-            //     transition: height 0.2s ease 0s;
-            //   }
-            // }
-  
-            // .ScrollbarsCustom-TrackX {
-            //   position: absolute;
-            //   display: flex;
-            //   align-items: center;
-            //   height: 4px;
-            //   width: calc(100% - 10vw);
-            //   bottom: 0;
-            //   left: 5vw;
-            //   background-color: rgba(33, 33, 33, 0.2);
-            // }
         }
   
         }

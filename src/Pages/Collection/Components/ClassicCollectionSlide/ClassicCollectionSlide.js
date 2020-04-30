@@ -20,10 +20,6 @@ export default class ClassicCollectionSlide extends Component {
         fetch("http://localhost:3000/data/CollectionData.json")
             .then((res) => res.json())
             .then((res) => {
-                console.log(
-                    "res.CollectionData가 이렇게 생겼어요 : ",
-                    res.CollectionData
-                );
                 this.setState({ collectionData: res.CollectionData });
             });
     };
