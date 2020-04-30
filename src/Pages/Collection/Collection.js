@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import ClassicCollectionSlide from './ClassicCollectionSlide/ClassicCollectionSlide';
-import ProfessionalCollection from './ProfessionalCollection/ProfessionalCollection';
+import ClassicCollectionSlide from './Components/ClassicCollectionSlide/ClassicCollectionSlide';
+import ProfessionalCollection from './Components/ProfessionalCollection/ProfessionalCollection';
 import PageShare from "../Main/Component/PageShare/PageShare";
+import SixGrid from './Components/SixGrid/SixGrid';
+import SixGridBot from './Components/SixGrid/SixGridBot'
 import './Collection.scss';
 
 class Collection extends Component {
@@ -18,7 +20,7 @@ class Collection extends Component {
                         playsinline
                         loop
                         preload="auto"
-                        class="sc-pRTZB jXSwJn"
+                        className="sc-pRTZB jXSwJn"
                     />
                     <div className="videoTitle">
                         <div>롤렉스 컬렉션</div>
@@ -47,13 +49,10 @@ class Collection extends Component {
                         </p>
                     </div>
                 </div>
-                <div className="Images">
-                    <ul>
-                        <li><a><figure>
-                            <img></img>
-                            <span></span>
-                        </figure></a></li>
-                    </ul>
+                <div className="SixGridWrapper">
+                    <div className="CollectionWord">시계 골라보기</div>
+                    <SixGrid />
+                    <SixGridBot />
                 </div>
                 <PageShare />
             </div>
