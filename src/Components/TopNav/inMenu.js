@@ -7,24 +7,17 @@ import "./inMenu.scss";
 class InMenu extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
   goTo(location) {
     this.props.history.push(location);
     this.props.openMenuHandle();
   }
   render() {
+    const { openMenu, openMenuHandle } = this.props;
     return (
-      <div
-        className="InMenu"
-        style={{ display: this.props.openMenu ? "" : "none" }}
-      >
+      <div className={openMenu ? "InMenu" : "InMenu open"}>
         <div className="menuWindow">
-          <div
-            className="outMenu"
-            onClick={this.props.openMenuHandle}
-            style={{ position: "absolute" }}
-          >
+          <div className="outMenu" onClick={openMenuHandle}>
             <TopNavCancel />
           </div>
           <div className="inMenuLeft">
@@ -56,10 +49,7 @@ class InMenu extends Component {
               </div>
             </div>
           </div>
-          <div
-            className="inMenuRight"
-            onClick={this.props.openMenuHandle}
-          ></div>
+          <div className="inMenuRight" onClick={openMenuHandle}></div>
         </div>
       </div>
     );

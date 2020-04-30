@@ -25,14 +25,16 @@ export default class ShowCollection extends Component {
   };
 
   render() {
-    let CollectionList = this.state.collectionData.map((collection) => (
-      <Collection
-        pic={collection.pic_url}
-        name={collection.name}
-        detail={collection.detail}
-        link={collection.link}
-      />
-    ));
+    let CollectionList = this.state.collectionData.map((collection) => {
+      return (
+        <Collection
+          pic={collection.pic_url}
+          name={collection.name}
+          detail={collection.detail}
+          link={collection.link}
+        />
+      );
+    });
     return (
       <div className="showCollection">
         <div className="collectionTxtNSwipe">

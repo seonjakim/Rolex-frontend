@@ -23,6 +23,10 @@ class TopNav extends Component {
     window.addEventListener("scroll", this.handleScroll);
   };
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
   handleScroll = (e) => {
     const currentScroll = e.srcElement.scrollingElement.scrollTop;
     this.setState((state) => ({
