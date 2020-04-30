@@ -3,11 +3,6 @@ import FindRolexLike from "../../../../../Images/FindRolexLike";
 import "./ProductCard.scss";
 
 class ProductCard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div
@@ -16,9 +11,9 @@ class ProductCard extends React.Component {
       >
         <FindRolexLike />
         <div>
-          <img src={this.props.data.img} alt="" />
-          <h2>{this.props.data.name}</h2>
-          <span>{this.props.data.outline}</span>
+          <img src={this.props.img} alt="" />
+          <h2>{`${this.props.name} ${this.props.size}`}</h2>
+          <span>{`${this.props.oyster}, ${this.props.size}mm, ${this.props.material}`}</span>
         </div>
       </div>
     );
