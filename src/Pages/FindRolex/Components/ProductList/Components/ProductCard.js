@@ -4,16 +4,17 @@ import "./ProductCard.scss";
 
 class ProductCard extends React.Component {
   render() {
+    const { img, name, oyster, diameter, material, idx } = this.props;
     return (
       <div
         className={`${this.props.class} Card`}
-        style={{ gridArea: `main` + this.props.idx }}
+        style={{ gridArea: `main` + idx }}
       >
         <FindRolexLike />
         <div>
-          <img src={this.props.img} alt="" />
-          <h2>{`${this.props.name} ${this.props.diameter}`}</h2>
-          <span>{`${this.props.oyster}, ${this.props.diameter}mm, ${this.props.material}`}</span>
+          <img src={img} alt="" />
+          <h2>{`${name} ${diameter}`}</h2>
+          <span>{`${oyster}, ${diameter}mm, ${material}`}</span>
         </div>
       </div>
     );
