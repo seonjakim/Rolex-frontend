@@ -9,6 +9,7 @@ import CollectionDetail from './Pages/CollectionDetail/CollectionDetail'
 import MapRolex from './Pages/MapRolex/MapRolex'
 import SignIn from './Pages/SignInNUp/SignIn'
 import SignUp from './Pages/SignInNUp/SignUp'
+import TopNav from './Components/TopNav/TopNav';
 
 
 class Routes extends React.Component {
