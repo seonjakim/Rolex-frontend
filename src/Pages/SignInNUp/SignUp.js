@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import ColorLogo from './ColorLogo.png'
 import './SignUp.scss';
 
@@ -26,6 +27,34 @@ class SignUp extends React.Component {
                 this.setState({ signUpData: response.SignUpData })
             })
     }
+
+    clickToSignUp = (e) => {
+        e.preventDefault();
+        const { user_id, password } = this.state;
+        console.log('ok');
+        if (!user_id || !password) {
+            alert("필수항목을 작성해주세요")
+        } else {
+            fetch("http://10.58.0.209:8000/user/login", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    user_id: this.state.user_id,
+                    password: this.state.password
+                })
+                    .then(res => {
+                        if (res.status === 400) {
+                            alert('다시 한번 확인해주세요.')
+                        } else {
+                            alert('가입완료');
+                        }
+                    })
+            })
+        }
+    }
+
 
     render() {
         console.log("name, email, pw, checkpw :", this.state)
@@ -57,7 +86,7 @@ class SignUp extends React.Component {
                         <div>이용약관 동의</div>
                     </div>
                     <div className="WraptheBtn">
-                        <button>
+                        <button onClick={this.clickToSignUp}>
                             회원가입
                         </button>
                         <button className="Join">로그인</button>
@@ -68,4 +97,4 @@ class SignUp extends React.Component {
     }
 }
 
-export default SignUp;
+export default withRouter(SignUp);
