@@ -91,11 +91,7 @@ export default class ShowCollection extends Component {
           </div>
           <div className="collectionSwipe" onScroll={this.whenScrolled}>
             <div className="collections">
-              <Scrollbar
-                ref={(ref) => (this.scrollbar = ref)}
-                trackClickBehavior="step"
-                noDefaultStyles
-              >
+              <Scrollbar ref={(ref) => (this.scrollbar = ref)} noDefaultStyles>
                 {CollectionList}
               </Scrollbar>
             </div>

@@ -14,6 +14,7 @@ class SignIn extends React.Component {
         }
     }
 
+
     signIn = () => {
         const { name, password } = this.state
         fetch(`${API_URL}/user/login`, {
@@ -43,6 +44,7 @@ class SignIn extends React.Component {
                     </div>
                     <h2>로그인</h2>
                     <div className="IdPwInput">
+
                         <div>이름</div>
                         <input className="EmailAddress" onChange={(e) => { this.setState({ name: e.target.value }) }}></input>
                     </div>
