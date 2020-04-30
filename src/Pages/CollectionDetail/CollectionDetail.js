@@ -80,7 +80,15 @@ class CollectionDetail extends Component {
                     </div>
                 </div>
                 <div className="insidePic">
-                    <video src="https://content.rolex.com/dam/watches/family-pages/day-date/video/classic_watches_day-date_movement_auto_play_0001.mp4" />
+                    <video src="https://content.rolex.com/dam/watches/family-pages/day-date/video/classic_watches_day-date_movement_auto_play_0001.mp4"
+                        type="video/mp4"
+                        autoPlay
+                        muted
+                        playsinline
+                        loop
+                        preload="auto"
+
+                    />
                 </div>
             </div>
         )

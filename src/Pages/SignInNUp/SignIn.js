@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ColorLogo from './ColorLogo.png'
+import { API_URL } from '../../Config';
 import './SignIn.scss';
 
 class SignIn extends React.Component {
@@ -14,23 +15,12 @@ class SignIn extends React.Component {
     }
 
     componentDidMount = () => {
-        // this.getPData();
+        this.signIn();
     }
-
-    // getPData = () => {
-    //     fetch('http://10.58.0.209:8000/user/login')
-    //         .then((response) => response.json())
-    //         .then((response) => {
-    //             console.log("나오나?:", response.SignInData)
-    //             this.setState({ PersonalData: response.SignInData });
-    //         })
-    // }
-
-    //연습
 
     signIn = () => {
         const { name, password } = this.state
-        fetch("http://10.58.0.209:8000/user/login", {
+        fetch(`${API_URL}/login`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -48,27 +38,10 @@ class SignIn extends React.Component {
                 }
             })
             .catch(err => console.log(err))
-
-
-
-        // .then(res => { 
-        //     console.log(res)
-        // })
-        //         .then(res => res.json())
-        //         .then(res => {
-        //     if (res.status === 200) {
-        //         console.log(res, 'res')
-        //         this.props.history.push('/')
-        //     } else if (res.status === 403) {
-        //         alert("잘못 입력하셨습니다.")
-        //     }
-        //     return res;
-        // })
     }
 
 
     render() {
-        // console.log("id and pw:", this.state)
         return (
             <div className="SignIn">
                 <div className="ContentWrapper">
@@ -77,7 +50,7 @@ class SignIn extends React.Component {
                     </div>
                     <h2>로그인</h2>
                     <div className="IdPwInput">
-                        <div>이메일</div>
+                        <div>이름</div>
                         <input className="EmailAddress" onChange={(e) => { this.setState({ name: e.target.value }) }}></input>
                     </div>
                     <div className="IdPwInput">
