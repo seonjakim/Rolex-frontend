@@ -21,7 +21,7 @@ class CollectionDetail extends Component {
                         playsinline
                         loop
                         preload="auto"
-                        class="sc-pRTZB jXSwJn"
+                        className="sc-pRTZB jXSwJn"
                     />
                     <div className="videoTitle">
                         <div>DAY-DATE</div>
@@ -67,14 +67,20 @@ class CollectionDetail extends Component {
                     </ul>
                 </div>
 
-                <div>
-
+                <div className="bracelet">
+                    <img src="https://content.rolex.com/dam/watches/family-pages/day-date/classic-watches-day-date-president-bracelet_m118238_0419_1806ac_001.jpg?imwidth=1112, https://content.rolex.com/dam/watches/family-pages/day-date/classic-watches-day-date-president-bracelet_m118238_0419_1806ac_001.jpg?imwidth=1668 2x" />
                 </div>
-                <div>
-
+                <div className="lettering">
+                    <div>
+                        데이-데이트 40 (Day-Date 40)은 최상의 성능을 구현하기 위하여 롤렉스에서 직접 개발하고
+                        제작한 차세대 무브먼트인 칼리버 3255를 탑재하고 있습니다. 이 새로운 오토매틱 와인
+                        메케니컬 무브먼트는 워치메이킹 기술의 정점입니다. 14개의 롤렉스 특허를 포함, 롤렉
+                        스의 워치메이킹 기술이 고스란히 담겨 있는 무브먼트로 정밀함, 파워리저브, 충격과 자기
+                        장에 대한 저항, 사용의 편의성, 신뢰도 등의 다양한 측면에서 핵심적인 성과를 보여줍니다.
+                    </div>
                 </div>
-                <div>
-
+                <div className="insidePic">
+                    <video src="https://content.rolex.com/dam/watches/family-pages/day-date/video/classic_watches_day-date_movement_auto_play_0001.mp4" />
                 </div>
             </div>
         )

@@ -26,6 +26,8 @@ class SignIn extends React.Component {
     //         })
     // }
 
+    //연습
+
     signIn = () => {
         const { name, password } = this.state
         fetch("http://10.58.0.209:8000/user/login", {
@@ -46,6 +48,9 @@ class SignIn extends React.Component {
                 }
             })
             .catch(err => console.log(err))
+
+
+
         // .then(res => { 
         //     console.log(res)
         // })
@@ -63,7 +68,7 @@ class SignIn extends React.Component {
 
 
     render() {
-        console.log("id and pw:", this.state)
+        // console.log("id and pw:", this.state)
         return (
             <div className="SignIn">
                 <div className="ContentWrapper">
