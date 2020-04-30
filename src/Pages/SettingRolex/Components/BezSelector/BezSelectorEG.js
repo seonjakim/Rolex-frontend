@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Scrollbar from "react-scrollbars-custom";
 import ScrollLeft from "../../../../Images/ScrollLeft";
 import ScrollRight from "../../../../Images/ScrollRight";
-import "./WatchSelector.scss";
+import "./BezSelectorEG.scss";
 
-export default class WatchSelector extends Component {
-  constructor(props) {
-    super(props);
+export default class BezSelectorEG extends Component {
+  constructor() {
+    super();
     this.state = {
-      watchData: [],
+      bezData: [],
       whichWatch: "0",
       LBtnAppear: false,
       RBtnAppear: true,
@@ -21,41 +21,31 @@ export default class WatchSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://localhost:3000/data/watchData.json")
+    fetch("http://localhost:3000/data/bezDataEG.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.watchData가 이렇게 생겼어요 : ", res.watchData);
-        this.setState({ watchData: res.watchData }, () => {
-          this.opacWhenMount();
-        });
+        console.log("res.bezData가 이렇게 생겼어요 : ", res.bezData);
+        this.setState({ bezData: res.bezData });
       });
   };
 
-  opacWhenMount = () => {
-    const { contentElement } = this.scrollbar;
-    contentElement.children[3].style.opacity = 0;
-  };
-
-  componentDidUpdate = (prevState) => {
-    if (prevState.whichWatch !== this.state.whichWatch) {
-      this.changeName();
-    }
+  componentDidUpdate = () => {
+    this.changeName();
   };
 
   changeName = () => {
-    const { watchData, whichWatch } = this.state;
-    watchData[whichWatch] &&
-      (this.watchName.innerText = watchData[whichWatch].name);
+    const { bezData, whichWatch } = this.state;
+    this.bezWatchPic.style.backgroundImage = `url(${bezData[whichWatch].watch_pic_url})`;
+    this.bezName.innerText = bezData[whichWatch].name;
+    this.bezDim.innerText = bezData[whichWatch].diameter;
+    this.bezPrice.innerText = bezData[whichWatch].price;
   };
 
   whenScrolled = () => {
-    const { watchData, whichWatch } = this.state;
-
     const { scrollLeft, scrollTo, scrollWidth, clientWidth } = this.scrollbar;
     let howManyEl = Math.round(scrollLeft / 240);
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
-    this.props.onSelect(watchData[whichWatch].name);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
@@ -73,6 +63,14 @@ export default class WatchSelector extends Component {
     90 < scrollLeft % 240 && scrollLeft % 240 < 150
       ? this.setState({ scrollFence: "onFence" })
       : this.setState({ scrollFence: "notOnFence" });
+
+    // if (contentElement.children[howManyEl - 1]) {
+    //   contentElement.children[howManyEl - 1].style.opacity =
+    //     0.88 - (scrollLeft - howManyEl * 240) / 119;
+    // }
+
+    // contentElement.children[howManyEl].style.opacity =
+    //   (scrollLeft - howManyEl * 240) / 120;
 
     if (contentElement.children[howManyEl + 3]) {
       contentElement.children[howManyEl + 3].style.opacity =
@@ -96,21 +94,23 @@ export default class WatchSelector extends Component {
   };
 
   render() {
-    let WatchList = this.state.watchData.map((watch) => {
+    const { bezData, scrollFence } = this.state;
+
+    let BezList = bezData.map((bez) => {
       return (
         <div
-          className="eachWatch"
-          style={{ backgroundImage: `url(${watch.pic_url})` }}
+          className="eachBez"
+          style={{ backgroundImage: `url(${bez.bez_pic_url})` }}
         />
       );
     });
 
     return (
-      <div className="watchSelector">
+      <div className="bezSelectorEG">
         <div className="configureStage">
-          <div>클래식 시계</div>
-          <div>컬렉션 선택하기</div>
-          <div>단계 2</div>
+          <div>DAY-DATE 40</div>
+          <div>베젤 선택하기</div>
+          <div>단계 5</div>
         </div>
         <Scrollbar
           onScrollStop={this.whenScrolled}
@@ -118,7 +118,7 @@ export default class WatchSelector extends Component {
           ref={(ref) => (this.scrollbar = ref)}
           noDefaultStyles
         >
-          {WatchList}
+          {BezList}
         </Scrollbar>
         <button
           className={`${this.state.LBtnAppear}`}
@@ -132,11 +132,14 @@ export default class WatchSelector extends Component {
         >
           <ScrollRight />
         </button>
+        <div
+          ref={(ref) => (this.bezWatchPic = ref)}
+          className="watchPicContainer"
+        ></div>
         <div className="nameContainer">
-          <div
-            ref={(ref) => (this.watchName = ref)}
-            className={this.state.scrollFence}
-          />
+          <div ref={(ref) => (this.bezName = ref)} className={scrollFence} />
+          <div ref={(ref) => (this.bezDim = ref)} className={scrollFence} />
+          <div ref={(ref) => (this.bezPrice = ref)} className={scrollFence} />
         </div>
       </div>
     );

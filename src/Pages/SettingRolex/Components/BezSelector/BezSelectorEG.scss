@@ -1,4 +1,4 @@
-.watchSelector {
+.bezSelectorEG {
   position: relative;
   height: 510px;
   transition: all 1s linear 0s;
@@ -60,7 +60,7 @@
           text-align: initial;
           white-space: nowrap;
           position: relative;
-          .eachWatch {
+          .eachBez {
             display: inline-block;
             width: 240px;
             height: 372.4px;
@@ -147,6 +147,37 @@
   }
   .false {
     display: none;
+  }
+
+  .watchPicContainer {
+    position: absolute;
+    bottom: 50px;
+    width: 240px;
+    height: 372.4px;
+    margin-left: calc(42%);
+    background-position-x: center;
+    background-position-y: -90px;
+    background-size: 350px;
+    transition: all 1s cubic-bezier(0.32, 0.94, 0.6, 1) 0s;
+    opacity: 1;
+    &.notOnFence {
+      text-align: center;
+      color: white;
+      transition: opacity 1s cubic-bezier(0.32, 0.94, 0.6, 1) 0.2s;
+      opacity: 1;
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: calc(0.75rem + 0.125 * ((100vw - 20rem) / 100));
+    }
+    &.onFence {
+      text-align: center;
+      color: white;
+      transition: opacity 0.05s cubic-bezier(0.32, 0.94, 0.6, 1) 0s;
+      opacity: 0;
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: calc(0.75rem + 0.125 * ((100vw - 20rem) / 100));
+    }
   }
 
   .nameContainer {

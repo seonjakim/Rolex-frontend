@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Scrollbar from "react-scrollbars-custom";
 import ScrollLeft from "../../../../Images/ScrollLeft";
 import ScrollRight from "../../../../Images/ScrollRight";
-import "./WatchSelector.scss";
+import "./MatSelector.scss";
 
-export default class WatchSelector extends Component {
+export default class MatSelector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      watchData: [],
+      matData: [],
       whichWatch: "0",
       LBtnAppear: false,
       RBtnAppear: true,
@@ -21,11 +21,11 @@ export default class WatchSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://localhost:3000/data/watchData.json")
+    fetch("http://localhost:3000/data/matData.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.watchData가 이렇게 생겼어요 : ", res.watchData);
-        this.setState({ watchData: res.watchData }, () => {
+        console.log("res.matData가 이렇게 생겼어요 : ", res.matData);
+        this.setState({ matData: res.matData }, () => {
           this.opacWhenMount();
         });
       });
@@ -36,26 +36,27 @@ export default class WatchSelector extends Component {
     contentElement.children[3].style.opacity = 0;
   };
 
-  componentDidUpdate = (prevState) => {
-    if (prevState.whichWatch !== this.state.whichWatch) {
-      this.changeName();
-    }
+  componentDidUpdate = () => {
+    this.changeName();
   };
 
   changeName = () => {
-    const { watchData, whichWatch } = this.state;
-    watchData[whichWatch] &&
-      (this.watchName.innerText = watchData[whichWatch].name);
+    const { matData, whichWatch } = this.state;
+    this.matWatchPic.style.backgroundImage = `url(${matData[whichWatch].watch_pic_url})`;
+    this.matName.innerText = matData[whichWatch].name;
+    this.matDim.innerText = matData[whichWatch].diameter;
+    this.matPrice.innerText = matData[whichWatch].price;
   };
 
   whenScrolled = () => {
-    const { watchData, whichWatch } = this.state;
+    const { matData, whichWatch } = this.state;
 
     const { scrollLeft, scrollTo, scrollWidth, clientWidth } = this.scrollbar;
     let howManyEl = Math.round(scrollLeft / 240);
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
-    this.props.onSelect(watchData[whichWatch].name);
+
+    this.props.onSelect(matData[whichWatch].name);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
@@ -73,6 +74,14 @@ export default class WatchSelector extends Component {
     90 < scrollLeft % 240 && scrollLeft % 240 < 150
       ? this.setState({ scrollFence: "onFence" })
       : this.setState({ scrollFence: "notOnFence" });
+
+    // if (contentElement.children[howManyEl - 1]) {
+    //   contentElement.children[howManyEl - 1].style.opacity =
+    //     0.88 - (scrollLeft - howManyEl * 240) / 119;
+    // }
+
+    // contentElement.children[howManyEl].style.opacity =
+    //   (scrollLeft - howManyEl * 240) / 120;
 
     if (contentElement.children[howManyEl + 3]) {
       contentElement.children[howManyEl + 3].style.opacity =
@@ -96,21 +105,23 @@ export default class WatchSelector extends Component {
   };
 
   render() {
-    let WatchList = this.state.watchData.map((watch) => {
+    const { matData, scrollFence } = this.state;
+
+    let MatList = matData.map((mat) => {
       return (
         <div
-          className="eachWatch"
-          style={{ backgroundImage: `url(${watch.pic_url})` }}
+          className="eachMat"
+          style={{ backgroundImage: `url(${mat.mat_pic_url})` }}
         />
       );
     });
 
     return (
-      <div className="watchSelector">
+      <div className="matSelector">
         <div className="configureStage">
-          <div>클래식 시계</div>
-          <div>컬렉션 선택하기</div>
-          <div>단계 2</div>
+          <div>DAY-DATE 40</div>
+          <div>소재 선택하기</div>
+          <div>단계 4</div>
         </div>
         <Scrollbar
           onScrollStop={this.whenScrolled}
@@ -118,7 +129,7 @@ export default class WatchSelector extends Component {
           ref={(ref) => (this.scrollbar = ref)}
           noDefaultStyles
         >
-          {WatchList}
+          {MatList}
         </Scrollbar>
         <button
           className={`${this.state.LBtnAppear}`}
@@ -132,11 +143,14 @@ export default class WatchSelector extends Component {
         >
           <ScrollRight />
         </button>
+        <div
+          ref={(ref) => (this.matWatchPic = ref)}
+          className="watchPicContainer"
+        ></div>
         <div className="nameContainer">
-          <div
-            ref={(ref) => (this.watchName = ref)}
-            className={this.state.scrollFence}
-          />
+          <div ref={(ref) => (this.matName = ref)} className={scrollFence} />
+          <div ref={(ref) => (this.matDim = ref)} className={scrollFence} />
+          <div ref={(ref) => (this.matPrice = ref)} className={scrollFence} />
         </div>
       </div>
     );
