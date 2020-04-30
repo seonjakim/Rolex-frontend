@@ -7,10 +7,10 @@ class FilterCenter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      genders: [],
+      sizes: [],
       materials: [],
-      selectedGender: "",
-      selectedMaterial: "",
+      selectedSize: null,
+      selectedMaterial: null,
       selectedJewerly: "",
     };
   }
@@ -23,56 +23,70 @@ class FilterCenter extends Component {
     fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
       .then((res) => {
-        const { genders, materials } = res;
+        const { sizes, materials } = res;
         this.setState({
-          genders,
+          sizes,
           materials,
         });
       });
   };
 
   selected = (cate, name, idx) => {
-    this.setState({
-      [name]: cate === idx ? "" : idx,
-    });
+    this.setState(
+      {
+        [name]: cate === idx ? "" : idx,
+      },
+      () => {
+        const { selectedSize, selectedMaterial } = this.state;
+        this.props.onFilterChange &&
+          this.props.onFilterChange({
+            selectedSize,
+            selectedMaterial,
+          });
+      }
+    );
   };
 
   resetSelected = () => {
     this.setState({
-      selectedGender: "",
+      selectedSize: "",
     });
   };
 
   render() {
-    const Genders = this.state.genders.map((gender, i) => (
+    const Sizes = this.state.sizes.map((size, i) => (
       <CategoryIcon
-        key={i}
-        name={`gender`}
+        key={size.value}
+        name="size"
         idx={i}
-        data={gender}
+        data={size}
         onClick={() =>
-          this.selected(this.state.selectedGender, "selectedGender", i)
+          this.selected(this.state.selectedSize, "selectedSize", size.value)
         }
-        isSelected={i === this.state.selectedGender}
+        isSelected={size.value === this.state.selectedSize}
       />
     ));
 
     const Materials = this.state.materials.map((material, i) => (
       <CategoryIcon
-        key={i}
+        key={material.value}
         name={`material`}
         idx={i}
         data={material}
         onClick={() =>
-          this.selected(this.state.selectedMaterial, "selectedMaterial", i)
+          this.selected(
+            this.state.selectedMaterial,
+            "selectedMaterial",
+            material.value
+          )
         }
-        isSelected={i === this.state.selectedMaterial}
+        isSelected={material.value === this.state.selectedMaterial}
       />
     ));
 
     return (
       <div className="FilterCenter">
-        {Genders}
+        {Sizes}
         {Materials}
         <div className="CategoryItem FilterContainer">
           <div className="FilterBox" onClick={this.props.openFilterHandle} />

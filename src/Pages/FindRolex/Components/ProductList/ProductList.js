@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GridChange from "./Components/GridChange";
 import ProductCard from "./Components/ProductCard";
 import DescriptionCard from "./Components/DescriptionCard";
-import { BASE_URL } from "../../../../Config";
 import "./ProductList.scss";
 
 class ProductList extends Component {
@@ -10,9 +9,7 @@ class ProductList extends Component {
     super(props);
     this.state = {
       checkbox: false,
-      watches: [],
       descriptions: [],
-      watches02: [],
     };
   }
 
@@ -22,16 +19,16 @@ class ProductList extends Component {
   //     .then((data) => console.log(data.products));
   // }
 
-  componentDidMount() {
-    fetch(`${BASE_URL}/product/list?page=1&limit=14`)
-      .then((data) => data.json())
-      .then((data) => this.setState({ watches02: data }));
-    this.getData();
-  }
-
-  // componentDidMount = () => {
+  // componentDidMount() {
+  //   fetch(`${BASE_URL}/product/list?page=1&limit=14`)
+  //     .then((data) => data.json())
+  //     .then((data) => this.setState({ watches02: data }));
   //   this.getData();
-  // };
+  // }
+
+  componentDidMount = () => {
+    this.getData();
+  };
 
   getData = () => {
     fetch("http://localhost:3000/data/data.json")
@@ -51,8 +48,6 @@ class ProductList extends Component {
   };
 
   render() {
-    console.log(`here is render`, this.state.watches02.products);
-
     const Descriptions = this.state.descriptions.map((des, idx) => (
       <DescriptionCard key={idx} idx={idx} class={`des${idx}`} data={des} />
     ));
@@ -65,8 +60,8 @@ class ProductList extends Component {
             this.state.checkbox ? "ListGrid Grid02" : "ListGrid Grid01"
           }
         >
-          {this.state.watches02.products &&
-            this.state.watches02.products.map((watch, idx) => (
+          {this.props.watches.products &&
+            this.props.watches.products.map((watch, idx) => (
               <ProductCard
                 key={idx}
                 idx={idx}
@@ -74,7 +69,7 @@ class ProductList extends Component {
                 name={watch.collection}
                 material={watch.material}
                 img={watch.image}
-                size={watch.size}
+                diameter={watch.diameter}
                 oyster={watch.oyster ? "오이스터" : ""}
               />
             ))}

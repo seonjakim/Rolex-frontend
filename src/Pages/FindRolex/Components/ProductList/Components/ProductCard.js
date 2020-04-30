@@ -12,8 +12,8 @@ class ProductCard extends React.Component {
         <FindRolexLike />
         <div>
           <img src={this.props.img} alt="" />
-          <h2>{`${this.props.name} ${this.props.size}`}</h2>
-          <span>{`${this.props.oyster}, ${this.props.size}mm, ${this.props.material}`}</span>
+          <h2>{`${this.props.name} ${this.props.diameter}`}</h2>
+          <span>{`${this.props.oyster}, ${this.props.diameter}mm, ${this.props.material}`}</span>
         </div>
       </div>
     );
