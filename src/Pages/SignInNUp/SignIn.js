@@ -14,9 +14,6 @@ class SignIn extends React.Component {
         }
     }
 
-    componentDidMount = () => {
-        this.signIn();
-    }
     signIn = () => {
         const { name, password } = this.state
         fetch(`${API_URL}/user/login`, {
