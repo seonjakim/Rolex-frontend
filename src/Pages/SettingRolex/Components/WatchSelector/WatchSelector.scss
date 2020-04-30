@@ -1,0 +1,178 @@
+.watchSelector {
+  position: relative;
+  height: 510px;
+  transition: all 1s linear 0s;
+
+  &:hover {
+    button {
+      visibility: visible;
+      &:first-of-type {
+        transform: translateX(5vw);
+        opacity: 1;
+      }
+      &:last-of-type {
+        transform: translateX(-5vw);
+        opacity: 1;
+      }
+    }
+  }
+  .configureStage {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    div:first-of-type,
+    :nth-of-type(2) {
+      margin-bottom: 4px;
+    }
+    div:first-of-type {
+      letter-spacing: 0.25em;
+      font-weight: 300;
+      font-size: calc(0.75rem + 0.5 * ((100vw - 20rem) / 100));
+      line-height: 1.3;
+    }
+    div:nth-of-type(2) {
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: calc(0.75rem + 0.125 * ((100vw - 20rem) / 100));
+    }
+    div:last-of-type {
+      font-weight: 400;
+      font-family: var(--text-font-family);
+      letter-spacing: 0px;
+      font-size: calc(0.875rem + 0.125 * ((100vw - 20rem) / 100));
+      line-height: 1.3;
+    }
+  }
+
+  .ScrollbarsCustom {
+    width: 100%;
+    height: 100%;
+    & > .ScrollbarsCustom-Wrapper {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      & > .ScrollbarsCustom-Scroller {
+        scroll-behavior: smooth;
+        & > .ScrollbarsCustom-Content {
+          color: white;
+          width: 100%;
+          text-align: initial;
+          white-space: nowrap;
+          position: relative;
+          .eachWatch {
+            display: inline-block;
+            width: 240px;
+            height: 372.4px;
+            background-position: center;
+            &:first-child {
+              margin-left: calc(42%);
+            }
+            &:last-child {
+              margin-right: calc(42%);
+            }
+          }
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .ScrollbarsCustom-TrackX {
+      border-radius: 4px;
+      * {
+        border-color: transparent;
+      }
+      position: absolute;
+      display: flex;
+      align-items: center;
+      height: 4px;
+      width: 50%;
+      bottom: 0;
+      left: 25%;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ScrollbarsCustom-ThumbX {
+      background: rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+      border-radius: 4px;
+      height: 4px;
+      background: white;
+      transition: height 0.2s ease 0s;
+      &:hover {
+        height: 6px;
+        transition: height 0.2s ease 0s;
+      }
+    }
+  }
+
+  button {
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    flex-direction: row;
+    transition-property: all;
+    transition-duration: 0.3s;
+    line-height: 1;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 0.75rem;
+    text-decoration: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    &:first-of-type {
+      left: 0;
+      opacity: 0;
+    }
+    &:last-of-type {
+      right: 0;
+      opacity: 0;
+    }
+    &:hover {
+      background-color: black;
+      border-color: transparent;
+      fill: white;
+    }
+  }
+  .false {
+    display: none;
+  }
+
+  .nameContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 1s cubic-bezier(0.32, 0.94, 0.6, 1) 0s;
+    opacity: 1;
+
+    .notOnFence {
+      text-align: center;
+      color: white;
+      transition: opacity 1s cubic-bezier(0.32, 0.94, 0.6, 1) 0.2s;
+      opacity: 1;
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: calc(0.75rem + 0.125 * ((100vw - 20rem) / 100));
+    }
+    .onFence {
+      text-align: center;
+      color: white;
+      transition: opacity 0.05s cubic-bezier(0.32, 0.94, 0.6, 1) 0s;
+      opacity: 0;
+      font-weight: 700;
+      line-height: 1.3;
+      font-size: calc(0.75rem + 0.125 * ((100vw - 20rem) / 100));
+    }
+  }
+}
