@@ -1,0 +1,75 @@
+.SlidingShow2 {
+    display: flex;
+    overflow-x: scroll;
+    .forUl {
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            height: 581.391px;
+            li {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                margin-right: 20px;
+                &:first-child {
+                    width: 343.74px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    div {
+                        &:first-child {
+                            font-size: 15px;
+                            margin-bottom: 30px;
+                            margin-right: 70%;
+                        }
+                        &:last-child {
+                            font-size: 26.5938px;
+                            padding-right: 60%;
+                        }
+                    }
+    
+                }
+                &:nth-child(2) {
+                    width: 581.391px;
+                }
+                &:nth-child(3) {
+                    width: 584.11px;
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        height: 280.69px;
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+                        &:last-child {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    width: 580px;
+                    padding: 0 40px;
+                    display: flex;
+                    align-items: center;
+                }
+                &:nth-child(5) {
+                    width: 581.391px;
+                }
+                &:nth-child(6) {
+                    width: 581.39px;
+                }
+                &:nth-child(7) {
+                    width: 581.39px;
+                }
+                &:nth-child(8) {
+                    width: 581.39px;
+                }
+            }
+        }
+    }
+}

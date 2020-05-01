@@ -28,7 +28,6 @@ class SignUp extends React.Component {
                 body: JSON.stringify({
                     name,
                     password,
-
                 }),
             })
                 .then(res => {

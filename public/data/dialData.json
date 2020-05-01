@@ -1,0 +1,60 @@
+{
+  "dialData": [
+    {
+      "name": "블랙, 사선 모티프",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/50630_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0007.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "샴페인 컬러",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46157_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0003.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "샴페인 컬러",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/50629_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0006.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "실버",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46156_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0002.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "실버, 사선 모티프",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/50631_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0008.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "화이트",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "44,540,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51220_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0042.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 블랙",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "50,050,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46158_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0004.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 샴페인 컬러",
+      "diameter": "오이스터, 40mm, 옐로우 골드",
+      "price": "50,050,000 &#8361",
+      "dial_pic_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46161_y_40.png?impolicy=main-configurator&imwidth=340",
+      "watch_pic_url": "https://content.rolex.com/dam/2019/upright-cc/m228238-0005.png?impolicy=main-configurator&imwidth=680"
+    }
+  ]
+}

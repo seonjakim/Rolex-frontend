@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Scrollbar from "react-scrollbars-custom";
 import SlideOnClick from "./SlideOnClick";
+// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import * as Scroll from 'react-scroll';
 import "./ClickSlide.scss";
 
 export default class ClickSlide extends Component {
@@ -20,10 +22,6 @@ export default class ClickSlide extends Component {
         fetch("http://localhost:3000/data/ClickSlide.json")
             .then((res) => res.json())
             .then((res) => {
-                console.log(
-                    "res.CollectionData가 이렇게 생겼어요 : ",
-                    res.CollectionData
-                );
                 this.setState({ collectionData: res.CollectionData });
             });
     };
@@ -45,6 +43,9 @@ export default class ClickSlide extends Component {
                     <div className="collectionSwipe">
                         <div className="collections">
                             <Scrollbar noDefaultStyles>{CollectionList}</Scrollbar>
+                        </div>
+                        <div>
+
                         </div>
                     </div>
                 </div>

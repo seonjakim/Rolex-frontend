@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import ColorLogo from './ColorLogo.png'
 import { API_URL } from '../../Config';
 import './SignIn.scss';
@@ -14,13 +14,10 @@ class SignIn extends React.Component {
         }
     }
 
-    componentDidMount = () => {
-        this.signIn();
-    }
 
     signIn = () => {
         const { name, password } = this.state
-        fetch(`${API_URL}/login`, {
+        fetch(`${API_URL}/user/login`, {
             method: 'POST',
             body: JSON.stringify({
                 name,
@@ -58,7 +55,7 @@ class SignIn extends React.Component {
                         <button onClick={this.signIn}>
                             로그인
                             </button>
-                        <button className="Join" >회원가입</button>
+                        <button className="Join" ><Link to="/signup">회원가입</Link></button>
                     </div>
                     <div className="FindIdPw">아이디 / 비밀번호 찾기</div>
                 </div>

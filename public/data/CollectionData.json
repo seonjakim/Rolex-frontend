@@ -5,7 +5,7 @@
       "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_day-date_m228238_0042_1804jva_001_2_re.jpg?imwidth=550",
       "name": "DAY-DATE",
       "detail": "품격 있는 시계의 상징",
-      "link": "https://www.rolex.com/ko/watches/day-date.html"
+      "link": "http://localhost:3000/collection/detail"
     },
     {
       "id": 2,

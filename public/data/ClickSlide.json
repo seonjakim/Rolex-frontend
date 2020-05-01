@@ -3,36 +3,36 @@
         {
             "id": 1,
             "pic_url": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?imwidth=420",
-            "name": "DAY-DATE",
-            "detail": "품격 있는 시계의 상징",
+            "name": "DAY-DATE 40",
+            "detail": "오이스터, 40mm, 옐로우 골드",
             "link": "https://www.rolex.com/ko/watches/day-date.html"
         },
         {
             "id": 2,
             "pic_url": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128238-0069.png?imwidth=420",
-            "name": "DATEJUST",
-            "detail": "대표적인 클래식 시계",
+            "name": "Day-Date 36",
+            "detail": "오이스터, 36mm, 옐로우 골드",
             "link": "https://www.rolex.com/ko/watches/datejust.html"
         },
         {
             "id": 3,
             "pic_url": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228206-0004.png?imwidth=420",
-            "name": "GMT-MASTER II",
-            "detail": "코스모폴리탄을 위한 시계",
+            "name": "Day-Date 40",
+            "detail": "오이스터, 40mm, 플래티넘",
             "link": "https://www.rolex.com/ko/watches/gmt-master-ii.html"
         },
         {
             "id": 4,
             "pic_url": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228239-0033.png?imwidth=420",
-            "name": "SUBMARINER",
-            "detail": "다이버 워치의 대명사",
+            "name": "Day-Date 40",
+            "detail": "오이스터, 40mm, 화이트 골드",
             "link": "https://www.rolex.com/ko/watches/submariner.html"
         },
         {
             "id": 5,
             "pic_url": "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m128239-0023.png?imwidth=420",
-            "name": "OYSTER PERPETUAL",
-            "detail": "가장 기본적인 오이스터 모델",
+            "name": "Day-Date 36",
+            "detail": "오이스터, 36mm, 화이트 골드",
             "link": "https://www.rolex.com/ko/watches/oyster-perpetual.html"
         }
     ]
