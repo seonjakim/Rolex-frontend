@@ -45,7 +45,7 @@ class InMenu extends Component {
             </div>
             <div className="menuList">
               <div>
-                <li>롤렉스 컬렉션</li>
+                <li onClick={() => this.goTo("/collection")}>롤렉스 컬렉션</li>
                 <li onClick={() => this.goTo("/settingrolex")}>
                   시계 설정하기
                 </li>
