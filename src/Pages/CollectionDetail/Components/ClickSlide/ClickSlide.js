@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Scrollbar from "react-scrollbars-custom";
-import ClassicCollection from "./ClassicCollection";
-import "./ClassicCollectionSlide.scss";
+import SlideOnClick from "./SlideOnClick";
+// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import * as Scroll from 'react-scroll';
+import "./ClickSlide.scss";
 
-export default class ClassicCollectionSlide extends Component {
+export default class ClickSlide extends Component {
     constructor() {
         super();
         this.state = {
@@ -17,7 +19,7 @@ export default class ClassicCollectionSlide extends Component {
     };
 
     getData = () => {
-        fetch("http://localhost:3000/data/CollectionData.json")
+        fetch("http://localhost:3000/data/ClickSlide.json")
             .then((res) => res.json())
             .then((res) => {
                 this.setState({ collectionData: res.CollectionData });
@@ -27,7 +29,7 @@ export default class ClassicCollectionSlide extends Component {
     render() {
         let CollectionList = this.state.collectionData.map((collection) => {
             return (
-                <ClassicCollection
+                <SlideOnClick
                     pic={collection.pic_url}
                     name={collection.name}
                     detail={collection.detail}
@@ -36,14 +38,14 @@ export default class ClassicCollectionSlide extends Component {
             );
         });
         return (
-            <div className="showCollection">
+            <div className="ClickSlide">
                 <div className="collectionTxtNSwipe">
-                    <div className="collectionTxt">
-                        클래식 시계 - <Link>모두 보기</Link>
-                    </div>
                     <div className="collectionSwipe">
                         <div className="collections">
                             <Scrollbar noDefaultStyles>{CollectionList}</Scrollbar>
+                        </div>
+                        <div>
+
                         </div>
                     </div>
                 </div>

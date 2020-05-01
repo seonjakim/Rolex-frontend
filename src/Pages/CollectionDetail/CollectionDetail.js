@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import DisplayWithHeart from './Components/DisplayWithHeart'
 import SideSlideDayDate from './Components/SideSlideDayDate/SideSlideDayDate'
+import ClickSlide from './Components/ClickSlide/ClickSlide';
+import SlidingShow from './Components/SlidingShow/SlidingShow';
+import * as Scroll from 'react-scroll';
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import Carousel from "react-multi-carousel";
+import SlideMap from "./SlideMap";
+import "react-multi-carousel/lib/styles.css";
 import './CollectionDetail.scss';
+import SlidingShow2 from './Components/SlidingShow/SlidingShow2';
+
 
 class CollectionDetail extends Component {
-    constructor(props) {
-        super(props);
-        console.log({ props })
+
+    componentDidMount() {
+        Events.scrollEvent.register('end', function (to, element) {
+            console.log("end", arguments);
+        });
+
+        scrollSpy.update();
+
     }
+    componentWillUnmount() {
+        Events.scrollEvent.remove('begin');
+        Events.scrollEvent.remove('end');
+    }
+
+    scrollToBottom() {
+        scroll.scrollToBottom();
+    }
+
     render() {
         return (
             <div className='CollectionDetail'>
@@ -33,18 +56,29 @@ class CollectionDetail extends Component {
                         <p>
                             1956년, 탄생한 데이-데이트(Day-Date)는 다이얼에 날짜뿐만 아니라 약자가 아닌 전체 단어로 표시된 요일이 순간적으로 바뀌는 현대적인 캘린더 기능을 창작한 최초의 방수 오토매틱 크로노미터 손목시계입니다.
                         </p>
-                        <p>
-                            탁월한 정밀함과 신뢰성, 가독성 그리고 독보적인 존재감을 자랑하는 이 품격 있는 모델은 가장 높은 명성을 자랑하는 시계로 자리 잡았습니다.
-                        </p>
                     </div>
                 </div>
-                <DisplayWithHeart />
+                <div className="theMovingWatch">
+                    <p>
+                        탁월한 정밀함과 신뢰성, 가독성 그리고 독보적인 존재감을 자랑하는 이 품격 있는 모델은 가장 높은 명성을 자랑하는 시계로 자리 잡았습니다.
+                    </p>
+                    <img src="https://content.rolex.com/dam/watches/watch-on-time/m228238-0042/landscape_big.jpg" />
+                </div>
+                <ClickSlide />
+                <div className="TwoBtn">
+                    <div></div>
+                    <div onClick={this.scrollToBottom}></div>
+                </div>
                 <div className="TwoButton">
                     <button>
-                        설정
+                        <Link to="/settingrolex">
+                            설정
+                        </Link>
                     </button>
                     <button>
-                        모두 보기
+                        <Link to="/findrolex">
+                            모두 보기
+                        </Link>
                     </button>
                 </div>
                 <div className="movingPic">
@@ -56,8 +90,10 @@ class CollectionDetail extends Component {
                     </div>
 
                 </div>
+                <SlidingShow />
+
                 {/* <SideSlideDayDate /> */}
-                <div class="carousel carousel-wrap">
+                {/* <div class="carousel carousel-wrap">
                     <ul>
                         <li></li>
                         <li></li>
@@ -65,7 +101,13 @@ class CollectionDetail extends Component {
                         <li></li>
                         <li></li>
                     </ul>
-                </div>
+                </div> */}
+
+                {/* <Carousel>
+                    <div>item1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </Carousel> */}
 
                 <div className="bracelet">
                     <img src="https://content.rolex.com/dam/watches/family-pages/day-date/classic-watches-day-date-president-bracelet_m118238_0419_1806ac_001.jpg?imwidth=1112, https://content.rolex.com/dam/watches/family-pages/day-date/classic-watches-day-date-president-bracelet_m118238_0419_1806ac_001.jpg?imwidth=1668 2x" />
@@ -80,9 +122,22 @@ class CollectionDetail extends Component {
                     </div>
                 </div>
                 <div className="insidePic">
-                    <video src="https://content.rolex.com/dam/watches/family-pages/day-date/video/classic_watches_day-date_movement_auto_play_0001.mp4" />
+                    <video src="https://content.rolex.com/dam/watches/family-pages/day-date/video/classic_watches_day-date_movement_auto_play_0001.mp4"
+                        type="video/mp4"
+                        autoPlay
+                        muted
+                        playsinline
+                        loop
+                        preload="auto"
+
+                    />
                 </div>
-            </div>
+                <div className="innerVideo">
+
+                </div>
+                <SlidingShow2 />
+                <SlideMap />
+            </div >
         )
     }
 }

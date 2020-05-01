@@ -1,0 +1,20 @@
+.SlideMap {
+    .forUl {
+        li {
+            list-style: none;
+            img {
+                height: 420px;
+                width: auto;
+            }
+            span {
+
+                &:first-child {
+
+                }
+                &:last-child {
+
+                }
+            }
+        }
+    }
+}

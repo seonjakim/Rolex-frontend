@@ -1,0 +1,136 @@
+.ClickSlide {
+    // height: 500.483px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    .collectionTxtNSwipe {
+      // height: 584.563px;
+      width: 1000px;
+      .collectionTxt {
+        color: rgb(33, 33, 33);
+        font-weight: 400;
+        letter-spacing: 0px;
+      }
+      .collectionSwipe {
+        height: 490px;
+        .collections {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          .ScrollbarsCustom {
+            width: 100%;
+            height: 100%;
+  
+            & > .ScrollbarsCustom-Wrapper {
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+  
+              & > .ScrollbarsCustom-Scroller {
+                & > .ScrollbarsCustom-Content {
+                  width: 100%;
+                  text-align: initial;
+                  white-space: nowrap;
+                  position: relative;
+                  a {
+                    color: inherit;
+                    display: inline-block;
+                    width: 330px;
+                  }
+                  li {
+                    display: inline-block;
+                    //position: relative;
+                    height: 490.79px;
+                    width: 100%;
+                    overflow: hidden;
+                    // display: flex;
+                    // justify-content: center;
+                    .collectionPic {
+                      height: 424.59px;
+                      // display: flex;
+                      // justify-content: center;
+
+                      //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
+                      // object-fit: cover;
+                      // background-size: cover;
+                      transform: scale(1);
+                      transition: transform 0.6s ease 0s;
+                    }
+                    .collectionPicHover {
+                      height: 424.59px;
+                      //background-image: url(https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550);
+                      object-fit: cover;
+                      background-size: cover;
+                      transform: scale(1.05);
+                      transition: transform 0.6s ease 0s;
+                    }
+                    .collectionTitle {
+                      display: flex;
+                      flex-direction: column;
+                      height: 66.2px;
+                      background-color: white;
+                      // transform: translateY(0px);
+                      // transition: transform 0.2s ease 0s;
+                      span {
+                        text-align: center;
+                        &:first-child {
+                          font-weight: 700;
+                          font-size: 11.3px
+                        }
+                        &:nth-child(2) {
+                          letter-spacing: 0.3px;
+                          font-size: 0.875rem;
+                          line-height: 1.3;
+                          margin: 0px;
+                        }
+                      }
+                    }
+                    .collectionTitleHover {
+                      display: flex;
+                      flex-direction: column;
+                      //height: 66.2px;
+                      background-color: white;
+                      // transform: translateY(-10px);
+                      // transform-origin: 50% 50%;
+                      // transition: transform 0.2s ease 0s;
+                      //overflow: hidden;
+                      span {
+                        text-align: center;
+                        &:first-child {
+                          font-weight: 700;
+                          font-size: 11.3px
+                          
+                        }
+                        &:nth-child(2) {
+                          letter-spacing: 0.3px;
+                          font-size: 0.875rem;
+                          line-height: 1.3;
+                          margin: 0px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+  
+        }
+  
+        }
+      }
+    }
+    // .divBtn {
+    //   div{
+    //     background-color: green;
+    //   }
+    // }
+  }
+  

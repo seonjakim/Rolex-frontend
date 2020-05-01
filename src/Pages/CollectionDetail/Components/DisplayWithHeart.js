@@ -33,12 +33,6 @@ const watches = [
         outline: "오이스터, 40mm, 옐로우 골드",
         img:
             "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
-    },
-    {
-        name: "Day-Date 40",
-        outline: "오이스터, 40mm, 옐로우 골드",
-        img:
-            "https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=420, https://content.rolex.com/dam/2019/upright-bba-with-shadow/m228238-0042.png?impolicy=v6-upright&imwidth=840 2x",
     }
 ];
 
@@ -71,6 +65,10 @@ export default class DisplayWithHeart extends React.Component {
                             </a>
                         </li>
                     </ul>
+                    <div className="divBtn">
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         )
