@@ -27,6 +27,8 @@ class Detail extends Component {
   };
 
   render() {
+    console.log("here", this.state.watchData);
+    console.log("here");
     return (
       <div className="detail">
         <div className="mainPicContainer">

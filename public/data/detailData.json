@@ -1,0 +1,60 @@
+{
+  "product": {
+    "metadata": {
+      "category": "클래식 시계",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "size": 40,
+      "material": "옐로우 골드",
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_40.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m228238-0042.png&cw=3000&ch=3000&imwidth=600",
+      "bg_image": "https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?impolicy=v6-upright&imwidth=1920",
+      "price": 44540000,
+      "product_id": 1
+    },
+    "description": {
+      "first_paragraph": "프레지던트 브레슬릿과 플루티드, 화이트 다이얼을 갖춘 18캐럿 옐로우 골드 소재의 Oyster Perpetual Day-Date 40.",
+      "second_paragraph": "1956년 처음 선보인 Day-Date는 요일의 전체 글자를 표시한 세계 최초의 시계였습니다."
+    },
+    "main_features": {
+      "thumbnail_image": "https://content.rolex.com/dam/2019/bg/model-main-feature-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bezel-with-colored-shadow/46451.png&sc1=1.55&c1x=-1050&c1y=-74&imwidth=1920",
+      "click_image": "https://content.rolex.com/dam/2019/bg/model-popin-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bezel-with-colored-shadow/46451.png&sc1=1.3&c1x=-201&c1y=-500&imwidth=2400%202x",
+      "title": "플루티드 베젤",
+      "sub_title": "롤렉스의 상징",
+      "description": "롤렉스 플루티드 베젤은 롤렉스 시계를 대표하는 요소로 자리 잡았습니다. 최초 오이스터(Oyster) 베젤의 가장자리에는 플루팅, 즉 톱니 모양의 세로 홈을 새겼습니다. 이는 시계의 방수를 위해 베젤을 케이스에 돌려 잠그기 위한 용도였습니다. 역시 방수를 위해 케이스 본체에 스크류-다운 방식으로 고정되는 케이스 백에도 이와 같은 세로홈이 새겨져 있는데, 롤렉스 전용 도구를 사용하여 케이스에 고정시킬 수 있습니다. 롤렉스 시계를 대표하는 디자인 요소로 자리잡은 플루티드 베젤은 항상 골드 소재로만 제작됩니다."
+    },
+    "sub_features": {
+      "title": [
+        "화이트 다이얼",
+        "18캐럿 옐로우 골드",
+        "프레지던트 브레슬릿",
+        "요일 표시창",
+        "사이클롭스 렌즈",
+        "3255 무브먼트"
+      ],
+      "sub_title": [
+        "독특한 다이얼",
+        "완벽을 추구하는 신념",
+        "세련미의 상징",
+        "자정에 순간적으로 변경되는 날짜",
+        "볼록 렌즈",
+        "최상급 성능"
+      ],
+      "thumbnail": [
+        "https://content.rolex.com/dam/2019/bg/model-feature-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/dial-raw-with-colored-shadow/51220_y_40.png&sc1=4.65&c1x=-1215&c1y=-956&imwidth=550",
+        "https://content.rolex.com/dam/model-page/features/material/materials-yellow-gold_rolex_profiles_evr_05a6232.jpg?imwidth=550",
+        "https://content.rolex.com/dam/2019/bg/model-feature-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/42410.png&sc1=4.65&c1x=-887&c1y=-135&imwidth=550",
+        "https://content.rolex.com/dam/model-page/features/special-features/day-display-yellow-gold.jpg?imwidth=550",
+        "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-yellow-gold_elmt_1701rlx_001.jpg?imwidth=550",
+        "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-y.jpg?imwidth=550"
+      ],
+      "click_image": [
+        "https://content.rolex.com/dam/2019/bg/model-popin-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/dial-raw-with-colored-shadow/51220_y_40.png&sc1=1.7&c1x=-474&c1y=-760&imwidth=1350",
+        "https://content.rolex.com/dam/model-page/features/material/materials-yellow-gold-pop-in_rolex_profiles_evr_05a6232.jpg?imwidth=1350",
+        "https://content.rolex.com/dam/2019/bg/model-popin-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/46233.png&sc1=1.89&c1x=-599&c1y=0&imwidth=1350",
+        "https://content.rolex.com/dam/model-page/features/special-features/day-display-yellow-gold-pop-in.jpg?imwidth=1350",
+        "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-yellow-gold-pop-in_elmt_1701rlx_001.jpg?imwidth=1350",
+        "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-pop-in-y.jpg?imwidth=1350"
+      ]
+    }
+  }
+}

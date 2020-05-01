@@ -17,6 +17,7 @@ class TopNav extends Component {
       openMenu: false,
       openSelection: false,
       scroll: 0,
+      likeList: [],
     };
   }
   componentDidMount = () => {
@@ -42,29 +43,6 @@ class TopNav extends Component {
     }));
   };
 
-  // handleScroll = (e) => {
-  //   const scrollPoint = ("scroll", e.srcElement.scrollingElement.scrollTop);
-  //   this.state.point.unshift(scrollPoint);
-  //   this.state.point.splice(2, 2);
-
-  //   if (this.state.point[0] === 0) {
-  //     this.setState({
-  //       navClass: "Nav onTopNav",
-  //     });
-  //   } else if (
-  //     this.state.point[0] > this.state.point[1] &&
-  //     this.state.point[0] !== 0
-  //   ) {
-  //     this.setState({
-  //       navClass: "Nav MiddleNav ScrollDown",
-  //     });
-  //   } else if (this.state.point[0] < this.state.point[1]) {
-  //     this.setState({
-  //       navClass: "Nav MiddleNav ScrollUp",
-  //     });
-  //   }
-  // };
-
   openMenuHandle = () => {
     this.setState({
       openMenu: !this.state.openMenu,
@@ -72,14 +50,34 @@ class TopNav extends Component {
   };
 
   openSelectionHandle = () => {
-    this.setState({
-      openSelection: !this.state.openSelection,
-    });
+    localStorage.getItem("token")
+      ? this.setState(
+          {
+            openSelection: !this.state.openSelection,
+          },
+          () => {
+            fetch("http://10.58.5.93:8000/user/mylike/preview", {
+              method: "GET",
+              headers: {
+                Authorization: localStorage.getItem("token"),
+              },
+            })
+              .then((res) => res.json())
+              .then((res) => {
+                this.setState({
+                  likeList: res,
+                });
+              });
+          }
+        )
+      : alert("로그인 해주시기 바랍니다.");
   };
+
   goTo(location) {
     this.props.history.push(location);
   }
   render() {
+    console.log("state", this.state.likeList);
     return (
       <div className="TopNav">
         <InMenu
@@ -89,6 +87,7 @@ class TopNav extends Component {
         <InSelection
           openSelection={this.state.openSelection}
           openSelectionHandle={this.openSelectionHandle}
+          likeList={this.state.likeList}
         />
         <div className={this.state.navClass}>
           <div className="NavContainer">
@@ -97,7 +96,7 @@ class TopNav extends Component {
                 <TopNavMenu />
                 메뉴
               </div>
-              <div>컬렉션</div>
+              <div onClick={() => this.goTo("/collection")}>컬렉션</div>
               <div>롤렉스 세계</div>
               <div>공식 판매점 찾기</div>
             </div>
@@ -127,3 +126,25 @@ class TopNav extends Component {
 }
 
 export default withRouter(TopNav);
+// handleScroll = (e) => {
+//   const scrollPoint = ("scroll", e.srcElement.scrollingElement.scrollTop);
+//   this.state.point.unshift(scrollPoint);
+//   this.state.point.splice(2, 2);
+
+//   if (this.state.point[0] === 0) {
+//     this.setState({
+//       navClass: "Nav onTopNav",
+//     });
+//   } else if (
+//     this.state.point[0] > this.state.point[1] &&
+//     this.state.point[0] !== 0
+//   ) {
+//     this.setState({
+//       navClass: "Nav MiddleNav ScrollDown",
+//     });
+//   } else if (this.state.point[0] < this.state.point[1]) {
+//     this.setState({
+//       navClass: "Nav MiddleNav ScrollUp",
+//     });
+//   }
+// };

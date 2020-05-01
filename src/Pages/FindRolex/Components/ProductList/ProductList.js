@@ -71,6 +71,7 @@ class ProductList extends Component {
                 img={watch.image}
                 diameter={watch.diameter}
                 oyster={watch.oyster ? "오이스터" : ""}
+                id={watch.id}
               />
             ))}
           {Descriptions}

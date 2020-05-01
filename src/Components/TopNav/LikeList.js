@@ -8,13 +8,21 @@ class LikeList extends React.Component {
   }
 
   render() {
-    const { img, name, outline } = this.props.data;
+    const {
+      collection,
+      oyster,
+      size,
+      material,
+      thumbnail_image,
+    } = this.props.data;
     return (
       <div className="LikeList">
         <TopNavCancel />
-        <img src={img} alt="" />
-        <h2>{name}</h2>
-        <span>{outline}</span>
+        <img src={thumbnail_image} alt="" />
+        <h2>{collection}</h2>
+        <span>{`${
+          oyster ? "오이스터Oyster," : ""
+        } ${size}mm, ${material}`}</span>
       </div>
     );
   }
