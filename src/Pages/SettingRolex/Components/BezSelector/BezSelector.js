@@ -37,10 +37,14 @@ export default class BezSelector extends Component {
 
   changeName = () => {
     const { bezData, whichWatch } = this.state;
-    this.bezWatchPic.style.backgroundImage = `url(${bezData[whichWatch].watch_pic_url})`;
+    this.bezWatchPic.style.backgroundImage = `url(${bezData[whichWatch].watch_image})`;
     this.bezName.innerText = bezData[whichWatch].name;
     this.bezDim.innerText = bezData[whichWatch].diameter;
-    this.bezPrice.innerText = bezData[whichWatch].price;
+    if (bezData[whichWatch].price === 0) {
+      this.bezPrice.innerText = "가격 문의";
+    } else {
+      this.bezPrice.innerText = bezData[whichWatch].price;
+    }
   };
 
   whenScrolled = () => {
@@ -97,7 +101,7 @@ export default class BezSelector extends Component {
       return (
         <div
           className="eachBez"
-          style={{ backgroundImage: `url(${bez.bez_pic_url})` }}
+          style={{ backgroundImage: `url(${bez.bezel_url})` }}
         />
       );
     });

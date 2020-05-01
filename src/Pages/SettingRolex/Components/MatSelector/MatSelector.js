@@ -44,10 +44,14 @@ export default class MatSelector extends Component {
 
   changeName = () => {
     const { matData, whichWatch } = this.state;
-    this.matWatchPic.style.backgroundImage = `url(${matData[whichWatch].watch_pic_url})`;
+    this.matWatchPic.style.backgroundImage = `url(${matData[whichWatch].watch_image})`;
     this.matName.innerText = matData[whichWatch].name;
     this.matDim.innerText = matData[whichWatch].diameter;
-    this.matPrice.innerText = matData[whichWatch].price;
+    if (matData[whichWatch].price === 0) {
+      this.matPrice.innerText = "가격 문의";
+    } else {
+      this.matPrice.innerText = matData[whichWatch].price;
+    }
   };
 
   whenScrolled = () => {
@@ -105,7 +109,7 @@ export default class MatSelector extends Component {
       return (
         <div
           className="eachMat"
-          style={{ backgroundImage: `url(${mat.mat_pic_url})` }}
+          style={{ backgroundImage: `url(${mat.material_url})` }}
         />
       );
     });

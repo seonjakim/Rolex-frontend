@@ -23,15 +23,15 @@ export default class DialSelector extends Component {
   getData = () => {
     let queryString;
     if (this.props.onSelect.model === 40) {
-      queryString = `${this.props.onSelect.model}&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}`;
+      queryString = `40&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}&bracelet=프레지던트`;
     } else if (this.props.onSelect.model === 36) {
-      queryString = `${this.props.onSelect.model}&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}&bracelet=${this.props.onSelect.brac}`;
+      queryString = `36&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}&bracelet=${this.props.onSelect.brac}`;
     }
     fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.dialData가 이렇게 생겼어요 : ", res.dialData);
-        this.setState({ dialData: res.dialData }, () => {
+        console.log("res.dialData가 이렇게 생겼어요 : ", res.dial_data);
+        this.setState({ dialData: res.dial_data }, () => {
           this.opacWhenMount();
         });
       });
@@ -48,10 +48,14 @@ export default class DialSelector extends Component {
 
   changeName = () => {
     const { dialData, whichWatch } = this.state;
-    this.dialWatchPic.style.backgroundImage = `url(${dialData[whichWatch].watch_pic_url})`;
+    this.dialWatchPic.style.backgroundImage = `url(${dialData[whichWatch].watch_image})`;
     this.dialName.innerText = dialData[whichWatch].name;
-    this.dialDim.innerText = dialData[whichWatch].diameter;
-    this.dialPrice.innerText = dialData[whichWatch].price;
+    this.dialDim.innerText = `${dialData[whichWatch].is_oyster}, ${dialData[whichWatch].diameter} mm`;
+    if (dialData[whichWatch].price === 0) {
+      this.dialPrice.innerText = "가격 문의";
+    } else {
+      this.dialPrice.innerText = dialData[whichWatch].price;
+    }
   };
 
   whenScrolled = () => {
@@ -61,7 +65,7 @@ export default class DialSelector extends Component {
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
 
-    this.props.onSelect(dialData[whichWatch].name);
+    this.props.onSelect(dialData[whichWatch].product_id);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
@@ -108,7 +112,7 @@ export default class DialSelector extends Component {
       return (
         <div
           className="eachDial"
-          style={{ backgroundImage: `url(${dial.dial_pic_url})` }}
+          style={{ backgroundImage: `url(${dial.dial_url})` }}
         />
       );
     });
