@@ -1,10 +1,12 @@
 {
-  "genders": [
+  "sizes": [
     {
+      "value": 36,
       "title": "36mm",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-36.jpg"
     },
     {
+      "value": 40,
       "title": "40mm",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/diameter-40.jpg"
     }
@@ -12,18 +14,22 @@
 
   "materials": [
     {
+      "value": "옐로우 골드",
       "title": "옐로우 골드",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-yellow-gold.jpg"
     },
     {
-      "title": "핑크 골드",
+      "value": "에버로즈 골드",
+      "title": "에버로즈 골드",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-pink-gold.jpg"
     },
     {
+      "value": "화이트 골드",
       "title": "화이트 골드",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-18-ct-white-gold.jpg"
     },
     {
+      "value": "플래티넘",
       "title": "플래티넘",
       "img": "https://content.rolex.com/dam/watches/find-your-rolex/filters/alt-platinum.jpg"
     }
