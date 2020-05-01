@@ -9,7 +9,7 @@ export default class MatSelector extends Component {
     super(props);
     this.state = {
       matData: [],
-      whichWatch: "0",
+      whichWatch: 0,
       LBtnAppear: false,
       RBtnAppear: true,
       scrollFence: "notOnFence",
@@ -21,11 +21,13 @@ export default class MatSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://localhost:3000/data/matData.json")
+    let queryString;
+    queryString = `${this.props.onSelect.model}`;
+    fetch(`http://10.58.4.196:8000/product/config/material?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.matData가 이렇게 생겼어요 : ", res.matData);
-        this.setState({ matData: res.matData }, () => {
+        console.log("res.matData가 이렇게 생겼어요 : ", res.material_data);
+        this.setState({ matData: res.material_data }, () => {
           this.opacWhenMount();
         });
       });
@@ -74,14 +76,6 @@ export default class MatSelector extends Component {
     90 < scrollLeft % 240 && scrollLeft % 240 < 150
       ? this.setState({ scrollFence: "onFence" })
       : this.setState({ scrollFence: "notOnFence" });
-
-    // if (contentElement.children[howManyEl - 1]) {
-    //   contentElement.children[howManyEl - 1].style.opacity =
-    //     0.88 - (scrollLeft - howManyEl * 240) / 119;
-    // }
-
-    // contentElement.children[howManyEl].style.opacity =
-    //   (scrollLeft - howManyEl * 240) / 120;
 
     if (contentElement.children[howManyEl + 3]) {
       contentElement.children[howManyEl + 3].style.opacity =
