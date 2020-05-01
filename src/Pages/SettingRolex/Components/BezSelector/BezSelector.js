@@ -9,7 +9,7 @@ export default class BezSelector extends Component {
     super(props);
     this.state = {
       bezData: [],
-      whichWatch: "0",
+      whichWatch: 0,
       LBtnAppear: false,
       RBtnAppear: true,
       scrollFence: "notOnFence",
@@ -21,11 +21,13 @@ export default class BezSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://localhost:3000/data/bezData.json")
+    let queryString;
+    queryString = `${this.props.onSelect.model}&material=${this.props.onSelect.mat}`;
+    fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.bezData가 이렇게 생겼어요 : ", res.bezData);
-        this.setState({ bezData: res.bezData });
+        console.log("res.bezData가 이렇게 생겼어요 : ", res.bezel_data);
+        this.setState({ bezData: res.bezel_data });
       });
   };
 
@@ -66,14 +68,6 @@ export default class BezSelector extends Component {
     90 < scrollLeft % 240 && scrollLeft % 240 < 150
       ? this.setState({ scrollFence: "onFence" })
       : this.setState({ scrollFence: "notOnFence" });
-
-    // if (contentElement.children[howManyEl - 1]) {
-    //   contentElement.children[howManyEl - 1].style.opacity =
-    //     0.88 - (scrollLeft - howManyEl * 240) / 119;
-    // }
-
-    // contentElement.children[howManyEl].style.opacity =
-    //   (scrollLeft - howManyEl * 240) / 120;
 
     if (contentElement.children[howManyEl + 3]) {
       contentElement.children[howManyEl + 3].style.opacity =

@@ -65,6 +65,8 @@
             width: 240px;
             height: 372.4px;
             background-position: center;
+            background-size: cover;
+            transform: scale(1.2);
             &:first-child {
               margin-right: calc(42%);
             }

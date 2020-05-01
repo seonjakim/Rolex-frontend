@@ -9,7 +9,7 @@ export default class ModelSelector extends Component {
     super(props);
     this.state = {
       modelData: [],
-      whichWatch: "0",
+      whichWatch: 0,
       LBtnAppear: false,
       RBtnAppear: true,
       boldScrollFence: "boldNotOnFence",
@@ -22,11 +22,11 @@ export default class ModelSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://localhost:3000/data/modelData.json")
+    fetch("http://10.58.4.196:8000/product/config/model")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.modelData가 이렇게 생겼어요 : ", res.modelData);
-        this.setState({ modelData: res.modelData });
+        console.log("res.modelData가 이렇게 생겼어요 : ", res.model_data);
+        this.setState({ modelData: res.model_data });
       });
   };
 
@@ -37,11 +37,11 @@ export default class ModelSelector extends Component {
   changeName = () => {
     const { modelData, whichWatch } = this.state;
     if (whichWatch === 0) {
-      this.modelName.innerText = modelData[1].name;
-      this.modelDim.innerText = modelData[1].diameter;
+      this.modelName.innerText = `${modelData[1].collection} ${modelData[1].diameter}`;
+      this.modelDim.innerText = `${modelData[1].diameter} mm`;
     } else {
-      this.modelName.innerText = modelData[0].name;
-      this.modelDim.innerText = modelData[0].diameter;
+      this.modelName.innerText = `${modelData[0].collection} ${modelData[0].diameter}`;
+      this.modelDim.innerText = `${modelData[0].diameter} mm`;
     }
   };
 
@@ -96,7 +96,7 @@ export default class ModelSelector extends Component {
       return (
         <div
           className="eachModel"
-          style={{ backgroundImage: `url(${model.pic_url})` }}
+          style={{ backgroundImage: `url(${model.watch_image})` }}
         />
       );
     });
