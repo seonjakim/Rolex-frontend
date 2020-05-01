@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import ColorLogo from "./ColorLogo.png";
-import { API_URL02 } from "../../Config";
+
 import "./SignUp.scss";
 
 class SignUp extends React.Component {
@@ -23,7 +23,7 @@ class SignUp extends React.Component {
     } else if (password !== checkPassword) {
       alert("비밀번호를 다시 한번 확인해주세요.");
     } else {
-      fetch(`${API_URL02}/user/sign-up`, {
+      fetch(`http://10.58.5.93:8000/user/sign-up`, {
         method: "POST",
         body: JSON.stringify({
           name,
