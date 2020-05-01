@@ -87,19 +87,19 @@ class SettingRolex extends Component {
                 onSelect={(data) => this.handleSelect("bez", data)}
               />
             )}
-            {whichStage === 5 && model === "36" && (
+            {whichStage === 5 && model === 36 && (
               <BracSelector
                 data={this.state.data}
                 onSelect={(data) => this.handleSelect("brac", data)}
               />
             )}
-            {whichStage === 5 && model === "40" && (
+            {whichStage === 5 && model === 40 && (
               <DialSelector
                 data={this.state.data}
                 onSelect={(data) => this.handleSelect("id", data)}
               />
             )}
-            {whichStage === 6 && model === "36" && (
+            {whichStage === 6 && model === 36 && (
               <DialSelector
                 data={this.state.data}
                 onSelect={(data) => this.handleSelect("id", data)}
