@@ -64,7 +64,10 @@
             display: inline-block;
             width: 240px;
             height: 372.4px;
-            background-position: center;
+            background-position-x: left;
+            background-position-y: bottom;
+            background-size: cover;
+            transform: scale(1.2);
             &:first-child {
               margin-left: calc(42%);
             }
@@ -156,7 +159,7 @@
     height: 372.4px;
     margin-left: calc(42%);
     background-position-x: center;
-    background-position-y: -90px;
+    background-position-y: 0;
     background-size: 350px;
     transition: all 1s cubic-bezier(0.32, 0.94, 0.6, 1) 0s;
     opacity: 1;
