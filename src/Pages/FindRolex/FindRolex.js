@@ -5,7 +5,6 @@ import FilterCenter from "./Components/FilterCenter/FilterCenter";
 import ProductList from "./Components/ProductList/ProductList";
 import FilterRight from "./Components/FilterRight/FilterRight";
 import FindRolexArrow from "../../Images/FindRolexArrow";
-import FilterModal from "./Components/FilterModal/FilterModal";
 import { API_URL } from "../../Config";
 
 import "./FindRolex.scss";

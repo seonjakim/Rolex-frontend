@@ -1,7 +1,9 @@
 .ProductList {
   width: 80vw;
   margin: 0 auto;
-
+  .like {
+    padding: 50px;
+  }
   .Grid01 {
     grid-template-rows: repeat(7, 1fr);
     grid-template-columns: repeat(3, 1fr);
