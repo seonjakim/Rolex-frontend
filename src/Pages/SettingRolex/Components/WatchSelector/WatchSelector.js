@@ -9,7 +9,7 @@ export default class WatchSelector extends Component {
     super(props);
     this.state = {
       watchData: [],
-      whichWatch: "0",
+      whichWatch: 0,
       LBtnAppear: false,
       RBtnAppear: true,
       scrollFence: "notOnFence",

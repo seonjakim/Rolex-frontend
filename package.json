@@ -17,7 +17,8 @@
     "react-scrollbar-custom": "^1.2.0",
     "react-scrollbars-custom": "^4.0.21",
     "sass": "^1.26.3",
-    "save": "^2.4.0"
+    "save": "^2.4.0",
+    "scroll": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

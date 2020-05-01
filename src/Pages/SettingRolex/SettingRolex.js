@@ -15,39 +15,46 @@ class SettingRolex extends Component {
   constructor() {
     super();
     this.state = {
-      whichStage: 1,
-      isClicked: false,
-      data: {},
+      data: {
+        whichStage: 1,
+      },
     };
   }
 
   setStage = (isIncreasing) => {
-    const prev = this.state.whichStage;
+    const prev = this.state.data.whichStage;
     if (isIncreasing && prev === 6) return;
     if (!isIncreasing && prev === 1) return;
     this.setState({
-      whichStage: isIncreasing ? prev + 1 : prev - 1,
+      data: {
+        ...this.state.data,
+        whichStage: isIncreasing ? prev + 1 : prev - 1,
+      },
     });
   };
 
   resetStage = () => {
     this.setState({
-      whichStage: 1,
+      data: {
+        whichStage: 1,
+      },
     });
   };
 
   handleSelect = (key, value) => {
-    this.setState({
-      data: {
-        ...this.state.data,
-        [key]: value,
+    this.setState(
+      {
+        data: {
+          ...this.state.data,
+          [key]: value,
+        },
       },
-    });
-    console.log(this.state.data);
+      () => console.log(this.state.data)
+    );
   };
 
   render() {
-    const { whichStage } = this.state;
+    const { whichStage, model } = this.state.data;
 
     return (
       <div className="SettingRolex">
@@ -73,12 +80,17 @@ class SettingRolex extends Component {
                 onSelect={(data) => this.handleSelect("bez", data)}
               />
             )}
-            {whichStage === 5 && (
+            {whichStage === 5 && model === "36mm" && (
               <BracSelector
                 onSelect={(data) => this.handleSelect("brac", data)}
               />
             )}
-            {whichStage === 6 && (
+            {whichStage === 5 && model === "40mm" && (
+              <DialSelector
+                onSelect={(data) => this.handleSelect("dial", data)}
+              />
+            )}
+            {whichStage === 6 && model === "36mm" && (
               <DialSelector
                 onSelect={(data) => this.handleSelect("dial", data)}
               />
@@ -94,13 +106,7 @@ class SettingRolex extends Component {
                 <LeftArrow />
                 이전
               </button>
-              <button
-                onClick={
-                  () => this.setStage(true)
-                  // ,
-                  // this.setState({ isClicked: true })
-                }
-              >
+              <button onClick={() => this.setStage(true)}>
                 선택하기
                 <RightArrow />
               </button>

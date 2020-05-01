@@ -9,11 +9,22 @@ class ProductList extends Component {
     super(props);
     this.state = {
       checkbox: false,
-      watches: [],
       descriptions: [],
-      watches02: [],
     };
   }
+
+  // componentDidMount() {
+  //   fetch(`${BASE_URL}/product/list`)
+  //     .then((data) => data.json())
+  //     .then((data) => console.log(data.products));
+  // }
+
+  // componentDidMount() {
+  //   fetch(`${BASE_URL}/product/list?page=1&limit=14`)
+  //     .then((data) => data.json())
+  //     .then((data) => this.setState({ watches02: data }));
+  //   this.getData();
+  // }
 
   componentDidMount = () => {
     this.getData();
@@ -23,9 +34,8 @@ class ProductList extends Component {
     fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
       .then((res) => {
-        const { watches, descriptions } = res;
+        const { descriptions } = res;
         this.setState({
-          watches,
           descriptions,
         });
       });
@@ -38,10 +48,6 @@ class ProductList extends Component {
   };
 
   render() {
-    const Products = this.state.watches.map((watch, idx) => (
-      <ProductCard key={idx} idx={idx} class={`item${idx}`} data={watch} />
-    ));
-
     const Descriptions = this.state.descriptions.map((des, idx) => (
       <DescriptionCard key={idx} idx={idx} class={`des${idx}`} data={des} />
     ));
@@ -54,7 +60,19 @@ class ProductList extends Component {
             this.state.checkbox ? "ListGrid Grid02" : "ListGrid Grid01"
           }
         >
-          {Products}
+          {this.props.watches.products &&
+            this.props.watches.products.map((watch, idx) => (
+              <ProductCard
+                key={idx}
+                idx={idx}
+                class={`item${idx}`}
+                name={watch.collection}
+                material={watch.material}
+                img={watch.image}
+                diameter={watch.diameter}
+                oyster={watch.oyster ? "오이스터" : ""}
+              />
+            ))}
           {Descriptions}
         </div>
       </div>
