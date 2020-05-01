@@ -22,8 +22,8 @@ export default class BracSelector extends Component {
 
   getData = () => {
     let queryString;
-    queryString = `36&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}`;
-    fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
+    queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}`;
+    fetch(`http://10.58.4.196:8000/product/config/bracelet?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.bracData가 이렇게 생겼어요 : ", res.bracelet_data);
@@ -102,7 +102,7 @@ export default class BracSelector extends Component {
       return (
         <div
           className="eachBrac"
-          style={{ backgroundImage: `url(${brac.brac_pic_url})` }}
+          style={{ backgroundImage: `url(${brac.bracelet_url})` }}
         />
       );
     });

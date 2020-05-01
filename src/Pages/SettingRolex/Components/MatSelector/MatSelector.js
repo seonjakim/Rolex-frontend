@@ -22,7 +22,7 @@ export default class MatSelector extends Component {
 
   getData = () => {
     let queryString;
-    queryString = `${this.props.onSelect.model}`;
+    queryString = `${this.props.data.model}`;
     fetch(`http://10.58.4.196:8000/product/config/material?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
@@ -35,7 +35,9 @@ export default class MatSelector extends Component {
 
   opacWhenMount = () => {
     const { contentElement } = this.scrollbar;
-    contentElement.children[3].style.opacity = 0;
+    if (contentElement.children[3]) {
+      contentElement.children[3].style.opacity = 0;
+    }
   };
 
   componentDidUpdate = () => {
@@ -45,7 +47,7 @@ export default class MatSelector extends Component {
   changeName = () => {
     const { matData, whichWatch } = this.state;
     this.matWatchPic.style.backgroundImage = `url(${matData[whichWatch].watch_image})`;
-    this.matName.innerText = matData[whichWatch].name;
+    this.matName.innerText = matData[whichWatch].material_name;
     this.matDim.innerText = matData[whichWatch].diameter;
     if (matData[whichWatch].price === 0) {
       this.matPrice.innerText = "가격 문의";
@@ -62,7 +64,7 @@ export default class MatSelector extends Component {
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
 
-    this.props.onSelect(matData[whichWatch].name);
+    this.props.onSelect(matData[whichWatch].material_name);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })

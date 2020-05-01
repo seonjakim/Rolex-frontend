@@ -22,7 +22,7 @@ export default class BezSelector extends Component {
 
   getData = () => {
     let queryString;
-    queryString = `${this.props.onSelect.model}&material=${this.props.onSelect.mat}`;
+    queryString = `${this.props.data.model}&material=${this.props.data.mat}`;
     fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
@@ -39,7 +39,7 @@ export default class BezSelector extends Component {
     const { bezData, whichWatch } = this.state;
     this.bezWatchPic.style.backgroundImage = `url(${bezData[whichWatch].watch_image})`;
     this.bezName.innerText = bezData[whichWatch].name;
-    this.bezDim.innerText = bezData[whichWatch].diameter;
+    this.bezDim.innerText = `${bezData[whichWatch].is_oyster}, ${bezData[whichWatch].diameter} mm`;
     if (bezData[whichWatch].price === 0) {
       this.bezPrice.innerText = "가격 문의";
     } else {
