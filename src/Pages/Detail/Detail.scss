@@ -1,0 +1,162 @@
+.detail {
+  * {
+    border: 1px solid black;
+  }
+  .mainPicContainer {
+    height: 638.075px;
+    position: relative;
+    .mainPic {
+      height: 600px;
+      width: 600px;
+      position: absolute;
+      bottom: 19px;
+      left: calc(50vw - 300px);
+    }
+    .mainPicDesc {
+      height: 138.6px;
+      width: 432px;
+      position: absolute;
+      bottom: 100px;
+      left: 144px;
+    }
+  }
+  .mainDetail {
+    height: 278.744px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .detailTxt {
+      height: 127.2px;
+      width: 1140px;
+    }
+  }
+  .dialPicContainer {
+    height: 779.6px;
+    position: relative;
+    .dialPic {
+      width: 1296px;
+      height: 779.6px;
+      margin: 0 auto;
+    }
+    .dialPicTxt {
+      width: 608px;
+      height: 174.8px;
+      position: absolute;
+      top: 144px;
+      left: 415px;
+    }
+  }
+  .modelDetail {
+    height: 793.267px;
+    .detailContainer {
+      height: 553.987px;
+      margin: 119.64px 150px;
+      .detailTxt {
+        height: 20px;
+        margin-bottom: 30px;
+      }
+      .detailCarousel {
+        height: 503.987px;
+      }
+    }
+  }
+  .rolexRetail {
+    height: 847.4px;
+    .retailContainer {
+      height: 648px;
+      margin: 79.76px 72px 119.64px;
+      display: flex;
+      .retailPic {
+        height: 648px;
+        width: 648px;
+      }
+      .retailTxt {
+        height: 648px;
+        width: 432px;
+        margin: 0px 72px 0 144px;
+      }
+    }
+  }
+  .collectionWorld {
+    height: 319.038px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: auto;
+    overflow: hidden;
+    .retailPic {
+      width: 100%;
+      height: 100%;
+      background-image: url(https://content.rolex.com/dam/model-page/family-page-push/family-page-push-day-date_96734_flagship_2019_day_date_40_dp_iso_11.jpg?imwidth=2400);
+      background-size: cover;
+      background-position-y: center;
+      filter: brightness(0.5);
+      transform: scale(1);
+      transition: all 0.5s ease-in 0s;
+    }
+    .retailPicHover {
+      width: 100%;
+      height: 100%;
+      background-image: url(https://content.rolex.com/dam/model-page/family-page-push/family-page-push-day-date_96734_flagship_2019_day_date_40_dp_iso_11.jpg?imwidth=2400);
+      background-size: cover;
+      background-position-y: center;
+      filter: brightness(0.5);
+      transform: scale(1.03);
+      transition: all 0.5s ease-in 0s;
+    }
+
+    .retailTxt {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      width: 650px;
+      color: white;
+      .buyOne {
+        margin-bottom: 30px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        font-size: calc(0.875rem + 0.125 * ((100vw - 20rem) / 100));
+        line-height: 1.3;
+      }
+      .findRetail {
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        font-size: calc(1.25rem + 0.625 * ((100vw - 20rem) / 100));
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .button {
+        padding: 11px 30px;
+        border-radius: 30px;
+        font-size: 1rem;
+        letter-spacing: 0.3px;
+        line-height: 16px;
+        border: 1px solid white;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        transition: all 0.5s ease 0s;
+      }
+      .buttonHover {
+        padding: 11px 30px;
+        border-radius: 30px;
+        font-size: 1rem;
+        letter-spacing: 0.3px;
+        line-height: 16px;
+        border: 1px solid white;
+        background-color: white;
+        color: rgb(18, 120, 74);
+        transition: all 0.5s ease 0s;
+      }
+    }
+  }
+  footer {
+    height: 773.4px;
+    text-align: center;
+    font-size: 100px;
+  }
+}
