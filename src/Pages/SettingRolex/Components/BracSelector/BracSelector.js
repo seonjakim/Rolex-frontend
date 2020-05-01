@@ -22,12 +22,12 @@ export default class BracSelector extends Component {
 
   getData = () => {
     let queryString;
-    queryString = `${this.props.onSelect.model}&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}`;
+    queryString = `36&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}`;
     fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.bracData가 이렇게 생겼어요 : ", res.bracData);
-        this.setState({ bracData: res.bracData });
+        console.log("res.bracData가 이렇게 생겼어요 : ", res.bracelet_data);
+        this.setState({ bracData: res.bracelet_data });
       });
   };
 
@@ -37,10 +37,14 @@ export default class BracSelector extends Component {
 
   changeName = () => {
     const { bracData, whichWatch } = this.state;
-    this.bracWatchPic.style.backgroundImage = `url(${bracData[whichWatch].watch_pic_url})`;
-    this.bracName.innerText = bracData[whichWatch].name;
-    this.bracDim.innerText = bracData[whichWatch].diameter;
-    this.bracPrice.innerText = bracData[whichWatch].price;
+    this.bracWatchPic.style.backgroundImage = `url(${bracData[whichWatch].watch_image})`;
+    this.bracName.innerText = bracData[whichWatch].collection;
+    this.bracDim.innerText = `${bracData[whichWatch].diameter} mm`;
+    if (bracData[whichWatch].price === 0) {
+      this.bracPrice.innerText = "가격 문의";
+    } else {
+      this.bracPrice.innerText = bracData[whichWatch].price;
+    }
   };
 
   whenScrolled = () => {

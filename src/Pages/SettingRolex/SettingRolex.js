@@ -22,8 +22,11 @@ class SettingRolex extends Component {
   }
 
   setStage = (isIncreasing) => {
-    const prev = this.state.data.whichStage;
-    if (isIncreasing && prev === 6) return;
+    const { whichStage, id } = this.state.data;
+    const prev = whichStage;
+    if (isIncreasing && prev === 6) {
+      this.props.history.push(`/detail/${id}`);
+    }
     if (!isIncreasing && prev === 1) return;
     this.setState({
       data: {
@@ -80,19 +83,19 @@ class SettingRolex extends Component {
                 onSelect={(data) => this.handleSelect("bez", data)}
               />
             )}
-            {whichStage === 5 && model === "36mm" && (
+            {whichStage === 5 && model === "36" && (
               <BracSelector
                 onSelect={(data) => this.handleSelect("brac", data)}
               />
             )}
-            {whichStage === 5 && model === "40mm" && (
+            {whichStage === 5 && model === "40" && (
               <DialSelector
-                onSelect={(data) => this.handleSelect("dial", data)}
+                onSelect={(data) => this.handleSelect("id", data)}
               />
             )}
-            {whichStage === 6 && model === "36mm" && (
+            {whichStage === 6 && model === "36" && (
               <DialSelector
-                onSelect={(data) => this.handleSelect("dial", data)}
+                onSelect={(data) => this.handleSelect("id", data)}
               />
             )}
           </div>

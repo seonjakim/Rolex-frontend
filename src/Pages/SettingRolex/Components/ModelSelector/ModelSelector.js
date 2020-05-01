@@ -9,7 +9,7 @@ export default class ModelSelector extends Component {
     super(props);
     this.state = {
       modelData: [],
-      whichWatch: 0,
+      whichWatch: 1,
       LBtnAppear: false,
       RBtnAppear: true,
       boldScrollFence: "boldNotOnFence",
