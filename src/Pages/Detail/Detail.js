@@ -18,29 +18,17 @@ class Detail extends Component {
   };
 
   getData = () => {
-<<<<<<< HEAD
-    fetch("http://localhost:3000/data/detailData.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          watchData: res,
-        });
-=======
     fetch("http://10.58.4.196:8000/product/1")
       .then((res) => res.json())
       .then((res) => {
         console.log("res.watchData가 이렇게 생겼어요 : ", res.product);
         this.setState({ watchData: res.product });
->>>>>>> master
       });
   };
 
   render() {
-<<<<<<< HEAD
     console.log("here", this.state.watchData);
     console.log("here");
-=======
->>>>>>> master
     return (
       <div className="detail">
         <div className="mainPicContainer">
@@ -52,10 +40,7 @@ class Detail extends Component {
         </div>
         <div className="dialPicContainer">
           <div className="dialPic"></div>
-<<<<<<< HEAD
-=======
           <div className="dialPicTxt"></div>
->>>>>>> master
         </div>
         <div className="modelDetail">
           <div className="detailContainer">

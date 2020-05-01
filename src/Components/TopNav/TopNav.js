@@ -96,7 +96,7 @@ class TopNav extends Component {
                 <TopNavMenu />
                 메뉴
               </div>
-              <div>컬렉션</div>
+              <div onClick={() => this.goTo("/collection")}>컬렉션</div>
               <div>롤렉스 세계</div>
               <div>공식 판매점 찾기</div>
             </div>
