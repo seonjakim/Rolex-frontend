@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Main from './Pages/Main/Main'
-import SettingRolex from './Pages/SettingRolex/SettingRolex'
-import FindRolex from './Pages/FindRolex/FindRolex'
-import Detail from './Pages/Detail/Detail'
-import Collection from './Pages/Collection/Collection'
-import CollectionDetail from './Pages/CollectionDetail/CollectionDetail'
-import MapRolex from './Pages/MapRolex/MapRolex'
-import SignIn from './Pages/SignInNUp/SignIn'
-import SignUp from './Pages/SignInNUp/SignUp'
-import TopNav from './Components/TopNav/TopNav';
-=======
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -30,7 +16,7 @@ import MapRolex from "./Pages/MapRolex/MapRolex";
 import SignIn from "./Pages/SignInNUp/SignIn";
 import SignUp from "./Pages/SignInNUp/SignUp";
 import TopNav from "./Components/TopNav/TopNav";
->>>>>>> origin
+import Footer from "./Components/Footer/Footer";
 
 class Routes extends React.Component {
   render() {
@@ -49,6 +35,7 @@ class Routes extends React.Component {
           <Route exact path="/signup" component={SignUp} />
           <Redirect from="*" to="/" />
         </Switch>
+        <Footer />
       </Router>
     );
   }
