@@ -70,19 +70,7 @@ export default class MatSelector extends Component {
 
     this.props.onSelect(matData[whichWatch].material_name);
 
-    if (matData[whichWatch].name === "옐로우 골드") {
-      this.props.changeBg(
-        "https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?imwidth=1920"
-      );
-    } else if (matData[whichWatch].name === "에버로즈 골드") {
-      this.props.changeBg(
-        "https://content.rolex.com/dam/2019/bg/model-cover-background-everose.jpg?imwidth=2880"
-      );
-    } else {
-      this.props.changeBg(
-        "https://content.rolex.com/dam/2019/bg/model-cover-background-steel.jpg?imwidth=1920"
-      );
-    }
+    this.props.changeBg(matData[whichWatch].background_image);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
