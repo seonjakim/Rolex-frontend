@@ -23,7 +23,8 @@ export default class MatSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `${this.props.data.model}`;
-    fetch(`http://10.58.4.196:8000/product/config/material?size=${queryString}`)
+    fetch("http://localhost:3000/data/matData40.json")
+      //fetch(`http://10.58.4.196:8000/product/config/material?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.matData가 이렇게 생겼어요 : ", res.material_data);
@@ -47,12 +48,15 @@ export default class MatSelector extends Component {
   changeName = () => {
     const { matData, whichWatch } = this.state;
     this.matWatchPic.style.backgroundImage = `url(${matData[whichWatch].watch_image})`;
-    this.matName.innerText = matData[whichWatch].material_name;
-    this.matDim.innerText = matData[whichWatch].diameter;
+    this.watchTitle.innerText = `DAY-DATE ${matData[whichWatch].diameter}`;
+    this.matName.innerText = matData[whichWatch].name;
+    this.matDim.innerText = `오이스터, ${matData[whichWatch].diameter}mm, ${matData[whichWatch].name}`;
     if (matData[whichWatch].price === 0) {
       this.matPrice.innerText = "가격 문의";
     } else {
-      this.matPrice.innerText = matData[whichWatch].price;
+      this.matPrice.innerText = `${matData[
+        whichWatch
+      ].price.toLocaleString()} ￦`;
     }
   };
 
@@ -65,6 +69,20 @@ export default class MatSelector extends Component {
     this.setState({ whichWatch: howManyEl });
 
     this.props.onSelect(matData[whichWatch].material_name);
+
+    if (matData[whichWatch].name === "옐로우 골드") {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?imwidth=1920"
+      );
+    } else if (matData[whichWatch].name === "에버로즈 골드") {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-everose.jpg?imwidth=2880"
+      );
+    } else {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-steel.jpg?imwidth=1920"
+      );
+    }
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
@@ -111,7 +129,7 @@ export default class MatSelector extends Component {
       return (
         <div
           className="eachMat"
-          style={{ backgroundImage: `url(${mat.material_url})` }}
+          style={{ backgroundImage: `url(${mat.material_url.split(" ")[0]})` }}
         />
       );
     });
@@ -119,7 +137,7 @@ export default class MatSelector extends Component {
     return (
       <div className="matSelector">
         <div className="configureStage">
-          <div>DAY-DATE 40</div>
+          <div ref={(ref) => (this.watchTitle = ref)} />
           <div>소재 선택하기</div>
           <div>단계 4</div>
         </div>
