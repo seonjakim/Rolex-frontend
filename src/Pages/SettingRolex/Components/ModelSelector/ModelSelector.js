@@ -22,7 +22,7 @@ export default class ModelSelector extends Component {
   };
 
   getData = () => {
-    fetch("http://10.58.4.196:8000/product/config/model")
+    fetch("http://localhost:3000/data/modelData.json")
       .then((res) => res.json())
       .then((res) => {
         console.log("res.modelData가 이렇게 생겼어요 : ", res.model_data);

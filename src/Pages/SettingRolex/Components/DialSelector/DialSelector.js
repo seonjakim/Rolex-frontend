@@ -27,7 +27,8 @@ export default class DialSelector extends Component {
     } else if (this.props.data.model === 36) {
       queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}&bracelet=${this.props.data.brac}`;
     }
-    fetch(`http://10.58.4.196:8000/product/config/dial?size=${queryString}`)
+    fetch("http://localhost:3000/data/dialData36.json")
+      //fetch(`http://10.58.4.196:8000/product/config/dial?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.dialData가 이렇게 생겼어요 : ", res.dial_data);
@@ -49,12 +50,15 @@ export default class DialSelector extends Component {
   changeName = () => {
     const { dialData, whichWatch } = this.state;
     this.dialWatchPic.style.backgroundImage = `url(${dialData[whichWatch].watch_image})`;
+    this.watchTitle.innerText = `DAY-DATE ${dialData[whichWatch].diameter}`;
     this.dialName.innerText = dialData[whichWatch].name;
-    this.dialDim.innerText = `${dialData[whichWatch].is_oyster}, ${dialData[whichWatch].diameter} mm`;
+    this.dialDim.innerText = `오이스터, ${dialData[whichWatch].diameter}mm`;
     if (dialData[whichWatch].price === 0) {
       this.dialPrice.innerText = "가격 문의";
     } else {
-      this.dialPrice.innerText = dialData[whichWatch].price;
+      this.dialPrice.innerText = `${dialData[
+        whichWatch
+      ].price.toLocaleString()} ￦`;
     }
   };
 
@@ -120,7 +124,7 @@ export default class DialSelector extends Component {
     return (
       <div className="dialSelector">
         <div className="configureStage">
-          <div>DAY-DATE 40</div>
+          <div ref={(ref) => (this.watchTitle = ref)} />
           <div>다이얼 선택하기</div>
           <div>단계 6</div>
         </div>

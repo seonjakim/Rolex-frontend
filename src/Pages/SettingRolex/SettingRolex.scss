@@ -5,9 +5,9 @@
   // z-index: 1;
   .settingZone {
     height: 844px;
-    background-image: url("https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?imwidth=1920");
     object-fit: cover;
     background-position: right;
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0s;
     .configurator {
       height: 737.2px;
       padding-top: 112px;

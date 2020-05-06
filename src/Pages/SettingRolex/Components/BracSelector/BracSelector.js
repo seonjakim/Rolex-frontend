@@ -23,7 +23,8 @@ export default class BracSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}`;
-    fetch(`http://10.58.4.196:8000/product/config/bracelet?size=${queryString}`)
+    fetch("http://localhost:3000/data/bracData36.json")
+      //fetch(`http://10.58.4.196:8000/product/config/bracelet?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.bracData가 이렇게 생겼어요 : ", res.bracelet_data);
@@ -38,12 +39,15 @@ export default class BracSelector extends Component {
   changeName = () => {
     const { bracData, whichWatch } = this.state;
     this.bracWatchPic.style.backgroundImage = `url(${bracData[whichWatch].watch_image})`;
+    this.watchTitle.innerText = `DAY-DATE ${bracData[whichWatch].diameter}`;
     this.bracName.innerText = bracData[whichWatch].collection;
-    this.bracDim.innerText = `${bracData[whichWatch].diameter} mm`;
+    this.bracDim.innerText = `오이스터, ${bracData[whichWatch].diameter}mm`;
     if (bracData[whichWatch].price === 0) {
       this.bracPrice.innerText = "가격 문의";
     } else {
-      this.bracPrice.innerText = bracData[whichWatch].price;
+      this.bracPrice.innerText = `${bracData[
+        whichWatch
+      ].price.toLocaleString()} ￦`;
     }
   };
 
@@ -110,7 +114,7 @@ export default class BracSelector extends Component {
     return (
       <div className="bracSelector">
         <div className="configureStage">
-          <div>DAY-DATE 40</div>
+          <div ref={(ref) => (this.watchTitle = ref)} />
           <div>브레슬릿 선택하기</div>
           <div>단계 6</div>
         </div>

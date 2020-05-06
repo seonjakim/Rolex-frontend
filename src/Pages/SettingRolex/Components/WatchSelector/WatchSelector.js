@@ -55,7 +55,6 @@ export default class WatchSelector extends Component {
     let howManyEl = Math.round(scrollLeft / 240);
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
-    this.props.onSelect(watchData[whichWatch].name);
 
     scrollLeft > 120
       ? this.setState({ LBtnAppear: true })
@@ -64,6 +63,22 @@ export default class WatchSelector extends Component {
     scrollLeft > scrollWidth - clientWidth - 120
       ? this.setState({ RBtnAppear: false })
       : this.setState({ RBtnAppear: true });
+
+    this.props.onSelect(watchData[whichWatch].name);
+
+    if (whichWatch === 0 || whichWatch === 2) {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?imwidth=1920"
+      );
+    } else if (whichWatch === 1 || whichWatch === 3 || whichWatch === 6) {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-everose.jpg?imwidth=2880"
+      );
+    } else {
+      this.props.changeBg(
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-steel.jpg?imwidth=1920"
+      );
+    }
   };
 
   changeOpac = () => {
