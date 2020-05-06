@@ -20,7 +20,7 @@ class Detail extends Component {
   componentDidMount = () => {
     this.getData();
   };
-
+  //`${this.props.match.params.id}`
   getData = () => {
     fetch("http://localhost:3000/data/detailData.json")
       .then((res) => res.json())
