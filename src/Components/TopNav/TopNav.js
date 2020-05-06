@@ -7,6 +7,7 @@ import TopNavEnter from "../../Images/TopNavEnter";
 import TopNavMenu from "../../Images/TopNavMenu";
 import InMenu from "./inMenu";
 import InSelection from "./InSelection";
+import { API_URL } from "../../Config";
 import "./TopNav.scss";
 
 class TopNav extends Component {
@@ -48,7 +49,20 @@ class TopNav extends Component {
       openMenu: !this.state.openMenu,
     });
   };
-
+  componentDidUpdate() {
+    fetch(`${API_URL}/user/mylike/preview`, {
+      method: "GET",
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          likeList: res,
+        });
+      });
+  }
   openSelectionHandle = () => {
     localStorage.getItem("token")
       ? this.setState(
@@ -56,7 +70,7 @@ class TopNav extends Component {
             openSelection: !this.state.openSelection,
           },
           () => {
-            fetch("http://3.134.244.199:8000/user/mylike/preview", {
+            fetch(`${API_URL}/user/mylike/preview`, {
               method: "GET",
               headers: {
                 Authorization: localStorage.getItem("token"),

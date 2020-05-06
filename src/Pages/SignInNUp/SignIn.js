@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../Config";
 import { withRouter, Link } from "react-router-dom";
 import { API_URL } from "../../Config";
 import "./SignIn.scss";
@@ -61,7 +62,12 @@ class SignIn extends React.Component {
           </div>
           <div className="WraptheBtn">
             <button onClick={this.signIn}>로그인</button>
-            <button className="Join" onClick={() => { this.props.history.push('/signup') }}>
+            <button
+              className="Join"
+              onClick={() => {
+                this.props.history.push("/signup");
+              }}
+            >
               회원가입
             </button>
           </div>

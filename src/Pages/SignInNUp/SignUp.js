@@ -82,7 +82,14 @@ class SignUp extends React.Component {
           </div>
           <div className="WraptheBtn">
             <button onClick={this.clickToSignUp}>회원가입</button>
-            <button className="Join" onClick={() => { this.props.history.push('./signin') }}>로그인</button>
+            <button
+              className="Join"
+              onClick={() => {
+                this.props.history.push("./signin");
+              }}
+            >
+              로그인
+            </button>
           </div>
         </div>
       </div>
