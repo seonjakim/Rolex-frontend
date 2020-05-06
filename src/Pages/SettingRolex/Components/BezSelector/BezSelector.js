@@ -23,10 +23,11 @@ export default class BezSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `${this.props.data.model}&material=${this.props.data.mat}`;
-    fetch("http://localhost:3000/data/bezData40.json")
-      //fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
+    //fetch("http://localhost:3000/data/bezData40.json")
+    fetch(`http://18.222.23.188:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
+        console.log(queryString);
         console.log("res.bezData가 이렇게 생겼어요 : ", res.bezel_data);
         this.setState({ bezData: res.bezel_data });
       });

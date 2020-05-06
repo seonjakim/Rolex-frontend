@@ -23,8 +23,10 @@ export default class BracSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}`;
-    fetch("http://localhost:3000/data/bracData36.json")
-      //fetch(`http://10.58.4.196:8000/product/config/bracelet?size=${queryString}`)
+    //fetch("http://localhost:3000/data/bracData36.json")
+    fetch(
+      `http://18.222.23.188:8000/product/config/bracelet?size=${queryString}`
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log("res.bracData가 이렇게 생겼어요 : ", res.bracelet_data);

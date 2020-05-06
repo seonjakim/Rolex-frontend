@@ -27,8 +27,8 @@ export default class DialSelector extends Component {
     } else if (this.props.data.model === 36) {
       queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}&bracelet=${this.props.data.brac}`;
     }
-    fetch("http://localhost:3000/data/dialData36.json")
-      //fetch(`http://10.58.4.196:8000/product/config/dial?size=${queryString}`)
+    //fetch("http://localhost:3000/data/dialData36.json")
+    fetch(`http://18.222.23.188:8000/product/config/dial?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.dialData가 이렇게 생겼어요 : ", res.dial_data);
