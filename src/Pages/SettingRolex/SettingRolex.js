@@ -139,8 +139,6 @@ class SettingRolex extends Component {
             </div>
           </div>
         </div>
-
-        <footer>Footer</footer>
       </div>
     );
   }
