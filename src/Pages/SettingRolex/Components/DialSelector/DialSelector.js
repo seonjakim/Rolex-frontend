@@ -22,12 +22,12 @@ export default class DialSelector extends Component {
 
   getData = () => {
     let queryString;
-    if (this.props.onSelect.model === 40) {
-      queryString = `40&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}&bracelet=프레지던트`;
-    } else if (this.props.onSelect.model === 36) {
-      queryString = `36&material=${this.props.onSelect.mat}&bezel=${this.props.onSelect.bez}&bracelet=${this.props.onSelect.brac}`;
+    if (this.props.data.model === 40) {
+      queryString = `40&material=${this.props.data.mat}&bezel=${this.props.data.bez}&bracelet=프레지던트`;
+    } else if (this.props.data.model === 36) {
+      queryString = `36&material=${this.props.data.mat}&bezel=${this.props.data.bez}&bracelet=${this.props.data.brac}`;
     }
-    fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
+    fetch(`http://10.58.4.196:8000/product/config/dial?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.dialData가 이렇게 생겼어요 : ", res.dial_data);

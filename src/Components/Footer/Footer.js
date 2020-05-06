@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
                         </svg>
                         언어
                     </div>
-                    <div onClick={() => { this.setState({ display: true }) }}>
+                    <div onClick={() => { this.setState({ display: !this.state.display }) }}>
                         접근성
                         <svg aria-labelledby="" height="15" width="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" role="img" class="accessibility down">
                             <path d="m15 5.41-7.5 7.91-7.5-7.91 1.95-1.95 5.55 5.83 5.55-5.83z">
@@ -26,11 +26,25 @@ export default class Footer extends React.Component {
                     </div>
                 </div>
                 {this.state.display && (<div className="hiddenDiv">
-                    <div>
-                        <span></span>
-                    </div>
-                    <div>
-
+                    <div className="hiddenWrapper">
+                        <div className="toWraptheBtn left">
+                            <span className="hiddenTitle">대비 증가</span>
+                            <div className="forPosition">
+                                <div className="hiddenBtn">
+                                    <div className="BtnToggle"></div>
+                                </div>
+                                <div className="deactivation">비활성화</div>
+                            </div>
+                        </div>
+                        <div className="toWraptheBtn right">
+                            <span className="hiddenTitle">애니메이션 줄이기</span>
+                            <div className="forPosition">
+                                <div className="hiddenBtn">
+                                    <div className="BtnToggle"></div>
+                                </div>
+                                <div className="deactivation">비활성화</div>
+                            </div>
+                        </div>
                     </div>
                 </div>)}
                 <div className="body">
@@ -187,11 +201,13 @@ export default class Footer extends React.Component {
                     </svg>
                     Rolex.org에 대한 브랜드의 헌신
                 </div>
-                <div className="toTheTop" href="#">
-                    <svg aria-labelledby="" height="21" width="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" role="img" name="search">
-                        <path d="m19.5 16.6-9-9.4-9 9.4-1.4-1.4 10.4-10.8 10.4 10.9z">
-                        </path>
-                    </svg>
+                <div className="toTheTop">
+                    <a href="#">
+                        <svg aria-labelledby="" height="21" width="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" role="img" name="search">
+                            <path d="m19.5 16.6-9-9.4-9 9.4-1.4-1.4 10.4-10.8 10.4 10.9z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         );

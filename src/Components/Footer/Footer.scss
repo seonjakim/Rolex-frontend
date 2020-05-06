@@ -24,6 +24,45 @@ $hover-color : rgb(133, 98, 33);
     }
 }
 
+.toWraptheBtn {
+    width: 33.3333%;
+    position: absolute;
+}
+
+.hiddenTitle {
+    color: #d4d4d4;
+    font-size: 10px;
+    margin: 10px 0;
+}
+
+.forPosition {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+}
+
+.hiddenBtn {
+    width: 36px;
+    height: 22px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.BtnToggle {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 2%;
+    top: 65%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.deactivation {
+    font-size: 15px;
+    margin: 0 0 0 10px;
+    display: inline;
+}
 
 .liFont {
     font-size: 0.8215rem;
@@ -81,6 +120,18 @@ $hover-color : rgb(133, 98, 33);
     }
     .hiddenDiv {
         height: 110px;
+        width: 100vw;
+        .hiddenWrapper{
+            width: 60%;
+            margin: 0 auto;
+            position: relative;
+            .left {
+                left: 33.3333%;
+            }
+            .right {
+                right: 0;
+            }
+        }
     }
     .body {
         width: 60%;

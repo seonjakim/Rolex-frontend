@@ -25,7 +25,7 @@ class SettingRolex extends Component {
     const { whichStage, id } = this.state.data;
     const prev = whichStage;
     if (isIncreasing && prev === 6) {
-      this.props.history.push(`/detail/${id}`);
+      this.props.history.push("/");
     }
     if (!isIncreasing && prev === 1) return;
     this.setState({
@@ -65,36 +65,43 @@ class SettingRolex extends Component {
           <div className="configurator">
             {whichStage === 1 && (
               <WatchSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("watch", data)}
               />
             )}
             {whichStage === 2 && (
               <ModelSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("model", data)}
               />
             )}
             {whichStage === 3 && (
               <MatSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("mat", data)}
               />
             )}
             {whichStage === 4 && (
               <BezSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("bez", data)}
               />
             )}
-            {whichStage === 5 && model === "36" && (
+            {whichStage === 5 && model === 36 && (
               <BracSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("brac", data)}
               />
             )}
-            {whichStage === 5 && model === "40" && (
+            {whichStage === 5 && model === 40 && (
               <DialSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("id", data)}
               />
             )}
-            {whichStage === 6 && model === "36" && (
+            {whichStage === 6 && model === 36 && (
               <DialSelector
+                data={this.state.data}
                 onSelect={(data) => this.handleSelect("id", data)}
               />
             )}

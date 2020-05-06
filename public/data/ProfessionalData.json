@@ -1,0 +1,60 @@
+{
+    "CollectionData": [
+        {
+            "id": 1,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_cosmograph-daytona_m116518ln_0040_1706jva_001_r.jpg?imwidth=550",
+            "name": "Cosmograph Daytona",
+            "detail": "레이싱을 위한 시계",
+            "link": "https://www.rolex.com/ko/watches/cosmograph-daytona.html"
+        },
+        {
+            "id": 2,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_sea-dweller_m126600-0001_1710jva_001.jpg?imwidth=550",
+            "name": "SEA-DWELLER",
+            "detail": "심해를 정복한 시계",
+            "link": "https://www.rolex.com/ko/watches/sea-dweller.html"
+        },
+        {
+            "id": 3,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_submariner_m116613lb-0005_1807jva_001.jpg?imwidth=550",
+            "name": "SUBMARINER",
+            "detail": "다이버 워치의 대명사",
+            "link": "https://www.rolex.com/ko/watches/submariner.html"
+        },
+        {
+            "id": 4,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_gmt-master2_m126710blro_0001_1809jva_001.jpg?imwidth=550",
+            "name": "GMT-MASTER II",
+            "detail": "코스모폴리탄을 위한 시계",
+            "link": "https://www.rolex.com/ko/watches/gmt-master-ii.html"
+        },
+        {
+            "id": 5,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_yacht-master_m116680_0002_1809jva_001.jpg?imwidth=550",
+            "name": "YACHT-MASTER",
+            "detail": "바다를 누비는 이들을 위한 시계",
+            "link": "https://www.rolex.com/ko/watches/yacht-master.html"
+        },
+        {
+            "id": 6,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_explorer2_m216570_0001_1809jva_002.jpg?imwidth=550",
+            "name": "EXPLORER",
+            "detail": "새로운 기준을 세우다",
+            "link": "https://www.rolex.com/ko/watches/explorer.html"
+        },
+        {
+            "id": 7,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_milgauss_m116400gv-0002_1809jva_001.jpg?imwidth=550",
+            "name": "MILGAUSS",
+            "detail": "과학자를 위하여",
+            "link": "https://www.rolex.com/ko/watches/milgauss.html"
+        },
+        {
+            "id": 8,
+            "pic_url": "https://content.rolex.com/dam/homepage/roller/all-watches/watches_air-king_m116900-0001_1809jva_001.jpg?imwidth=550",
+            "name": "AIR-KING",
+            "detail": "비행을 위한 시계",
+            "link": "https://www.rolex.com/ko/watches/air-king.html"
+        }
+    ]
+}
