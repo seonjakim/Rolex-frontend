@@ -1,0 +1,74 @@
+{
+  "dial_data": [
+    {
+      "name": "샴페인 컬러",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 40440000,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0045.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 105,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51759_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 다크 그레이",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 44160000,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0022.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 95,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51472_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 그린 옴브레",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 44160000,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0069.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 93,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51755_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 샴페인 컬러",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 44160000,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0008.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 106,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46160_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드가 세팅된 화이트 진주자개",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 46330000,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0011.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 112,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/46164_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "터콰이즈",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 0,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0072.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 149,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51970_y_36.png?impolicy=main-configurator&imwidth=680"
+    },
+    {
+      "name": "다이아몬드 파베",
+      "collection": "Day-Date",
+      "is_oyster": true,
+      "diameter": 36,
+      "price": 0,
+      "watch_image": "https://content.rolex.com/dam/2019/harmonised/upright-watch-shadow/shadow_oyster_daydate_36.png?impolicy=v6-model-feature&c1path=/dam/2019/upright-cc/m128238-0052.png&cw=3000&ch=3000&imwidth=600",
+      "product_id": 147,
+      "dial_url": "https://content.rolex.com/dam/2019/harmonised/dial-raw-with-colored-shadow/51761_y_36.png?impolicy=main-configurator&imwidth=680"
+    }
+  ]
+}

@@ -23,7 +23,8 @@ export default class BezSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `${this.props.data.model}&material=${this.props.data.mat}`;
-    fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
+    fetch("http://localhost:3000/data/bezData40.json")
+      //fetch(`http://10.58.4.196:8000/product/config/bezel?size=${queryString}`)
       .then((res) => res.json())
       .then((res) => {
         console.log("res.bezData가 이렇게 생겼어요 : ", res.bezel_data);
@@ -38,12 +39,15 @@ export default class BezSelector extends Component {
   changeName = () => {
     const { bezData, whichWatch } = this.state;
     this.bezWatchPic.style.backgroundImage = `url(${bezData[whichWatch].watch_image})`;
+    this.watchTitle.innerText = `DAY-DATE ${bezData[whichWatch].diameter}`;
     this.bezName.innerText = bezData[whichWatch].name;
-    this.bezDim.innerText = `${bezData[whichWatch].is_oyster}, ${bezData[whichWatch].diameter} mm`;
+    this.bezDim.innerText = `오이스터, ${bezData[whichWatch].diameter}mm`;
     if (bezData[whichWatch].price === 0) {
       this.bezPrice.innerText = "가격 문의";
     } else {
-      this.bezPrice.innerText = bezData[whichWatch].price;
+      this.bezPrice.innerText = `${bezData[
+        whichWatch
+      ].price.toLocaleString()} ￦`;
     }
   };
 
@@ -109,7 +113,7 @@ export default class BezSelector extends Component {
     return (
       <div className="bezSelector">
         <div className="configureStage">
-          <div>DAY-DATE 40</div>
+          <div ref={(ref) => (this.watchTitle = ref)} />
           <div>베젤 선택하기</div>
           <div>단계 5</div>
         </div>

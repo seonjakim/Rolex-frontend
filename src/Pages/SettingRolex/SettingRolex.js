@@ -18,14 +18,19 @@ class SettingRolex extends Component {
       data: {
         whichStage: 1,
       },
+      bgImg:
+        "https://content.rolex.com/dam/2019/bg/model-cover-background-yellow-gold.jpg?imwidth=1920",
     };
   }
 
   setStage = (isIncreasing) => {
-    const { whichStage, id } = this.state.data;
+    const { whichStage, id, model } = this.state.data;
     const prev = whichStage;
-    if (isIncreasing && prev === 6) {
-      this.props.history.push("/");
+    if (
+      isIncreasing &&
+      ((prev === 5 && model === 40) || (prev === 6 && model === 36))
+    ) {
+      this.props.history.push(`/${id}`);
     }
     if (!isIncreasing && prev === 1) return;
     this.setState({
@@ -56,17 +61,26 @@ class SettingRolex extends Component {
     );
   };
 
+  handleBg = (bg) => {
+    this.setState({ bgImg: bg });
+  };
+
   render() {
     const { whichStage, model } = this.state.data;
+    const { bgImg } = this.state;
 
     return (
       <div className="SettingRolex">
-        <div className="settingZone">
+        <div
+          className="settingZone"
+          style={{ backgroundImage: `url(${bgImg})` }}
+        >
           <div className="configurator">
             {whichStage === 1 && (
               <WatchSelector
                 data={this.state.data}
                 onSelect={(data) => this.handleSelect("watch", data)}
+                changeBg={(bg) => this.handleBg(bg)}
               />
             )}
             {whichStage === 2 && (
@@ -79,6 +93,7 @@ class SettingRolex extends Component {
               <MatSelector
                 data={this.state.data}
                 onSelect={(data) => this.handleSelect("mat", data)}
+                changeBg={(bg) => this.handleBg(bg)}
               />
             )}
             {whichStage === 4 && (
