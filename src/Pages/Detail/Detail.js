@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import PageShare from "../Main/Component/PageShare/PageShare";
+import SlideImg from "./Components/SlideImg";
 import "./Detail.scss";
 import "../Main/Component/PageShare/PageShare.scss";
 
@@ -11,6 +12,7 @@ class Detail extends Component {
       meta: {},
       des: {},
       main: {},
+      sub: [],
       hover: false,
     };
   }
@@ -27,10 +29,12 @@ class Detail extends Component {
           meta: res.product.metadata,
           des: res.product.description,
           main: res.product.main_features,
+          sub: res.sub_features,
         });
       });
   };
   render() {
+    console.log("here", this.state.sub);
     const { meta, des, main } = this.state;
     return (
       <div className="detail">
@@ -74,8 +78,10 @@ class Detail extends Component {
         </div>
         <div className="modelDetail">
           <div className="detailContainer">
-            <div className="detailTxt"></div>
-            <div className="detailCarousel"></div>
+            <div className="detailTxt">모델특징</div>
+            <div className="detailCarousel">
+              <SlideImg sub={this.state.sub} />
+            </div>
           </div>
         </div>
         <div className="rolexRetail">
