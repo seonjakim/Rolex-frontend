@@ -26,7 +26,6 @@ class Routes extends React.Component {
           <Route exact path="/" component={Main} />
           <Route exact path="/settingrolex" component={SettingRolex} />
           <Route exact path="/findrolex" component={FindRolex} />
-          <Route exact path="/detail" component={Detail} />
           <Route exact path="/detail/:id" component={Detail} />
           <Route exact path="/collection" component={Collection} />
           <Route exact path="/collection/detail" component={CollectionDetail} />
