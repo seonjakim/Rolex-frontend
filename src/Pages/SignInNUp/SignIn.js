@@ -1,7 +1,7 @@
 import React from "react";
 import { API_URL } from "../../Config";
 import { withRouter, Link } from "react-router-dom";
-// import ColorLogo from "./ColorLogo.png";
+import { API_URL } from "../../Config";
 import "./SignIn.scss";
 
 class SignIn extends React.Component {

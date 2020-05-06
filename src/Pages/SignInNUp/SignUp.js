@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { API_URL } from "../../Config";
-// import ColorLogo from "./ColorLogo.png";
-
 import "./SignUp.scss";
 
 class SignUp extends React.Component {

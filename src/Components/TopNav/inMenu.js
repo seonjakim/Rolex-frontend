@@ -37,19 +37,19 @@ class InMenu extends Component {
           </div>
           <div className="inMenuLeft">
             <div className="first"></div>
-            <div className="logo" onClick={() => this.goTo("/")}>
+            <a href="#" onClick={() => this.goTo("/")}><div className="logo">
               <TopNavLogo />
-            </div>
+            </div></a>
             <div className="slideShow">
               <CollectionDisplay />
             </div>
             <div className="menuList">
               <div>
-                <li onClick={() => this.goTo("/collection")}>롤렉스 컬렉션</li>
-                <li onClick={() => this.goTo("/settingrolex")}>
+                <a href="#" onClick={() => this.goTo("/collection")}><li>롤렉스 컬렉션</li></a>
+                <a href="#" onClick={() => this.goTo("/settingrolex")}><li>
                   시계 설정하기
-                </li>
-                <li onClick={() => this.goTo("/findrolex")}>시계 골라보기</li>
+                </li></a>
+                <a href="#" onClick={() => this.goTo("/findrolex")}><li>시계 골라보기</li></a>
                 <li>역사 & 워치메이킹</li>
               </div>
               <div>
