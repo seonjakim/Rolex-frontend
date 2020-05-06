@@ -65,8 +65,6 @@ class Main extends Component {
         <Retailer />
 
         <PageShare />
-
-        <div className="footer">Here comes footer</div>
       </div>
     );
   }
