@@ -125,7 +125,6 @@ class FindRolex extends Component {
           </div>
           <div className="sharebox">shareboxr section</div>
         </div>
-        <div className="footer">footer section</div>
       </div>
     );
   }
