@@ -15,6 +15,7 @@ import MapRolex from "./Pages/MapRolex/MapRolex";
 import SignIn from "./Pages/SignInNUp/SignIn";
 import SignUp from "./Pages/SignInNUp/SignUp";
 import TopNav from "./Components/TopNav/TopNav";
+import Footer from "./Components/Footer/Footer";
 
 class Routes extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class Routes extends React.Component {
           <Route exact path="/signup" component={SignUp} />
           <Redirect from="*" to="/" />
         </Switch>
+        <Footer />
       </Router>
     );
   }

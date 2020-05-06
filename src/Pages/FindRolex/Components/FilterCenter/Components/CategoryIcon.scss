@@ -87,7 +87,7 @@
   cursor: pointer;
 
   img {
-    -webkit-transition: border-color 0.5s linear; /*safari and chrome */
+    transition: border-color 0.5s linear; /*safari and chrome */
   }
 
   &:hover {

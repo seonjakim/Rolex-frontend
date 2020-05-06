@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
-import ColorLogo from "./ColorLogo.png";
+// import ColorLogo from "./ColorLogo.png";
 import "./SignIn.scss";
 
 class SignIn extends React.Component {
@@ -37,7 +37,7 @@ class SignIn extends React.Component {
       <div className="SignIn">
         <div className="ContentWrapper">
           <div className="Logo">
-            <img src={ColorLogo} alt="color logo" />
+            {/* <img src={ColorLogo} alt="color logo" /> */}
           </div>
           <h2>로그인</h2>
           <div className="IdPwInput">
@@ -61,8 +61,8 @@ class SignIn extends React.Component {
           </div>
           <div className="WraptheBtn">
             <button onClick={this.signIn}>로그인</button>
-            <button className="Join">
-              <Link to="/signup">회원가입</Link>
+            <button className="Join" onClick={() => { this.props.history.push('/signup') }}>
+              회원가입
             </button>
           </div>
           <div className="FindIdPw">아이디 / 비밀번호 찾기</div>

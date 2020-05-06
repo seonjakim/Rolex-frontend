@@ -16,9 +16,7 @@
                 padding: 30px;
                 display: flex;
                 justify-content: center;
-                img {
-                    width: 200px;
-                }
+                height: 150px;
             }
             h2 {
                 border-bottom: 0.5px solid #a37e2c;
@@ -47,7 +45,7 @@
                     }
                     width: 188px;
                     padding: 6px 30px;
-                    margin-top: 30px;
+                    margin-top: 60px;
                     background-color: transparent;
                     transition-duration: 0.3s;
                     transition-property: color, border-color, background-color, fill;
