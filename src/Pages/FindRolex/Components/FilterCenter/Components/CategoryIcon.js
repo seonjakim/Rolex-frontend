@@ -4,7 +4,6 @@ import "./CategoryIcon.scss";
 class CategoryIcon extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   render() {

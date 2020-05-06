@@ -56,7 +56,7 @@ class TopNav extends Component {
             openSelection: !this.state.openSelection,
           },
           () => {
-            fetch("http://10.58.5.93:8000/user/mylike/preview", {
+            fetch("http://3.134.244.199:8000/user/mylike/preview", {
               method: "GET",
               headers: {
                 Authorization: localStorage.getItem("token"),
@@ -77,7 +77,6 @@ class TopNav extends Component {
     this.props.history.push(location);
   }
   render() {
-    console.log("state", this.state.likeList);
     return (
       <div className="TopNav">
         <InMenu

@@ -11,7 +11,6 @@ class FilterCenter extends Component {
       materials: [],
       selectedSize: null,
       selectedMaterial: null,
-      selectedJewerly: "",
     };
   }
 
@@ -30,22 +29,6 @@ class FilterCenter extends Component {
         });
       });
   };
-
-  // selected = (cate, name, idx) => {
-  //   this.setState(
-  //     {
-  //       [name]: cate === idx ? "" : idx,
-  //     },
-  //     () => {
-  //       const { selectedSize, selectedMaterial } = this.state;
-  //       this.props.onFilterChange &&
-  //         this.props.onFilterChange({
-  //           selectedSize,
-  //           selectedMaterial,
-  //         });
-  //     }
-  //   );
-  // };
 
   clickHandlerSizes = (value) => {
     this.props.onFilterChange(value);

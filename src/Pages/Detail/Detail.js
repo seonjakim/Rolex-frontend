@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import PageShare from "../Main/Component/PageShare/PageShare";
+import SlideImg from "./Components/SlideImg";
 import "./Detail.scss";
 import "../Main/Component/PageShare/PageShare.scss";
 
@@ -8,7 +9,10 @@ class Detail extends Component {
   constructor() {
     super();
     this.state = {
-      watchData: {},
+      meta: {},
+      des: {},
+      main: {},
+      sub: [],
       hover: false,
     };
   }
@@ -16,42 +20,84 @@ class Detail extends Component {
   componentDidMount = () => {
     this.getData();
   };
-
+  //`${this.props.match.params.id}`
   getData = () => {
-    fetch("http://10.58.4.196:8000/product/1")
+    fetch("http://localhost:3000/data/detailData.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log("res.watchData가 이렇게 생겼어요 : ", res.product);
-        this.setState({ watchData: res.product });
+        this.setState({
+          meta: res.product.metadata,
+          des: res.product.description,
+          main: res.product.main_features,
+          sub: res.sub_features,
+        });
       });
   };
-
   render() {
-    console.log("here", this.state.watchData);
-    console.log("here");
+    console.log("here", this.state.sub);
+    const { meta, des, main } = this.state;
     return (
       <div className="detail">
-        <div className="mainPicContainer">
-          <div className="mainPic"></div>
-          <div className="mainPicDesc"></div>
+        <div
+          className="mainPicContainer"
+          style={{ backgroundImage: `url(${meta.bg_image})` }}
+        >
+          <div
+            className="mainPic"
+            style={{ backgroundImage: `url(${meta.watch_image})` }}
+          ></div>
+          <div className="mainPicDesc">
+            <div className="cate">{meta.category}</div>
+            <div className="collection">{meta.collection}</div>
+            <div className="des">
+              {meta.is_oyster && "오이스터,"}
+              {`${meta.size}mm,${meta.material}`}
+            </div>
+            <div className="price">{`${meta.price}₩`}</div>
+          </div>
         </div>
         <div className="mainDetail">
-          <div className="detailTxt"></div>
+          <div className="detailTxt">
+            <div>{des.first_paragraph}</div>
+            <div>{des.second_paragraph}</div>
+          </div>
         </div>
         <div className="dialPicContainer">
-          <div className="dialPic"></div>
-          <div className="dialPicTxt"></div>
+          <div className="dialPic">
+            <div
+              style={{ backgroundImage: `url(${main.thumbnail_image})` }}
+            ></div>
+          </div>
+          <div className="dialPicTxt">
+            {/* 100글자 뒤에 니다로 끝내기 */}
+            <h3>{main.title}</h3>
+            <h4>{main.sub_title}</h4>
+            <div>{main.description}</div>
+            <div>자세히 보기</div>
+          </div>
         </div>
         <div className="modelDetail">
           <div className="detailContainer">
-            <div className="detailTxt"></div>
-            <div className="detailCarousel"></div>
+            <div className="detailTxt">모델특징</div>
+            <div className="detailCarousel">
+              <SlideImg sub={this.state.sub} />
+            </div>
           </div>
         </div>
         <div className="rolexRetail">
           <div className="retailContainer">
-            <div className="retailPic"></div>
-            <div className="retailTxt"></div>
+            <div className="retailPic">
+              <div></div>
+            </div>
+            <div className="retailTxt">
+              <div>롤렉스 공식 판매점 연락처</div>
+              <div>
+                롤렉스 컬렉션의 클래식 시계 및 프로페셔널 시계는 어떤 환경이나
+                스타일에도 어울리며 다양한 소재와 다이얼, 브레슬릿, 사이즈로
+                선보입니다.
+              </div>
+              <div>판매점 연락처</div>
+            </div>
           </div>
         </div>
         <div
@@ -72,7 +118,6 @@ class Detail extends Component {
           </div>
         </div>
         <PageShare />
-        <footer>Footer</footer>
       </div>
     );
   }

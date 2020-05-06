@@ -7,19 +7,9 @@ import FilterRight from "./Components/FilterRight/FilterRight";
 import FindRolexArrow from "../../Images/FindRolexArrow";
 import PageShare from "../Main/Component/PageShare/PageShare";
 import { API_URL } from "../../Config";
+import { FindRolex_URL } from "../../Config";
 
 import "./FindRolex.scss";
-
-// const qs = (queries) => {
-//   const result = Object.entries(queries)
-//     .map(([key, value]) => {
-//       if (value === null || value === undefined) return null;
-//       return `${key}=${value}`;
-//     })
-//     .filter(Boolean)
-//     .join(`&`);
-//   return result ? `${result}` : "";
-// };
 
 class FindRolex extends Component {
   constructor(props) {
@@ -33,30 +23,10 @@ class FindRolex extends Component {
     };
   }
   componentDidMount() {
-    fetch(`${API_URL}/product/list?page=1&limit=14`)
+    fetch(`${FindRolex_URL}/product/list?page=1&limit=14`)
       .then((data) => data.json())
       .then((data) => this.setState({ watches: data }));
   }
-
-  // openFilterHandle = () => {
-  //   this.setState({
-  //     openFilter: !this.state.openFilter,
-  //   });
-  // };
-
-  // handleFilter = (data = {}) => {
-  //   const {
-  //     selectedSize: diameter = null,
-  //     selectedMaterial: material = null,
-  //   } = data;
-  //   const queryString = qs({
-  //     diameter,
-  //     material,
-  //   });
-  //   fetch(`${API_URL}/product/list?page=1&limit=14&${queryString}`)
-  //     .then((data) => data.json())
-  //     .then((data) => this.setState({ watches: data }));
-  // };
 
   componentDidUpdate(prevProps, prevState) {
     if (
@@ -76,7 +46,7 @@ class FindRolex extends Component {
         queryString = `&diameter=${diameter}&material=${material}`;
       }
 
-      fetch(`${API_URL}/product/list?page=1&limit=14&${queryString}`)
+      fetch(`${FindRolex_URL}/product/list?page=1&limit=14&${queryString}`)
         .then((data) => data.json())
         .then((data) => this.setState({ watches: data }));
     }
@@ -97,7 +67,6 @@ class FindRolex extends Component {
   };
 
   render() {
-    console.log("sufbsduybf: ", this.state);
     return (
       <div className="FindRolex">
         {/* <FilterModal
