@@ -5,8 +5,8 @@ import "./LikeList.scss";
 class LikeList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
-
   render() {
     const {
       collection,
@@ -14,10 +14,12 @@ class LikeList extends React.Component {
       size,
       material,
       thumbnail_image,
+      product_id,
     } = this.props.data;
+    console.log(this.state.click);
     return (
       <div className="LikeList">
-        <TopNavCancel />
+        <TopNavCancel id={product_id} />
         <img src={thumbnail_image} alt="" />
         <h2>{collection}</h2>
         <span>{`${

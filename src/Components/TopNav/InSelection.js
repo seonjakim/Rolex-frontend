@@ -22,7 +22,7 @@ class InSelection extends Component {
             onClick={openSelectionHandle}
             style={{ position: "absolute" }}
           >
-            <TopNavCancel likeList={likeList} />
+            <TopNavCancel likeList={likeList.product_preview} />
           </div>
           <div className="inSelectionLeft" onClick={openSelectionHandle}></div>
           <div className="inSelectionRight">

@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { API_URL } from "../../Config";
 // import ColorLogo from "./ColorLogo.png";
 
 import "./SignUp.scss";
@@ -23,7 +24,7 @@ class SignUp extends React.Component {
     } else if (password !== checkPassword) {
       alert("비밀번호를 다시 한번 확인해주세요.");
     } else {
-      fetch(`http://3.134.244.199:8000/user/sign-up`, {
+      fetch(`${API_URL}/user/sign-up`, {
         method: "POST",
         body: JSON.stringify({
           name,
@@ -83,7 +84,14 @@ class SignUp extends React.Component {
           </div>
           <div className="WraptheBtn">
             <button onClick={this.clickToSignUp}>회원가입</button>
-            <button className="Join" onClick={() => { this.props.history.push('./signin') }}>로그인</button>
+            <button
+              className="Join"
+              onClick={() => {
+                this.props.history.push("./signin");
+              }}
+            >
+              로그인
+            </button>
           </div>
         </div>
       </div>

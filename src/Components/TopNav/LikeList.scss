@@ -3,6 +3,9 @@
   background-color: white;
   padding: 10px;
   cursor: pointer;
+  .delete {
+    display: none;
+  }
   .cancel {
     position: absolute;
     right: 15px;
@@ -13,6 +16,7 @@
       fill: rgb(18, 120, 74);
     }
   }
+
   &:hover {
     img {
       transform: scale(1.03);

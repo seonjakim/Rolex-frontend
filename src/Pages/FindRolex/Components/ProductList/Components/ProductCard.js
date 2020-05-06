@@ -17,10 +17,9 @@ class ProductCard extends React.Component {
       <div
         className={`${this.props.class} Card`}
         style={{ gridArea: `main` + idx }}
-        onClick={() => this.props.history.push(`/detail/${id}`)}
       >
         <FindRolexLike id={id} />
-        <div>
+        <div onClick={() => this.props.history.push(`/detail/${id}`)}>
           <img src={img} alt="" />
           <h2>{`${name} ${diameter}`}</h2>
           <span>{`${oyster}, ${diameter}mm, ${material}`}</span>
