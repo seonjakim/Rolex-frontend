@@ -23,8 +23,10 @@ export default class MatSelector extends Component {
   getData = () => {
     let queryString;
     queryString = `${this.props.data.model}`;
-    fetch("http://localhost:3000/data/matData40.json")
-      //fetch(`http://10.58.4.196:8000/product/config/material?size=${queryString}`)
+    //fetch("http://localhost:3000/data/matData40.json")
+    fetch(
+      `http://18.222.23.188:8000/product/config/material?size=${queryString}`
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log("res.matData가 이렇게 생겼어요 : ", res.material_data);
@@ -68,7 +70,7 @@ export default class MatSelector extends Component {
     scrollTo(howManyEl * 240, 0);
     this.setState({ whichWatch: howManyEl });
 
-    this.props.onSelect(matData[whichWatch].material_name);
+    this.props.onSelect(matData[whichWatch].name);
 
     this.props.changeBg(matData[whichWatch].background_image);
 
