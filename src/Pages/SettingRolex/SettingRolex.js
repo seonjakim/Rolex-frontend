@@ -30,7 +30,7 @@ class SettingRolex extends Component {
       isIncreasing &&
       ((prev === 5 && model === 40) || (prev === 6 && model === 36))
     ) {
-      this.props.history.push(`/${id}`);
+      this.props.history.push(`/detail/${id}`);
     }
     if (!isIncreasing && prev === 1) return;
     this.setState({
