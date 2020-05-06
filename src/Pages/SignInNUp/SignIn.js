@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
-// import ColorLogo from "./ColorLogo.png";
+import { API_URL } from "../../Config";
 import "./SignIn.scss";
 
 class SignIn extends React.Component {
@@ -15,7 +15,7 @@ class SignIn extends React.Component {
 
   signIn = () => {
     const { name, password } = this.state;
-    fetch(`http://3.134.244.199:8000/user/login`, {
+    fetch(`${API_URL}/user/login`, {
       method: "POST",
       body: JSON.stringify({
         name,
