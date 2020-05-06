@@ -112,7 +112,6 @@ class Detail extends Component {
           </div>
         </div>
         <PageShare />
-        <footer>Footer</footer>
       </div>
     );
   }

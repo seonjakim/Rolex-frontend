@@ -5,6 +5,7 @@ import ProfessionalCollection from './Components/ProfessionalCollection/Professi
 import PageShare from "../Main/Component/PageShare/PageShare";
 import SixGrid from './Components/SixGrid/SixGrid';
 import SixGridBot from './Components/SixGrid/SixGridBot'
+import Footer from '../../Components/Footer/Footer';
 import './Collection.scss';
 
 class Collection extends React.Component {

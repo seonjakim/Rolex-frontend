@@ -17,7 +17,7 @@ export default class ProfessionalCollection extends Component {
     };
 
     getData = () => {
-        fetch("http://localhost:3000/data/CollectionData.json")
+        fetch("http://localhost:3000/data/ProfessionalData.json")
             .then((res) => res.json())
             .then((res) => {
                 console.log(
