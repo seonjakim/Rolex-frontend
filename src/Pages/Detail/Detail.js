@@ -22,7 +22,7 @@ class Detail extends Component {
   };
   //`${this.props.match.params.id}`
   getData = () => {
-    fetch("http://localhost:3000/data/detailData.json")
+    fetch(`http://18.222.23.188:8000/product/${this.props.match.params.id}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({

@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import FindRolexLike from "../../../../../Images/FindRolexLike";
 import "./ProductCard.scss";
 
@@ -16,6 +17,7 @@ class ProductCard extends React.Component {
       <div
         className={`${this.props.class} Card`}
         style={{ gridArea: `main` + idx }}
+        onClick={() => this.props.history.push(`/detail/${id}`)}
       >
         <FindRolexLike id={id} />
         <div>
@@ -28,4 +30,4 @@ class ProductCard extends React.Component {
   }
 }
 
-export default ProductCard;
+export default withRouter(ProductCard);

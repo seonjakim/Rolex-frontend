@@ -7,7 +7,6 @@ import FilterRight from "./Components/FilterRight/FilterRight";
 import FindRolexArrow from "../../Images/FindRolexArrow";
 import PageShare from "../Main/Component/PageShare/PageShare";
 import { API_URL } from "../../Config";
-import { FindRolex_URL } from "../../Config";
 
 import "./FindRolex.scss";
 
@@ -23,7 +22,7 @@ class FindRolex extends Component {
     };
   }
   componentDidMount() {
-    fetch(`${FindRolex_URL}/product/list?page=1&limit=14`)
+    fetch(`${API_URL}/product/list?page=1&limit=14`)
       .then((data) => data.json())
       .then((data) => this.setState({ watches: data }));
   }
@@ -46,7 +45,7 @@ class FindRolex extends Component {
         queryString = `&diameter=${diameter}&material=${material}`;
       }
 
-      fetch(`${FindRolex_URL}/product/list?page=1&limit=14&${queryString}`)
+      fetch(`${API_URL}/product/list?page=1&limit=14&${queryString}`)
         .then((data) => data.json())
         .then((data) => this.setState({ watches: data }));
     }
