@@ -23,7 +23,7 @@ class SignUp extends React.Component {
     } else if (password !== checkPassword) {
       alert("비밀번호를 다시 한번 확인해주세요.");
     } else {
-      fetch(`http://10.58.5.93:8000/user/sign-up`, {
+      fetch(`http://3.134.244.199:8000/user/sign-up`, {
         method: "POST",
         body: JSON.stringify({
           name,

@@ -15,7 +15,7 @@ class SignIn extends React.Component {
 
   signIn = () => {
     const { name, password } = this.state;
-    fetch(`http://10.58.5.93:8000/user/login`, {
+    fetch(`http://3.134.244.199:8000/user/login`, {
       method: "POST",
       body: JSON.stringify({
         name,

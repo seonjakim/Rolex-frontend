@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
 import Scrollbar from "react-scrollbars-custom";
 import NavCollection from "./NavCollection";
 import "./CollectionDisplay.scss";

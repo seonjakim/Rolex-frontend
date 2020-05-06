@@ -21,40 +21,50 @@
       "title": "플루티드 베젤",
       "sub_title": "롤렉스의 상징",
       "description": "롤렉스 플루티드 베젤은 롤렉스 시계를 대표하는 요소로 자리 잡았습니다. 최초 오이스터(Oyster) 베젤의 가장자리에는 플루팅, 즉 톱니 모양의 세로 홈을 새겼습니다. 이는 시계의 방수를 위해 베젤을 케이스에 돌려 잠그기 위한 용도였습니다. 역시 방수를 위해 케이스 본체에 스크류-다운 방식으로 고정되는 케이스 백에도 이와 같은 세로홈이 새겨져 있는데, 롤렉스 전용 도구를 사용하여 케이스에 고정시킬 수 있습니다. 롤렉스 시계를 대표하는 디자인 요소로 자리잡은 플루티드 베젤은 항상 골드 소재로만 제작됩니다."
-    },
-    "sub_features": {
-      "title": [
-        "화이트 다이얼",
-        "18캐럿 옐로우 골드",
-        "프레지던트 브레슬릿",
-        "요일 표시창",
-        "사이클롭스 렌즈",
-        "3255 무브먼트"
-      ],
-      "sub_title": [
-        "독특한 다이얼",
-        "완벽을 추구하는 신념",
-        "세련미의 상징",
-        "자정에 순간적으로 변경되는 날짜",
-        "볼록 렌즈",
-        "최상급 성능"
-      ],
-      "thumbnail": [
-        "https://content.rolex.com/dam/2019/bg/model-feature-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/dial-raw-with-colored-shadow/51220_y_40.png&sc1=4.65&c1x=-1215&c1y=-956&imwidth=550",
-        "https://content.rolex.com/dam/model-page/features/material/materials-yellow-gold_rolex_profiles_evr_05a6232.jpg?imwidth=550",
-        "https://content.rolex.com/dam/2019/bg/model-feature-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/42410.png&sc1=4.65&c1x=-887&c1y=-135&imwidth=550",
-        "https://content.rolex.com/dam/model-page/features/special-features/day-display-yellow-gold.jpg?imwidth=550",
-        "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-yellow-gold_elmt_1701rlx_001.jpg?imwidth=550",
-        "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-y.jpg?imwidth=550"
-      ],
-      "click_image": [
-        "https://content.rolex.com/dam/2019/bg/model-popin-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/dial-raw-with-colored-shadow/51220_y_40.png&sc1=1.7&c1x=-474&c1y=-760&imwidth=1350",
-        "https://content.rolex.com/dam/model-page/features/material/materials-yellow-gold-pop-in_rolex_profiles_evr_05a6232.jpg?imwidth=1350",
-        "https://content.rolex.com/dam/2019/bg/model-popin-background-yellow-gold.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/46233.png&sc1=1.89&c1x=-599&c1y=0&imwidth=1350",
-        "https://content.rolex.com/dam/model-page/features/special-features/day-display-yellow-gold-pop-in.jpg?imwidth=1350",
-        "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-yellow-gold-pop-in_elmt_1701rlx_001.jpg?imwidth=1350",
-        "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-pop-in-y.jpg?imwidth=1350"
-      ]
     }
-  }
+  },
+  "sub_features": [
+    {
+      "title": "다이아몬드 세팅 베젤",
+      "sub_title": "눈부신 하모니",
+      "small_image": "https://content.rolex.com/dam/2019/bg/model-feature-background-steel.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bezel-with-colored-shadow/46455.png&sc1=4.8&c1x=-1388&c1y=-981&imwidth=550",
+      "large_image": "https://content.rolex.com/dam/2019/bg/model-popin-background-steel.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bezel-with-colored-shadow/46455.png&sc1=1.3&c1x=-201&c1y=-500&imwidth=1350",
+      "description": "보석 장인들은 조각가처럼 정교한 솜씨로 귀금속을 조각하여 보석이 안전하게 자리 잡을 공간을 마련합니다. 그리고 다른 보석들과의 조화를 고려하며 정확하고 숙련된 기술로 보석을 골드 혹은 플래티넘 세팅 안에 단단히 고정시킵니다. 롤렉스의 보석 세팅은 다이아몬드 자체의 높은 품질 외에도 섬세한 피니시와 견고하고 균일하며 아름다운 세팅 그리고 정교한 배치를 통한 보석의 높이와 방향, 위치의 완벽한 조화 등을 통해 남다른 명성을 누리고 있습니다. 이 모든 요소들이 눈부신 하모니를 이루며 롤렉스 시계의 가치와 그 착용자의 품격을 더욱 높여줍니다."
+    },
+    {
+      "title": "18캐럿 화이트 골드",
+      "sub_title": "완벽을 추구하는 신념",
+      "small_image": "https://content.rolex.com/dam/model-page/features/material/materials-white-gold_elmt1506cw_003.jpg?imwidth=550",
+      "large_image": "https://content.rolex.com/dam/model-page/features/material/materials-white-gold-pop-in_elmt1506cw_003.jpg?imwidth=1350",
+      "description": "롤렉스는 금을 자체 주조할 수 있는 기술과 시설이 있어 최고급 수준의 18캐럿 골드 합금을 제작할 수 있습니다. 실버와 구리, 플래티넘과 팔라듐 등의 배합 비율에 따라 옐로우 골드나 핑크 골드, 화이트 골드의 서로 다른 18캐럿 골드가 생산됩니다. 가장 순도 높은 금속으로 제작된 18캐럿 골드는 롤렉스 매뉴팩처 자체 실험실의 첨단 장비를 이용해 정밀 검사를 마친 후, 역시 지극히 정교한 공정을 거쳐 성형 및 가공됩니다. 완벽을 추구하는 롤렉스의 신념은 제품 소재에서부터 시작됩니다."
+    },
+    {
+      "title": "프레지던트 브레슬릿",
+      "sub_title": "세련미의 상징",
+      "small_image": "https://content.rolex.com/dam/2019/bg/model-feature-background-steel.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/46466.png&sc1=4.65&c1x=-887&c1y=-135&imwidth=550",
+      "large_image": "https://content.rolex.com/dam/2019/bg/model-popin-background-steel.jpg?impolicy=v6-model-feature&c1path=/dam/2019/harmonised/bracelet-ud/46236.png&sc1=1.89&c1x=-599&c1y=0&imwidth=1350",
+      "description": "롤렉스는 브레슬릿과 클라스프의 설계와 개발, 제작, 테스트의 모든 단계에 최첨단 기술을 적용하고 있으며, 워치메이커의 육안으로 이루어지는 꼼꼼한 마감 관리를 통해 완벽한 아름다움을 보장합니다. 반원형 링크 3열로 구성된 프레지던트(President) 브레슬릿은 오이스터 퍼페츄얼 데이-데이트(Oyster Perpetual Day-Date)의 1956년 출시를 위해 특별히 제작되었습니다. 세련미와 편안함을 상징하는 프레지던트 브레슬릿은 롤렉스가 엄선한 최고급 메탈로 제작됩니다."
+    },
+    {
+      "title": "요일 표시창",
+      "sub_title": "자정에 순간적으로 변경되는 날짜",
+      "small_image": "https://content.rolex.com/dam/model-page/features/special-features/day-display-steel.jpg?imwidth=550",
+      "large_image": "https://content.rolex.com/dam/model-page/features/special-features/day-display-steel-pop-in.jpg?imwidth=1350",
+      "description": "1956년 처음 선보인 데이-데이트(Day-Date)는 요일의 전체 글자를 표시한 세계 최초의 시계였습니다. 글로벌 리더들이 즐겨 찾는 데이-데이트는 세계 각국의 언어로 표시됩니다."
+    },
+    {
+      "title": "사이클롭스 렌즈",
+      "sub_title": "볼록 렌즈",
+      "small_image": "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-steel_elmt_1701rlx_001.jpg?imwidth=550",
+      "large_image": "https://content.rolex.com/dam/model-page/features/cyclop/cyclop-steel-pop-in_elmt_1701rlx_001.jpg?imwidth=1350",
+      "description": "사이클롭스(Cyclops) 렌즈는 롤렉스가 보유하고 있는 매우 특별한 기능 중 하나이며, 누구나 한눈에 알아볼 수 있는 롤렉스 시계만의 특징입니다. 그리스 신화의 외눈박이 거인의 이름을 따서 명명한 사이클롭스 렌즈는 시계의 상징적인 날짜 표시창 위에 날짜를 2.5배 확대하여 더욱 높은 가독성을 제공합니다. 모든 롤렉스 시계의 특징과 마찬가지로 사이클롭스 렌즈에는 발명과 연구 개발, 완벽에 대한 끝없는 추구가 담겨 있습니다."
+    },
+    {
+      "title": "3255 무브먼트",
+      "sub_title": "최상급 성능",
+      "small_image": "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-g.jpg?imwidth=550",
+      "large_image": "https://content.rolex.com/dam/model-page/features/movement/movement-calibre-3255-pop-in-g.jpg?imwidth=1350",
+      "description": "데이-데이트 36 (Day-Date 36)은 최상의 성능을 구현하기 위하여 롤렉스에서 직접 개발하고 제작한 차세대 무브먼트인 칼리버 3255를 탑재하고 있습니다. 이 새로운 오토매틱 와인딩 메케니컬 무브먼트는 워치메이킹 기술의 정점입니다. 14개의 롤렉스 특허를 포함, 롤렉스의 워치메이킹 기술이 고스란히 담겨 있는 무브먼트로 정밀함, 파워리저브, 충격과 자기장에 대한 저항, 사용의 편의성, 신뢰도 등의 다양한 측면에서 핵심적인 성과를 보여줍니다."
+    }
+  ]
 }
