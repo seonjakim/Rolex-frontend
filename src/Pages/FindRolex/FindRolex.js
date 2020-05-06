@@ -5,6 +5,8 @@ import FilterCenter from "./Components/FilterCenter/FilterCenter";
 import ProductList from "./Components/ProductList/ProductList";
 import FilterRight from "./Components/FilterRight/FilterRight";
 import FindRolexArrow from "../../Images/FindRolexArrow";
+import PageShare from "../Main/Component/PageShare/PageShare";
+import { API_URL } from "../../Config";
 import { FindRolex_URL } from "../../Config";
 
 import "./FindRolex.scss";
@@ -91,9 +93,8 @@ class FindRolex extends Component {
             페이지 1
             <FindRolexArrow />
           </div>
-          <div className="sharebox">shareboxr section</div>
+          <PageShare />
         </div>
-        <div className="footer">footer section</div>
       </div>
     );
   }
