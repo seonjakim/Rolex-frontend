@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rolex 프로젝트 소개 _ FrontEnd
 
-## Available Scripts
+롤렉스 시계 스토리와 제작과정 및 롤렉스 시계 제품들을 소개하고 원하는 옵션을 선택하여 나만의 롤렉스 시계 설정하기 등을 제공하는 Rolex 클론 프로젝트
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 개발 인원 및 기간
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 기간 : 10일(4월 23일 ~ 5월 1일)
+- 인원 : 프론트엔드 3명, 벡엔드 3명
+- [백엔드 GitHub](https://github.com/wecode-bootcamp-korea/Rolex-backend)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## 목적
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 실제 협업에서 쓰이는 Scrum, Sprint Meeting, Stand Up Meeting 방식 경험
+- Front-End와 Back-End 간의 협업을 통해 커뮤니케이션의 중요성 이해
+- 롤렉스 홈페이지의 다양한 애니메이션과 UI를 React, Sass 이용 구현
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## 적용 기술 및 구현 기능
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 적용 기술
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- JavaScript
+- React
+- Sass
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### 구현 기능
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 회원가입, 로그인 페이지
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 회원가입 및 로그인 (Bcrypt 암호화 및 JWT Access Token 전송) 기능 구현
+- 회원가입 유효성 검사 기능 구현
+- 로그인 검증을 통한 좋아요 기능(클릭/취소/리스트)
 
-### Code Splitting
+#### 모두보기 페이지
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- DAY-DATE 제품 list 페이지네이션
+- DAY-DATE 제품 옵션에 따른 중복 필터링 구현
+- 토글 버튼 상태에 따라 제품 List layout 변경
 
-### Analyzing the Bundle Size
+#### 설정하기 페이지
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- DAY-DATE의 모든 제품에 따른 조합에 따른 상세 정보(가격, 설정 조합, 설명글 및 이미지)를 보여주는 슬라이드 이미지 페이지 구현
+- DAY-DATE 제품 단계별 옵션에 따른 시계 조합 보여주기 기능 구현
+- 각 단계별 조합에 따른 제품 상세페이지 이동 구현
+- 각 단계별 조합 페이지에서 이전 단계로 돌아갔을 때 선택 조합 저장하는 기능 구현
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+## 데모 영상
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+(해당 영상 첨부할 예정)
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
