@@ -7,9 +7,14 @@
 ## 개발 인원 및 기간
 
 - 기간 : 10일(4월 23일 ~ 5월 1일)
-- 인원 : 프론트엔드 3명, 벡엔드 3명
+- Front-end Members: 김지희, 이민석, 이원철
 - [백엔드 GitHub](https://github.com/wecode-bootcamp-korea/Rolex-backend)
 
+
+
+## 데모 영상
+링크: https://youtu.be/x_35Mi3LWTY
+[![Video Label](https://i9.ytimg.com/vi/x_35Mi3LWTY/maxresdefault.jpg?time=1592667196038&sqp=CPjWuPcF&rs=AOn4CLBNZEveqgN9mVF0Cp152u1uTbWTrQ)](https://youtu.be/x_35Mi3LWTY)
 
 
 ## 목적
@@ -51,11 +56,4 @@
 - 각 단계별 조합에 따른 제품 상세페이지 이동 구현
 - 각 단계별 조합 페이지에서 이전 단계로 돌아갔을 때 선택 조합 저장하는 기능 구현
 
-
-
-
-
-## 데모 영상
-
-(해당 영상 첨부할 예정)
 
