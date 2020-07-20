@@ -1,7 +1,6 @@
 import React from "react";
 import { API_URL } from "../../Config";
-import { withRouter, Link } from "react-router-dom";
-import { API_URL } from "../../Config";
+import { withRouter } from "react-router-dom";
 import "./SignIn.scss";
 
 class SignIn extends React.Component {
@@ -37,9 +36,7 @@ class SignIn extends React.Component {
     return (
       <div className="SignIn">
         <div className="ContentWrapper">
-          <div className="Logo">
-            {/* <img src={ColorLogo} alt="color logo" /> */}
-          </div>
+          <div className="Logo"></div>
           <h2>로그인</h2>
           <div className="IdPwInput">
             <div>이름</div>

@@ -43,9 +43,7 @@ class SignUp extends React.Component {
     return (
       <div className="SignUp">
         <div className="ContentWrapper">
-          <div className="Logo">
-            {/* <img src={ColorLogo} alt="color logo" /> */}
-          </div>
+          <div className="Logo"></div>
           <h2>회원가입</h2>
           <div className="IdPwInput">
             <div>이름</div>
